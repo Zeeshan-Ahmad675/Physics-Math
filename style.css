@@ -1,0 +1,217 @@
+/* General setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; 
+}
+
+
+
+/* Header and nav bar */
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    height: 56px;
+}
+
+#name{
+    padding-left: 8px;
+    font-family: "Times New Roman";
+}
+
+#lona{
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+    padding: 6px;
+}
+#lona:hover{
+    background-color: rgba(164, 163, 163, 0.477);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 60%;
+    max-width: 600px;
+    right: 0;
+}
+.nav-item{
+    padding: 18px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav div:hover{
+    background-color: rgba(153, 152, 152, 0.477);
+    color: hsl(170, 100%, 50%);
+}
+nav a.active {
+    background-color: rgba(224, 216, 216, 0.477);
+}
+
+#navbar{
+    display: none;
+}
+#navclo{
+    display: none;
+}
+.navdiv{
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes anime{
+    from{transform: translateX(-100%)}
+    0%{opacity: 0}
+}
+
+
+
+@keyframes clo1{
+    from{transform: rotateZ(0deg)}
+}
+@keyframes clo2{
+    0%{opacity: 1}
+}
+@keyframes clo3{
+    from{transform: rotateZ(0deg)}
+}
+
+
+
+@keyframes bar1{
+    from{transform: rotateZ(45deg) translateY(8.5px)}
+}
+@keyframes bar2{
+    0%{opacity: 0}
+}
+@keyframes bar3{
+    from{transform: rotateZ(-45deg) translateY(-8.5px)}
+}
+
+
+
+
+
+@media screen and (max-width: 700px){
+    header{
+        display: block;
+    }
+    #name{
+        padding: 12px;
+    }
+    #name:hover{
+        background-color:  rgba(153, 152, 152, 0.477);
+
+    }
+    #lona{
+        justify-content: space-between;
+        margin: 0;
+    }
+    #lona:hover{
+        background-color: initial;
+    }
+
+    nav{
+        display: none;
+        height: 900px;
+        width: 70%;
+        position: fixed;
+        right: 0;
+        z-index: 10px;
+        color: white;
+        text-align: center;
+        animation-name: anime;
+        animation-duration: 1s;
+    }
+    #navbar{
+        display: block;
+        padding: 11px;
+    }
+    #navbar:hover .navdiv{
+        background-color:  hsl(170, 100%, 50%);
+    }
+    #navclo{
+        display: none;
+        padding: 11px;
+    }
+    #navclo:hover .navdiv{
+        background-color:  hsl(170, 100%, 50%);
+    }
+    #navclo1{
+        transform: rotateZ(45deg) translateY(8.5px);
+        animation-name: clo1;
+        animation-duration: 1s;
+    }
+    #navclo2{
+        opacity:0;
+        animation-name: clo2;
+        animation-duration: 1s;
+    }
+    #navclo3{
+        transform: rotateZ(-45deg) translateY(-8.5px);
+        animation-name: clo3;
+        animation-duration: 1s;
+    }
+    #navbar1{
+        animation-name: bar1;
+        animation-duration: 1s;
+    }
+    #navbar2{
+        opacity: 1;
+        animation-name: bar2;
+        animation-duration: 1s;
+    }
+    #navbar3{
+        animation-name: bar3;
+        animation-duration: 1s;
+    }
+}
+
