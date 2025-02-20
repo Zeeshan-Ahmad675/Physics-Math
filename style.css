@@ -175,14 +175,14 @@ nav a.active {
         display: block;
         padding: 11px;
     }
-    #navbar:hover .navdiv{
+    #navbar:active .navdiv{
         background-color:  hsl(170, 100%, 50%);
     }
     #navclo{
         display: none;
         padding: 11px;
     }
-    #navclo:hover .navdiv{
+    #navclo:active .navdiv{
         background-color:  hsl(170, 100%, 50%);
     }
     #navclo1{
