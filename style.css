@@ -87,13 +87,13 @@ main{
 
 
 @keyframes welcome{
-    0%{opacity:0}
+    65%{opacity:1}
 }
 #welh4{
-    opacity: 1;
+    opacity: 0;
     animation-name: welcome;
     animation-duration: 2s;
-    /* animation-iteration-count: infinite; */
+    animation-iteration-count: infinite;
 }
 
 
@@ -101,6 +101,17 @@ main{
 
 
 
+/* Footer */
+
+footer{
+    background-color: black;
+    height: 100px;
+    color: white;
+    padding: 8px;
+}
+footer a{
+    color: hsl(170, 100%, 50%)
+}
 
 
 
