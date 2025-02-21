@@ -79,6 +79,22 @@ nav a.active {
 
 
 
+/* Main Content */
+
+main{
+    margin: 8px;
+}
+
+
+@keyframes welcome{
+    0%{opacity:0}
+}
+#welh4{
+    opacity: 1;
+    animation-name: welcome;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+}
 
 
 
@@ -106,6 +122,9 @@ nav a.active {
 
 
 
+
+
+/* Animations for nav and header */
 
 @keyframes anime{
     from{transform: translateX(-100%)}
@@ -141,6 +160,8 @@ nav a.active {
 
 
 @media screen and (max-width: 700px){
+
+    /* Header and nav reponsiveness */
     header{
         display: block;
     }
