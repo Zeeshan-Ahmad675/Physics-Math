@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="icon.png"/>
+    <title>Physics Derived</title>
+</head>
+<body>
+    <header>
+        <div id="lona">
+            <div id="logo">
+                <img src="logo.png" alt="logo" width="45px;"/>
+            </div>
+            <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
+
+            <div id="navbar" onclick="ocnav()">
+                <div class="navdiv" id="navbar1"></div>
+                <div class="navdiv" id="navbar2"></div>
+                <div class="navdiv" id="navbar3"></div>
+            </div>
+
+            <div id="navclo" onclick="ocnav()">
+                <div class="navdiv" id="navclo1"></div>
+                <div class="navdiv" id="navclo2"></div>
+                <div class="navdiv" id="navclo3"></div>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html" title="Home"><div class="nav-item">Home</div></a>
+            <a href="about.html" title="About this site"><div class="nav-item">About</div></a>
+            <a href="chapters.html" title="List of Chapters"><div class="nav-item">Chapters</div></a>
+            <a href="contact.html" title="Contact Us"><div class="nav-item">Contact</div></a>
+            <a href="further.html"><div class="nav-item">Further</div></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Chapters include:</h1>
+
+        <div id="divgrid">
+            <a href="chapters/Mathematical methods in physics.html">
+                <div class="chbox">
+                <img src="images/apmath.png" alt="Free body diagram of an extended body" style="width: 200px; padding-top: 8px;"/>
+                <h3 style="padding-top: 24px;">Mathematical Methods in Physics</h3>
+                </div>
+            </a>
+
+            <a href="chapters/vectors.html">
+                <div class="chbox">
+                    <img src="images/vectorf.png" alt="Free body diagram of an extended body" style="width: 181px;"/>
+                    <h3>Vectors</h3>
+                </div>
+            </a>
+
+            <a href="" style="display: none;">
+                <div class="chbox">
+                    <img src="images/classimech.png" alt="Free body diagram of an extended body"/>
+                    <h3>Classical Mechanics</h3>
+                </div>
+            </a>
+
+            <a href="" style="display: none;">
+                <div class="chbox">
+                    <img src="images/classimech.png" alt="Free body diagram of an extended body"/>
+                    <h3>Classical Mechanics</h3>
+                </div>
+            </a>
+
+            <a href="" style="display: none;">
+                <div class="chbox">
+                    <img src="images/classimech.png" alt="Free body diagram of an extended body"/>
+                    <h3>Classical Mechanics</h3>
+                </div>
+            </a>
+
+            <a href="" style="display: none;">
+                <div class="chbox">
+                    <img src="images/classimech.png" alt="Free body diagram of an extended body"/>
+                    <h3>Classical Mechanics</h3>
+                </div>
+            </a>
+        </div>
+    </main>
+
+
+
+    <footer>
+        
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    const navLinks = document.querySelectorAll('nav a');
+
+
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+            
+        }
+    });
+
+    function ocnav() {
+        var nav = document.getElementById("nav");
+        var navbar = document.getElementById("navbar");
+        var navclo = document.getElementById("navclo")
+        var computedStyle = window.getComputedStyle(nav);
+
+
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 700) {
+                nav.style.display = "flex";
+                navbar.style.display = "none";
+                navclo.style.display = "none";
+
+            }
+            else{
+                nav.style.display = "none";
+                navbar.style.display = "block";
+                navclo.style.display = "none";
+            }
+        });
+        // Check if the current display is "none" using computed style
+        if (computedStyle.display === "none") {
+            nav.style.display = "block";  // Show the nav
+            navbar.style.display = "none";
+            navclo.style.display = "block";
+
+        }
+
+        else{
+            nav.style.display = "none";
+            navbar.style.display = "block";
+            navclo.style.display = "none";
+        
+        }
+    }
+    </script>
+
+</body>
+</html>

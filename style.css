@@ -36,7 +36,7 @@ header{
     padding: 6px;
 }
 #lona:hover{
-    background-color: rgba(164, 163, 163, 0.477);
+    /* background-color: rgba(164, 163, 163, 0.477); */
 }
 
 nav{
