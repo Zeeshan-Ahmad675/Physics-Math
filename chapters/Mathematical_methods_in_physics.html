@@ -6,7 +6,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="/style.css"/>
     <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
-    <title>Mathematical Methods - Physics Derived</title>
+    <title>Mathematical Methods</title>
 
     <style>
         ul{
@@ -26,10 +26,23 @@
         ul a:hover{
             text-decoration: underline;
         }
+
+
+        .mathbox{
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .clrb{
+            clear: both;
+        }
+
         /* a:visited{
             color: purple;
         } */
-        @media screen and (max-width: 545px) {
+
+        @media screen and (max-width: 645px) {
             .imgdiv{
                 float: none !important;
                 display: block;
@@ -93,20 +106,25 @@
 
         <h2 id="basicgeometry">1. Basic Geometry</h2>
         <ul>
-            <li style="text-decoration: underline;"><b>Pythagoras Theorem:</b></li>
+            <li style="text-decoration: underline;" id="pythagoras"><b>Pythagoras Theorem:</b></li>
 
-            <div class="imgdiv" style="float: right;"><img src="rangle.png" alt="An image of a right angled triangle" width="180px;"/></div>
+            <div class="imgdiv" style="float: right;">
+                <figure>
+                        <img src="/images/rangle.png" alt="An image of a right angled triangle" width="180px;" id="img1.1"/>
+                        <figcaption><center><span style="color: red;">Fig 1.1</span>: Right angled <br/>triangle</center></figcaption>
+                </figure>
+            </div>
             
-            <p>For a right angled triangle, as shown in figure, with the hypotenuse \(c\), base \(b\), and height \(a\): 
+            <p>For a right angled triangle, as shown in <a href="#img1.1">Figure 1.1</a>, with the hypotenuse \(c\), base \(b\), and height \(a\): 
                 $$c^2=a^2+b^2 \tag{1.1}$$
             
             This relation was given by ancient Greek philosopher, Pythagoras upon whom the theorem is named. <br/>This thorem would be used for finding most prominantly the length of <a href="vectors.html">vectors</a>, followed by its traditional applications in finding the side length of right-angled triangles and much more.</p>
 
-            <p style="clear: both;">Here is a simple proof using triangle similarity.</p>
+            <p>Here is a simple proof using triangle similarity.</p>
 
             <ul>
                 <li><b><u>Proof</u>:</b></li>
-                <p>Consider the figure again for \(\triangle BCD\) and \(\triangle ABC\). Clearly,
+                <p class="clrb">Consider the <a href="#img1.1">Figure 1.1</a> again for \(\triangle BCD\) and \(\triangle ABC\). Clearly,
 
                     $$\angle CBD = \angle CBA =\theta$$
                     $$\angle BCD = \angle BAC =90^{\circ}-\theta$$
@@ -123,7 +141,7 @@
 
                 Using,\((\)i\()\) and \((\)ii\()\) and using the fact that \(AD+BD=AB\), we get:
 
-                    <div class="mathbox" style="display: flex; justify-content: center; align-items: center;">
+                    <div class="mathbox">
                     $$AB=AD+BD =  \frac{BC^2}{AB} + \frac{AC^2}{AB} $$
 
                     $$\implies AB^2= BC^2+AC^2 $$
@@ -135,7 +153,35 @@
                 </p>
             </ul>
 
-            <!-- <li><b><u></u></b></li> -->
+            <li><b><u>Distance Formula for 2 and 3 dimensions:</u></b></li>
+
+            <p>The distance formula is used to calculate the distance between two points in space. Now, the space can be of any dimensions (at least, theoretically) but, for now, we are concerned with only the 2 and 3 dimensional space.<br/><br/>Lets consider them both one by one.</p>
+
+            <ul>
+                <li><b><u>2 dimensional case:</u></b></li>
+                <p>For two points in the two dimensional plane, say \(A(x_1,y_1)\) and \(B(x_2,y_2)\), the distance between them is:
+
+                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \tag{1.2}$$
+                </p>
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/distance2d.png" alt="Figure describing the distance between two points in 2 dimensions" width="290px;" id="img1.2"/>
+                            <figcaption><center><span style="color: red;">Fig 1.2</span>: Distance in 2 dimensions<br/></center></figcaption>
+                    </figure>
+                </div>
+
+                <p>Consider the <a href="#img1.2">Figure 1.2</a> shown. The points \(A\) and \(B\) are shown, with the horizontal distance along the \(x\)-axis as \(x_2-x_1\) and the vertical distance along the \(y\)-axis as \(y_2-y_1\). Further, we apply the <a href="#pythagoras">Pythagoras Theorem</a> to the \(\triangle ABC\), so as to find the length of side \(AB\) using the sides \(AC\) and \(BC\), as below.
+                </p>
+
+                <div>
+                    $$AB^2= AC^2+BC^2$$$$\implies r^2 = (x_2-x_1)^2+(y_2-y_1)^2$$
+                    $$\implies r = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
+                </div>
+
+                <p>This shows the equation \(1.2\).</p>
+                
+            </ul>
             
         </ul>
     </main>
