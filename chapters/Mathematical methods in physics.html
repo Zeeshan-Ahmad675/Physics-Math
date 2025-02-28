@@ -1,1 +1,221 @@
-<h1>Coming Soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
+    <title>Physics Derived</title>
+
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+        a{
+            text-decoration: none;
+        }
+        ol a:hover{
+            text-decoration: underline;
+        }
+        p a:hover{
+            text-decoration: underline;
+        }
+        ul a:hover{
+            text-decoration: underline;
+        }
+        /* a:visited{
+            color: purple;
+        } */
+        @media screen and (max-width: 545px) {
+            .imgdiv{
+                float: none !important;
+                display: block;
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 607px) {
+            .mathbox{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="lona">
+            <div id="logo">
+                <img src="/logo.png" alt="logo" width="40px;"/>
+            </div>
+            <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
+
+            <div id="navbar" onclick="ocnav()">
+                <div class="navdiv" id="navbar1"></div>
+                <div class="navdiv" id="navbar2"></div>
+                <div class="navdiv" id="navbar3"></div>
+            </div>
+
+            <div id="navclo" onclick="ocnav()">
+                <div class="navdiv" id="navclo1"></div>
+                <div class="navdiv" id="navclo2"></div>
+                <div class="navdiv" id="navclo3"></div>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="/index.html" title="Home"><div class="nav-item">Home</div></a>
+            <a href="/about.html" title="About this site"><div class="nav-item">About</div></a>
+            <a href="/chapters.html" title="List of Chapters"><div class="nav-item">Chapters</div></a>
+            <a href="/contact.html" title="Contact Us"><div class="nav-item">Contact</div></a>
+            <a href="/further.html"><div class="nav-item">Further</div></a>
+        </nav>
+    </header>
+
+
+    <main>
+        <center>
+            <h1>Mathematical Methods</h1>
+        </center>
+
+        <p>The reader is assumed to have some <mark>basic understanding of geometry and algebra</mark>. <br/>Topics covered in this section are as follows:</p>
+        
+        <ol>
+            <li><a href="#basicgeometry">Basic Geometry</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ol>
+        <mark style="background-color: rgb(230, 230, 230);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
+        <hr>
+
+        <h2 id="basicgeometry">1. Basic Geometry</h2>
+        <ul>
+            <li style="text-decoration: underline;"><b>Pythagoras Theorem:</b></li>
+            <div class="imgdiv" style="float: right;"><img src="rangle.png" alt="An image of a right angled triangle" width="180px;"/></div>
+            <p>For a right angled triangle, as shown in figure, with the hypotenuse \(c\), base \(b\), and height \(a\): 
+                $$c^2=a^2+b^2 \tag{1.1}$$
+            
+            This relation was given by ancient Greek philosopher, Pythagoras upon whom the theorem is named. <br/>This thorem would be used for finding most prominantly the length of <a href="#">vectors</a>, followed by its traditional applications in finding the side length of right-angled triangles and much more.</p>
+
+            <p style="clear: both;">Here is a simple proof using triangle similarity.</p>
+
+            <ul>
+                <li><b><u>Proof</u>:</b></li>
+                <p>Consider the figure again for \(\triangle BCD\) and \(\triangle ABC\). Clearly,
+
+                    $$\angle CBD = \angle CBA =\theta$$
+                    $$\angle BCD = \angle BAC =90^{\circ}-\theta$$
+                    $$\angle BDC = \angle BCA =90^{\circ}$$
+                
+                This shows that the \(\triangle BCD \sim \triangle ABC, \) by the \(AAA\) similarity criterion. A similar argument for \(\triangle ACD\) and \(\triangle ABC\) would give \(\triangle ACD \sim \triangle ABC. \)<br/><br/>
+                Using similarity, 
+
+                    $$\frac{BC}{BD}=\frac{AB}{BC}\implies BD= \frac{BC^2}{AB}\tag{i}$$
+
+                and 
+
+                    $$\frac{AB}{AC}=\frac{AC}{AD}\implies AD= \frac{AC^2}{AB}\tag{ii}$$
+
+                Using,\((\)i\()\) and \((\)ii\()\) and using the fact that \(AD+BD=AB\), we get:
+
+                    <div class="mathbox" style="display: flex; justify-content: center; align-items: center;">
+                    $$AB=AD+BD =  \frac{BC^2}{AB} + \frac{AC^2}{AB} $$
+
+                    $$\implies AB^2= BC^2+AC^2 $$
+
+                    $$\implies \boxed{c^2=a^2+b^2}$$
+                    </div>
+                
+                ,which proves the theorem.
+                </p>
+            </ul>
+
+            <!-- <li><b><u></u></b></li> -->
+            
+        </ul>
+    </main>
+
+
+
+    <footer>
+        
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    const navLinks = document.querySelectorAll('nav a');
+
+    
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+            
+        }
+    });
+
+    function ocnav() {
+        var nav = document.getElementById("nav");
+        var navbar = document.getElementById("navbar");
+        var navclo = document.getElementById("navclo")
+        var computedStyle = window.getComputedStyle(nav);
+
+
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 700) {
+                nav.style.display = "flex";
+                navbar.style.display = "none";
+                navclo.style.display = "none";
+
+            }
+            else{
+                nav.style.display = "none";
+                navbar.style.display = "block";
+                navclo.style.display = "none";
+            }
+        });
+        // Check if the current display is "none" using computed style
+        if (computedStyle.display === "none") {
+            nav.style.display = "block";  // Show the nav
+            navbar.style.display = "none";
+            navclo.style.display = "block";
+
+        }
+
+        else{
+            nav.style.display = "none";
+            navbar.style.display = "block";
+            navclo.style.display = "none";
+        
+        }
+    }
+    </script>
+    
+</body>
+</html>
