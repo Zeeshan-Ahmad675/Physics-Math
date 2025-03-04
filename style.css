@@ -233,7 +233,7 @@ footer a{
 
     }
     #lona{
-        justify-content: space-between;
+        /* justify-content: ; */
         margin: 0;
     }
     #lona:hover{
@@ -245,7 +245,7 @@ footer a{
         height: 900px;
         width: 70%;
         position: fixed;
-        right: 0;
+        left: 0;
         z-index: 10px;
         color: white;
         text-align: center;

@@ -4,16 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <!-- <script>
-        window.MathJax = {
-            tex: {
-                displayMath: [['$$','$$'], ['\\[','\\]']]
-            },
-            chtml: {
-                displayAlign: 'left'
-            }
-        };
-    </script> -->
     <link rel="stylesheet" href="/style.css"/>
     <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
     <title>Mathematical Methods</title>
@@ -50,24 +40,20 @@
             clear: both;
         }
 
-        /* Force full width for block equations */
+
         mjx-container[display="true"] {
                 text-align: left !important;
-                /* display: inline-block !important; */
                 width: 100% !important;
                 margin-left: 6% !important;
         }
 
-        /* Override MathJax default styles */
+
         mjx-mtable {
-            text-align: left !important;  /* Remove center alignment */
-            /* display: inline-block !important;    Ensure full width */
+            text-align: left !important;
             margin-left: 10px;
         }
 
-        /* a:visited{
-            color: purple;
-        } */
+        
 
         @media screen and (max-width: 645px) {
             .imgdiv{
@@ -84,11 +70,6 @@
 <body>
     <header>
         <div id="lona">
-            <div id="logo">
-                <img src="/logo.png" alt="logo" width="40px;"/>
-            </div>
-            <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
-
             <div id="navbar" onclick="ocnav()">
                 <div class="navdiv" id="navbar1"></div>
                 <div class="navdiv" id="navbar2"></div>
@@ -100,6 +81,8 @@
                 <div class="navdiv" id="navclo2"></div>
                 <div class="navdiv" id="navclo3"></div>
             </div>
+            
+            <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
         </div>
         <nav id="nav">
             <a href="/index.html" title="Home"><div class="nav-item">Home</div></a>
