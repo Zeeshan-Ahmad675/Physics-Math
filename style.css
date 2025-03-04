@@ -224,6 +224,8 @@ footer a{
     /* Header and nav reponsiveness */
     header{
         display: block;
+        position: relative;
+        top: 0;
     }
     #name{
         padding: 12px;
