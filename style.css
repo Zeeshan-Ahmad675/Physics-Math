@@ -227,6 +227,10 @@ footer a{
         position: relative;
         top: 0;
     }
+
+    #logo{
+        display: none;
+    }
     #name{
         padding: 12px;
     }
