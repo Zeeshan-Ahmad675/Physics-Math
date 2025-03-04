@@ -216,9 +216,9 @@ footer a{
     h1, h2, h3, .infobox, .navbox {
         font-family: Arial, "Helvetica Neue", sans-serif;
     }
-    body {
+    /* body {
         font-family: "Linux Libertine", Georgia, "Times New Roman", Times, serif;
-    }
+    } */
     
 
     /* Header and nav reponsiveness */

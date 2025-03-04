@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script>
+        window.MathJax = {
+            tex: {
+                displayMath: [['$$','$$'], ['\\[','\\]']]
+            },
+            chtml: {
+                displayAlign: 'left'
+            }
+        };
+    </script> -->
     <link rel="stylesheet" href="/style.css"/>
     <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
     <title>Mathematical Methods</title>
@@ -31,11 +41,28 @@
         .mathbox{
             display: flex; 
             justify-content: center; 
-            align-items: center;
+            align-items: start;
+            flex-wrap: wrap;
+            left: 0;
         }
 
         .clrb{
             clear: both;
+        }
+
+        /* Force full width for block equations */
+        mjx-container[display="true"] {
+                text-align: left !important;
+                /* display: inline-block !important; */
+                width: 100% !important;
+                margin-left: 6% !important;
+        }
+
+        /* Override MathJax default styles */
+        mjx-mtable {
+            text-align: left !important;  /* Remove center alignment */
+            /* display: inline-block !important;    Ensure full width */
+            margin-left: 10px;
         }
 
         /* a:visited{
@@ -50,9 +77,7 @@
             }
         }
         @media screen and (max-width: 607px) {
-            .mathbox{
-                flex-direction: column;
-            }
+           
         }
     </style>
 </head>
@@ -104,8 +129,15 @@
         <mark style="background-color: rgb(230, 230, 230);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
         <hr>
 
+
+
+
         <h2 id="basicgeometry">1. Basic Geometry</h2>
         <ul>
+
+
+
+
             <li style="text-decoration: underline;" id="pythagoras"><b>Pythagoras Theorem:</b></li>
 
             <div class="imgdiv" style="float: right;">
@@ -115,8 +147,8 @@
                 </figure>
             </div>
             
-            <p>For a right angled triangle, as shown in <a href="#img1.1">Figure 1.1</a>, with the hypotenuse \(c\), base \(b\), and height \(a\): 
-                $$c^2=a^2+b^2 \tag{1.1}$$
+            <p id="eq1.1">For a right angled triangle, as shown in <a href="#img1.1">Figure 1.1</a>, with the hypotenuse \(c\), base \(b\), and height \(a\): 
+                $$c^2=a^2+b^2 \hspace{1cm}(1.1)$$
             
             This relation was given by ancient Greek philosopher, Pythagoras upon whom the theorem is named. <br/>This thorem would be used for finding most prominantly the length of <a href="vectors.html">vectors</a>, followed by its traditional applications in finding the side length of right-angled triangles and much more.</p>
 
@@ -126,42 +158,56 @@
                 <li><b><u>Proof</u>:</b></li>
                 <p class="clrb">Consider the <a href="#img1.1">Figure 1.1</a> again for \(\triangle BCD\) and \(\triangle ABC\). Clearly,
 
-                    $$\angle CBD = \angle CBA =\theta$$
-                    $$\angle BCD = \angle BAC =90^{\circ}-\theta$$
-                    $$\angle BDC = \angle BCA =90^{\circ}$$
+                    $$
+                    \begin{align}
+                    \angle CBD &= \angle CBA =\theta \\
+                    \angle BCD &= \angle BAC =90^{\circ}-\theta \\
+                    \angle BDC &= \angle BCA =90^{\circ}
+                    \end{align}
+                    $$
                 
                 This shows that the \(\triangle BCD \sim \triangle ABC, \) by the \(AAA\) similarity criterion. A similar argument for \(\triangle ACD\) and \(\triangle ABC\) would give \(\triangle ACD \sim \triangle ABC. \)<br/><br/>
                 Using similarity, 
 
-                    $$\frac{BC}{BD}=\frac{AB}{BC}\implies BD= \frac{BC^2}{AB}\tag{i}$$
+                    $$\frac{BC}{BD}=\frac{AB}{BC}\implies BD= \frac{BC^2}{AB}\hspace{1cm}(\text{i})$$
 
                 and 
 
-                    $$\frac{AB}{AC}=\frac{AC}{AD}\implies AD= \frac{AC^2}{AB}\tag{ii}$$
+                    $$\frac{AB}{AC}=\frac{AC}{AD}\implies AD= \frac{AC^2}{AB}\hspace{1cm}(\text{ii})$$
 
                 Using,\((\)i\()\) and \((\)ii\()\) and using the fact that \(AD+BD=AB\), we get:
 
                     <div class="mathbox">
-                    $$AB=AD+BD =  \frac{BC^2}{AB} + \frac{AC^2}{AB} $$
+                    $$
+                    \begin{align}
+                    AB=AD+BD &\implies AB =  \frac{BC^2}{AB} + \frac{AC^2}{AB} \\
 
-                    $$\implies AB^2= BC^2+AC^2 $$
-
-                    $$\implies \boxed{c^2=a^2+b^2}$$
+                    &\implies AB^2 = BC^2+AC^2\\
+                    
+                    &\implies \boxed{c^2 = a^2+b^2}
+                    \end{align}
+                    $$
                     </div>
                 
                 ,which proves the theorem.
                 </p>
             </ul>
 
+
+
+
+
             <li><b><u>Distance Formula for 2 and 3 dimensions:</u></b></li>
 
             <p>The distance formula is used to calculate the distance between two points in space. Now, the space can be of any dimensions (at least, theoretically) but, for now, we are concerned with only the 2 and 3 dimensional space.<br/><br/>Lets consider them both one by one.</p>
 
+
+
             <ul>
                 <li><b><u>2 dimensional case:</u></b></li>
-                <p>For two points in the two dimensional plane, say \(A(x_1,y_1)\) and \(B(x_2,y_2)\), the distance between them is:
+                <p id="eq1.2">For two points in the two dimensional plane, say \(A(x_1,y_1)\) and \(B(x_2,y_2)\), the distance between them is:
 
-                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \tag{1.2}$$
+                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}  \hspace{1cm} (1.2)$$
                 </p>
 
                 <div class="imgdiv" style="float: right;">
@@ -176,11 +222,84 @@
 
                 <div>
                     $$AB^2= AC^2+BC^2$$$$\implies r^2 = (x_2-x_1)^2+(y_2-y_1)^2$$
-                    $$\implies r = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
+                    $$\boxed{\implies r = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}$$
                 </div>
 
-                <p>This shows the equation \(1.2\).</p>
+                <p>This shows the equation <a href="#eq1.2">\(1.2\)</a>.</p>
+
                 
+
+
+
+                <li class="clrb"><b><u>3 dimensional case:</u></b></li>
+
+
+                <p id="eq1.3">In the three dimensional "normal" space, the distance between two points \(A(x_1,y_1,z_1)\) and \(B(x_2,y_2,z_2)\) is given by:
+
+                    
+                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2} \hspace{1cm}(1.3)$$
+                
+
+
+                    <div class="imgdiv" style="float: right;">
+                        <figure>
+                                <img src="/images/distance3d.png" alt="Figure describing the distance between two points in 3 dimensions" width="290px;" id="img1.3"/>
+                                <figcaption><center><span style="color: red;">Fig 1.3</span>: Distance in 3 dimensions<br/></center></figcaption>
+                        </figure>
+                    </div>
+                
+                Consider the <a href="#img1.3">Figure 1.3</a> shown.
+                </p>
+
+
+                
+                <p>
+                    Now, to start with we first project the points \(A\) and \(B\) to the \(x-y\) plane turning them into \(C(x_1,y_1,0)\) and \(D(x_2,y_2,0)\), respectively as shown. Further, we apply the 2 dimensional distance formula (<a href="#eq1.2">Eq 1.2</a>) for finding the distance \(r'\) to be: 
+
+                    $$r'= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
+
+
+                    The above equation is easily verified by comparing the top view (<a href="#img1.4">Figure 1.4</a>) shown below with the <a href="img1.2">Figure 1.2</a>.
+
+                    We identify that the length of the <span style="background-color: #CCFF66">green</span> and the <span style="background-color: #99FFFF">blue</span> segments are the same i.e. \(r'\). And, the vertical distance of the point \(A\) and \(B\) or the <span style="background-color: #CCFF66">green</span> segment and the point \(B\) is \(\left(z_2-z_1\right)\). 
+                </p>
+
+
+                
+
+                <div class="imgdiv" style="float: left;">
+                    <figure>
+                            <img src="/images/distance23d.png" alt="Figure describing the distance between two points in 2 dimensions" width="230px;" id="img1.4"/>
+                            <figcaption><center><span style="color: red;">Fig 1.4</span>: Top view of the points in 3D<br/></center></figcaption>
+                    </figure>
+                </div>
+
+
+
+
+                <p>
+                    Then, we again employ the <a href="#pythagoras">Pythagoras theorem</a>, this time for the triangle with two vertices as \(A\) and \(B\) and the <span style="background-color: #CCFF66">green</span> segment as the base. So, we get:
+
+                    $$
+                    r = \sqrt{(r')^2+(z_2-z_1)^2} 
+                    $$
+
+                    $$
+                    \implies \boxed{r= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}}
+                    $$
+
+                    By this, we have proved the distance formula in 3-dimensions.
+                </p>
+                
+                <p  class="clrb" id="eq1.4">
+                    <b>One special case: </b>A case which arises very frequently, especially when dealing with <a href="vectors.html">vectors</a>, is the distance of a point, say \((x,y,z)\) from the origin \((0,0,0)\). Using equation <a href="#eq1.3">1.3</a> ,we get this distance to be:
+
+                    $$
+                        r = \sqrt{x^2+y^2+z^2} \hspace{2cm} (1.4)
+                    $$
+
+                    This is often referred as the length of a vector from origin to the point \((x,y,z)\).
+                </p>
             </ul>
             
         </ul>
