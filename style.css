@@ -224,8 +224,6 @@ footer a{
     /* Header and nav reponsiveness */
     header{
         display: block;
-        position: relative;
-        top: 0;
     }
 
     #logo{
@@ -249,7 +247,7 @@ footer a{
     nav{
         display: none;
         height: 900px;
-        width: 70%;
+        width: 250px;
         position: fixed;
         left: 0;
         z-index: 10px;
