@@ -9,7 +9,7 @@
     <title>Mathematical Methods</title>
 
     <style>
-        ul{
+        ul,ol{
             margin: 0;
             padding: 0;
             list-style-position: inside;
@@ -41,10 +41,28 @@
         }
 
 
+        table {
+            margin: auto;
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+        }
+
+        th {
+            white-space: nowrap;
+        }
+
+
         mjx-container[display="true"] {
-                text-align: left !important;
-                width: 100% !important;
-                margin-left: 6% !important;
+            font-size: 110% !important;
+            text-align: left !important;
+            width: 100% !important;
+            margin-left: 6% !important;
         }
 
 
@@ -107,7 +125,7 @@
         
         <ol>
             <li><a href="#basicgeometry">Basic Geometry</a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#trigonometry">Trigonometry</a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
@@ -125,7 +143,7 @@
 
 
 
-            <li style="text-decoration: underline;" id="pythagoras"><b>Pythagoras Theorem:</b></li>
+            <li style="text-decoration: underline; font-size: 110%;" id="pythagoras"><b>Pythagoras Theorem:</b></li>
 
             <div class="imgdiv" style="float: right;">
                 <figure>
@@ -142,8 +160,10 @@
             <p>Here is a simple proof using triangle similarity.</p>
 
             <ul>
-                <li><b><u>Proof</u>:</b></li>
-                <p class="clrb">Consider the <a href="#img1.1">Figure 1.1</a> again for \(\triangle BCD\) and \(\triangle ABC\). Clearly,
+                <br/>
+                <br/>
+                <li class="clrb"><b><u>Proof</u>:</b></li>
+                <p>Consider the <a href="#img1.1">Figure 1.1</a> again for \(\triangle BCD\) and \(\triangle ABC\). Clearly,
 
                     $$
                     \begin{align}
@@ -184,13 +204,20 @@
 
 
 
-            <li><b><u>Distance Formula for 2 and 3 dimensions:</u></b></li>
+
+
+
+
+
+            <br/><br/>
+            <li style="font-size: 110%;"><b><u>Distance Formula for 2 and 3 dimensions:</u></b></li>
 
             <p>The distance formula is used to calculate the distance between two points in space. Now, the space can be of any dimensions (at least, theoretically) but, for now, we are concerned with only the 2 and 3 dimensional space.<br/><br/>Lets consider them both one by one.</p>
 
 
 
             <ul>
+                <br/><br/>
                 <li><b><u>2 dimensional case:</u></b></li>
                 <p id="eq1.2">For two points in the two dimensional plane, say \(A(x_1,y_1)\) and \(B(x_2,y_2)\), the distance between them is:
 
@@ -218,6 +245,10 @@
 
 
 
+
+
+
+                <br/><br/>
                 <li class="clrb"><b><u>3 dimensional case:</u></b></li>
 
 
@@ -246,7 +277,7 @@
                     $$r'= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
 
 
-                    The above equation is easily verified by comparing the top view (<a href="#img1.4">Figure 1.4</a>) shown below with the <a href="img1.2">Figure 1.2</a>.
+                    The above equation is easily verified by comparing the top view (<a href="#img1.4">Figure 1.4</a>) shown below with the <a href="#img1.2">Figure 1.2</a>.
 
                     We identify that the length of the <span style="background-color: #CCFF66">green</span> and the <span style="background-color: #99FFFF">blue</span> segments are the same i.e. \(r'\). And, the vertical distance of the point \(A\) and \(B\) or the <span style="background-color: #CCFF66">green</span> segment and the point \(B\) is \(\left(z_2-z_1\right)\). 
                 </p>
@@ -272,7 +303,7 @@
                     $$
 
                     $$
-                    \implies \boxed{r= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}}
+                    \boxed{r= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}}
                     $$
 
                     By this, we have proved the distance formula in 3-dimensions.
@@ -288,14 +319,224 @@
                     This is often referred as the length of a vector from origin to the point \((x,y,z)\).
                 </p>
             </ul>
+
+
+
+
+
+
+
+
+
+            <!-- <li style="font-size: 110%;" id="geometricshapes"><b><u>Geometric Shapes:</u></b></li> -->
             
         </ul>
+        
+
+        <hr/>
+        <br/>
+
+
+
+        <h2 id="trigonometry">2. Trigonometry</h2>
+
+        <p>
+            Trigongometry is the study of angles, more specifically the study of angles of a triangle.
+            We start by defining some some relations in between the angle and side length of the <a href="#img1.1">right angled triangle</a>, and move towards a general form.
+        </p>
+
+        <ul>
+            <br/><br/>
+            <li style="font-size: 110%;" id=""><b><u>Some basic definitions</u>:</b></li> 
+
+            <p>
+                Consider the figure shown.
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/trigdef.png" alt="An image of a right angled triangle" width="180px;" id="img2.1"/>
+                            <figcaption><center><span style="color: red;">Fig 2.1</span>: Right angled triangle<br/> with side lengths</center></figcaption>
+                    </figure>
+                </div>
+
+
+                <p>
+                    The three sides of the triangle \(ABC\), base \(BC\) has length \(b\), perpendicluar (the side in front of the angle under consideration, here, \(\theta\)) \(AB\) has length \(p\) and the longest side, hypotenuse (the side in front of right angle) \(AC\) has length \(h\).
+
+                </p>
+
+                <p>
+                    We <b>define</b> the following:
+                    
+                    <ol>
+                        <li>
+                            <b><u>Sine of \(\theta\) :</u></b>
+
+                            <p>
+                                Sine of angle \(\theta\) is defined as the ratio of the length of the perpendicular and the hypotenuse and is denoted as:
+
+                                $$\sin{\theta}=\frac{p}{h} \hspace{1cm} (2.1)$$
+
+                                Upon rearranging, we get \(p=h \sin{\theta}\). Thus, \(p\) is said to be the <a href="vectors.html">projection</a> of \(h\) over the perpendicular side. This is much useful when dealing with <a href="vectors.html">vector projection</a>.
+                            </p>
+                        </li>
+
+                        <li>
+                            <b><u>Cosine of \(\theta\) :</u></b>
+
+                            <p>
+                                Cosine of angle \(\theta\) is defined as the ratio of the length of the base and the hypotenuse and is denoted as:
+
+                                $$\cos{\theta}=\frac{b}{h}\hspace{1cm} (2.2)$$
+
+                                As before, \(b=h \cos{\theta}\). Thus, \(b\) is the <a href="vectors.html">projection</a> of \(h\) on the base.
+                            </p>
+                        </li>
+
+                        <li>
+                            <b><u>Tangent of \(\theta\) :</u></b>
+
+                            <p>
+                                Tangent of angle \(\theta\) is the ratio of sine and cosine of \(\theta\) or, length of the perpendicular and the base. It is denoted as:
+
+                                $$\tan{\theta}=\frac{\sin{\theta}}{\cos{\theta}}=\frac{p}{b}$$
+
+                                Now, \(\tan{\theta}\) has an immense significance as it represents the <a href="#trigonometry">slope</a> (how slant is the line with respect to the \(x\)-axis) of the hypotenuse. 
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                            <b><u>Cosecant of \(\theta\) :</u></b>
+
+                            <p>
+                                It is defined as the reciprocal of sine. It is denoted as \(\csc{\theta}\) or sometimes \(\text{cosec }\theta\) i.e. \(\csc{\theta}=\frac{1}{\sin{\theta}}=\frac{h}{p}\)
+                            </p>
+                        </li>
+
+                        
+
+                            <li>
+                                <b><u>Secant of \(\theta\) :</u></b>
+    
+                                <p>
+                                    It is defined as the reciprocal of cosine. It is denoted as \(\sec{\theta}\) i.e. \(\sec{\theta}=\frac{1}{\cos{\theta}}=\frac{h}{b}\)
+                                </p>
+                        </li>
+
+
+                        <li>
+                                <b><u>Cotangent of \(\theta\) :</u></b>
+    
+                                <p>
+                                    It is defined as the reciprocal of tangent. It is denoted as \(\cot{\theta}\) i.e. \(\cot{\theta}=\frac{1}{\tan{\theta}}=\frac{b}{p}\)
+                                </p>
+                        </li>
+                        
+                    </ol>
+                     
+                </p>
+            </p>
+
+
+
+
+            <br/>
+            <table id="table2.1" border="1" style="background-color: black;">
+                <caption>Table <span style="color: red;">2.1</span>: Values of trigonmetric functions at some common angles</caption>
+                <thead>
+                    <tr style="background-color: lightblue;">
+                        <th width="100">Function \(/ \theta\)</th>
+                        <th>\(0^{\circ}\)</th>
+                        <th>\(30^{\circ}\)</th>
+                        <th>\(45^{\circ}\)</th>
+                        <th>\(60^{\circ}\)</th>
+                        <th>\(90^{\circ}\)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr align="center" style="background-color: aliceblue;">
+                        <td>\(\sin{\theta}\)</td>
+                        <td>\(0\)</td>
+                        <td>\(1/2\)</td>
+                        <td>\(1/\sqrt{2}\)</td>
+                        <td>\(\sqrt{3}/2\)</td>
+                        <td>\(1\)</td>
+                    </tr>
+
+                    <tr align="center" style="background-color: aliceblue;">
+                        <td>\(\cos{\theta}\)</td>
+                        <td>\(1\)</td>
+                        <td>\(\sqrt{3}/2\)</td>
+                        <td>\(1/\sqrt{2}\)</td>
+                        <td>\(1/2\)</td>
+                        <td>\(0\)</td>
+                    </tr>
+
+                    <tr align="center" style="background-color: aliceblue;">
+                        <td>\(\tan{\theta}\)</td>
+                        <td>\(0\)</td>
+                        <td>\(1/\sqrt{3}\)</td>
+                        <td>\(1\)</td>
+                        <td>\(\sqrt{3}\)</td>
+                        <td>\(\inf \)<span style="color: red;">*</span></td>
+                    </tr>
+
+                    <tr align="center" style="background-color: aliceblue;">
+                        <td>\(\csc{\theta}\)</td>
+                        <td>\(\inf \)<span style="color: red;">*</span></td>
+                        <td>\(2\)</td>
+                        <td>\(\sqrt{2}\)</td>
+                        <td>\(2/\sqrt{3}\)</td>
+                        <td>\(1\)</td>
+                    </tr>
+
+                    <tr align="center" style="background-color: aliceblue;">
+                        <td>\(\sec{\theta}\)</td>
+                        <td>\(1\)</td>
+                        <td>\(2/\sqrt{3}\)</td>
+                        <td>\(\sqrt{2}\)</td>
+                        <td>\(2\)</td>
+                        <td>\(\inf \)<span style="color: red;">*</span></td>
+                    </tr>
+
+                    <tr align="center" style="background-color: aliceblue;">
+                        <td>\(\cot{\theta}\)</td>
+                        <td>\(\inf \)<span style="color: red;">*</span></td>
+                        <td>\(\sqrt{3}\)</td>
+                        <td>\(1\)</td>
+                        <td>\(1/\sqrt{3}\)</td>
+                        <td>\(0\)</td>
+                    </tr>
+                </tbody>
+
+                <tfoot style="font-weight: bold; background-color: white;">
+                    <tr>
+                        <td colspan="6"><span style="color: red;">*</span>here, \(\inf\) represents infinity or undefined</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br/>
+            
+
+
+
+
+
+
+            <!-- <br/><br/>
+            <li style="font-size: 110%;" id=""><b><u>Reviewing angles and ahead</u>:</b></li>  -->
+
+        </ul>
+
     </main>
 
 
 
     <footer>
-        
+        <p style="align-self: center; padding-left: 10px; text-shadow: 0 0 1px white;"> &copy; 2025 <a href="/index.html">Physics Derived</a>. All Rights Reserved.</p>
     </footer>
 
 
