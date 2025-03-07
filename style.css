@@ -5,7 +5,8 @@
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
+    background-color: hsl(0, 0%, 100%);
 }
 
 p{
@@ -13,7 +14,13 @@ p{
 }
 
 
-
+main{
+    width: 85%;
+    justify-self: center;
+    z-index: 10px;
+    background-color: #ffffff;
+    padding: 19px;
+}
 /* Header and nav bar */
 
 header{
@@ -150,7 +157,7 @@ footer{
     padding: 8px;
 }
 footer a{
-    color: hsl(170, 100%, 50%)
+    color: hsl(170, 100%, 50%);
 }
 
 
@@ -221,6 +228,9 @@ footer a{
         font-family: "Linux Libertine", Georgia, "Times New Roman", Times, serif;
     } */
     
+    main{
+        width: 95%;
+    }
 
     /* Header and nav reponsiveness */
     header{

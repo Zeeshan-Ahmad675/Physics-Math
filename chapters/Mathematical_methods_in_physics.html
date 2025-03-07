@@ -63,6 +63,7 @@
             text-align: left !important;
             width: 100% !important;
             margin-left: 6% !important;
+            padding: 20px;
         }
 
 
@@ -78,6 +79,9 @@
                 float: none !important;
                 display: block;
                 text-align: center;
+            }
+            mjx-mtable {
+            margin-left: 0px;
             }
         }
         @media screen and (max-width: 607px) {
@@ -131,7 +135,7 @@
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
         </ol>
-        <mark style="background-color: rgb(230, 230, 230);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
+        <mark style="background-color: rgb(229, 228, 228);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
         <hr>
 
 
@@ -191,7 +195,7 @@
 
                     &\implies AB^2 = BC^2+AC^2\\
                     
-                    &\implies \boxed{c^2 = a^2+b^2}
+                    &\implies c^2 = a^2+b^2
                     \end{align}
                     $$
                     </div>
@@ -235,8 +239,13 @@
                 </p>
 
                 <div>
-                    $$AB^2= AC^2+BC^2$$$$\implies r^2 = (x_2-x_1)^2+(y_2-y_1)^2$$
-                    $$\boxed{\implies r = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}$$
+                    $$
+                    \begin{aligned}
+                    &AB^2= AC^2+BC^2 \\
+                     \implies &r^2 = (x_2-x_1)^2+(y_2-y_1)^2 \\
+                    \implies &r = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+                    \end{aligned}
+                    $$
                 </div>
 
                 <p>This shows the equation <a href="#eq1.2">\(1.2\)</a>.</p>
@@ -299,11 +308,11 @@
                     Then, we again employ the <a href="#pythagoras">Pythagoras theorem</a>, this time for the triangle with two vertices as \(A\) and \(B\) and the <span style="background-color: #CCFF66">green</span> segment as the base. So, we get:
 
                     $$
-                    r = \sqrt{(r')^2+(z_2-z_1)^2} 
-                    $$
-
-                    $$
-                    \boxed{r= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}}
+                    \begin{aligned}
+                    r &= \sqrt{(r')^2+(z_2-z_1)^2} \\
+                    
+                    \implies r&= \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}
+                    \end{aligned}
                     $$
 
                     By this, we have proved the distance formula in 3-dimensions.
@@ -375,7 +384,9 @@
                             <p>
                                 Sine of angle \(\theta\) is defined as the ratio of the length of the perpendicular and the hypotenuse and is denoted as:
 
-                                $$\sin{\theta}=\frac{p}{h} \hspace{1cm} (2.1)$$
+                                $$
+                                \sin{\theta}=\frac{p}{h} \hspace{1cm} (2.1)
+                                $$
 
                                 Upon rearranging, we get \(p=h \sin{\theta}\). Thus, \(p\) is said to be the <a href="vectors.html">projection</a> of \(h\) over the perpendicular side. This is much useful when dealing with <a href="vectors.html">vector projection</a>.
                             </p>
@@ -387,7 +398,9 @@
                             <p>
                                 Cosine of angle \(\theta\) is defined as the ratio of the length of the base and the hypotenuse and is denoted as:
 
-                                $$\cos{\theta}=\frac{b}{h}\hspace{1cm} (2.2)$$
+                                $$
+                                \cos{\theta}=\frac{b}{h}\hspace{1cm} (2.2)
+                                $$
 
                                 As before, \(b=h \cos{\theta}\). Thus, \(b\) is the <a href="vectors.html">projection</a> of \(h\) on the base.
                             </p>
@@ -399,7 +412,9 @@
                             <p>
                                 Tangent of angle \(\theta\) is the ratio of sine and cosine of \(\theta\) or, length of the perpendicular and the base. It is denoted as:
 
-                                $$\tan{\theta}=\frac{\sin{\theta}}{\cos{\theta}}=\frac{p}{b}$$
+                                $$
+                                \tan{\theta}=\frac{\sin{\theta}}{\cos{\theta}}=\frac{p}{b} \hspace{1cm}(2.3)
+                                $$
 
                                 Now, \(\tan{\theta}\) has an immense significance as it represents the <a href="#trigonometry">slope</a> (how slant is the line with respect to the \(x\)-axis) of the hypotenuse. 
                             </p>
@@ -411,7 +426,10 @@
                             <b><u>Cosecant of \(\theta\) :</u></b>
 
                             <p>
-                                It is defined as the reciprocal of sine. It is denoted as \(\csc{\theta}\) or sometimes \(\text{cosec }\theta\) i.e. \(\csc{\theta}=\frac{1}{\sin{\theta}}=\frac{h}{p}\)
+                                It is defined as the reciprocal of sine. It is denoted as \(\csc{\theta}\) or sometimes \(\text{cosec }\theta\) i.e. 
+                                $$
+                                \csc{\theta}=\frac{1}{\sin{\theta}}=\frac{h}{p}
+                                $$
                             </p>
                         </li>
 
@@ -421,7 +439,10 @@
                                 <b><u>Secant of \(\theta\) :</u></b>
     
                                 <p>
-                                    It is defined as the reciprocal of cosine. It is denoted as \(\sec{\theta}\) i.e. \(\sec{\theta}=\frac{1}{\cos{\theta}}=\frac{h}{b}\)
+                                    It is defined as the reciprocal of cosine. It is denoted as \(\sec{\theta}\) i.e. 
+                                    $$
+                                    \sec{\theta}=\frac{1}{\cos{\theta}}=\frac{h}{b}
+                                    $$
                                 </p>
                         </li>
 
@@ -430,7 +451,10 @@
                                 <b><u>Cotangent of \(\theta\) :</u></b>
     
                                 <p>
-                                    It is defined as the reciprocal of tangent. It is denoted as \(\cot{\theta}\) i.e. \(\cot{\theta}=\frac{1}{\tan{\theta}}=\frac{b}{p}\)
+                                    It is defined as the reciprocal of tangent. It is denoted as \(\cot{\theta}\) i.e. 
+                                    $$
+                                    \cot{\theta}=\frac{1}{\tan{\theta}}=\frac{b}{p}
+                                    $$
                                 </p>
                         </li>
                         
@@ -444,7 +468,7 @@
 
             <br/>
             <table id="table2.1" border="1" style="background-color: black;">
-                <caption>Table <span style="color: red;">2.1</span>: Values of trigonmetric functions at some common angles</caption>
+                <caption><span style="color: red;">Table  2.1</span>: Values of trigonmetric functions at some common angles</caption>
                 <thead>
                     <tr style="background-color: lightblue;">
                         <th width="100">Function \(/ \theta\)</th>
