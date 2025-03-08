@@ -1,1 +1,451 @@
-<h1>Coming Soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
+    <title>Physics Derived</title>
+
+
+    <style>
+        ul,ol{
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+        a{
+            text-decoration: none;
+        }
+        ol a:hover{
+            text-decoration: underline;
+        }
+        p a:hover{
+            text-decoration: underline;
+        }
+        ul a:hover{
+            text-decoration: underline;
+        }
+        ul.c1ul>li::marker{
+            content:"→ ";
+            font-size: 20px;
+        }
+        ul.mainlist>li::marker{
+            content: "✶ ";
+            font-size: 20px;
+        }
+        
+
+
+        .clrb{
+            clear: both;
+        }
+
+
+        table {
+            margin: auto;
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+        }
+
+        th {
+            white-space: nowrap;
+        }
+
+
+        
+
+        
+
+        @media screen and (max-width: 645px) {
+            .imgdiv{
+                float: none !important;
+                display: block;
+                text-align: center;
+            }
+            mjx-mtable {
+            margin-left: 0;
+            }
+            #v12{
+                text-align: left !important;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div id="lona">
+            <div id="navbar" onclick="ocnav()">
+                <div class="navdiv" id="navbar1"></div>
+                <div class="navdiv" id="navbar2"></div>
+                <div class="navdiv" id="navbar3"></div>
+            </div>
+
+            <div id="navclo" onclick="ocnav()">
+                <div class="navdiv" id="navclo1"></div>
+                <div class="navdiv" id="navclo2"></div>
+                <div class="navdiv" id="navclo3"></div>
+            </div>
+
+            <div id="logo">
+                <img src="/logo.png" width="40px;"/>
+            </div>
+            
+            <div id="name">Physics<span style="color: hsl(170, 100%, 50%);">Derived</span></div>
+        </div>
+        <nav id="nav">
+            <a href="/index.html" title="Home"><div class="nav-item">Home</div></a>
+            <a href="/about.html" title="About this site"><div class="nav-item">About</div></a>
+            <a href="/chapters.html" title="List of Chapters"><div class="nav-item">Chapters</div></a>
+            <a href="/contact.html" title="Contact Us"><div class="nav-item">Contact</div></a>
+            <a href="/further.html"><div class="nav-item">Further</div></a>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <main>
+        <center>
+            <h1>Vectors</h1>
+        </center>
+
+        <p>Topics covered in this section are: </p>
+
+        <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#additionofvectors">Addition of Vectors</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ol>
+
+        <mark style="background-color: rgb(229, 228, 228);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
+        <hr>
+
+        <h2 id="introduction">1. Introduction</h2>
+
+        <p>
+            In our everyday-life, we encounter mainly three quantities - <b>Scalars, Vectors</b> and <b>Higher rank Tensors</b>. To say, Scalar and Vectors are zero and 1st rank tensors, respectively. But, we won't be discussing higher rank tensors here.
+            <br/><br/>
+
+            <ul class="mainlist">
+                <li><b><u>Scalar</u>:</b></li>
+
+                <p>
+                    <b>Definition: </b>Scalars are the quantities which have only magnitudes but no direction.
+                
+                    <br/>
+                    
+                    For example, distance, speed, charge, volume, mass, numbers etc.
+
+                    <br/><br/>
+                    
+                    Now, we can perform additon, subtraction, multiplication and divison on the scalars <i>in the same way we perform these operations on numbers (algebriac operations)</i>. Let us consider two scalar values, say \(5C\) and \(-1C\) of charges, where \(C\) is Coulomb.
+
+                    <br/><br/>
+
+                    If they are put together, then we say that \((5-1)C= 4C\), of charge is at that place.
+
+                    Similarly, other operations are performed.
+
+                </p>
+
+                <br/><br/>
+
+                <li><b><u>Vectors</u>:</b></li>
+
+
+                <p>
+                    <b>Definition:</b> Vectors are any physical quantity which have direction as well as magnitude.
+
+                    <br/>
+                    For example, displacement, velocity, force, angular speed, etc.
+
+                    <br/><br/> Let's take the example of force. When we push an object with a force, we can feel how hard we are pushing it. This is in a sense a measure of <b>magnitude</b> of the force. Further, we can push the object from different directions as shown in <a href="#img1.1">Figure 1.1</a>, this is the <b>direction</b> of the force.
+
+
+                    <div class="imgdiv" style="float: right;">
+                        <figure>
+                                <img src="/images/v11.png" alt="Force of different magnitudes on a cube in different directions expressing vectors." width="280px;" id="img1.1"/>
+                                <figcaption><center><span style="color: red;">Fig 1.1</span>: Force from different directions on a cube </center></figcaption>
+                        </figure>
+                    </div>
+                    
+
+                    
+                    <p>
+                        Vectors are <b>denoted</b> by a boldface letter such as \(\textbf{A}\) or with an arrow on head of the letter i.e. as \(\vec{A}\). We would take up the arrow on head notation in rest of the discussion. In <b>diagrams</b>, we represent vectors using arrows, such that its magnitude (denoted as \(|\vec{A}|\) or simply \(A\)) is proportional to the length of arrow and direction indicated by the head of the arrow.
+                        This can be seen in the <a href="#img1.1">Figure 1.1</a>.
+                        <br/><br/>
+
+                        
+                    </p>
+
+                </p>
+
+                <ul class="c1ul">
+                    <li><b><u>Equal vectors and Opposite/ Negative Vectors</u>:</b></li>
+
+                    <p>
+                        Two vectors \(\vec{A}\) and \(\vec{B}\) are said to be equal iff the have they same magnitude as well as direction, as shown in <a href="#img1.2">Figure 1.2</a>.
+
+                        <div class="imgdiv" id="v12" style="text-align: center;">
+                            <figure>
+                                    <img src="/images/v12.png" alt="Equal and negative vectors" width="380px;" id="img1.2"/>
+                                    <figcaption><center><span style="color: red;">Fig 1.2</span>: Depiction of equal and negative vectors</center></figcaption>
+                            </figure>
+                        </div>
+
+
+
+                        <p>
+
+                            And, one vector is said to be opposite of other vector, say \(\vec{C}\) or the negative of that vector iff they have the same magnitude but point in opposite directions and is denoted as \(-\vec{C}\). This is also shown in <a href="#img1.2">Figure 1.2</a>.
+
+                            <br/><br/>
+
+                            But, the arithmetic operations on the vectors doesn't operate in the normal algebriac way. We now move to discuss these operations in detail.
+                        </p>
+                    </p>
+                </ul>
+
+            </ul>
+            
+        </p>
+        
+
+
+
+        <br/><br/>
+        <h2 id="additionofvectors">2. Addition of Vectors</h2>
+        
+            <p>Additon of two vectors is performed using two laws: 
+
+                <ol style="list-style-type: lower-roman;">
+                    <li id="trianglelaw"><b><u>Triangle Law</u>:</b></li>
+
+                    <p>
+
+                        <div class="imgdiv" style="float: right;">
+                            <figure>
+                                    <img src="/images/v13.png" alt="Figure displaying the triangle law of vector addition." width="180px;" id="img1.3"/>
+                                    <figcaption><center><span style="color: red;">Fig 1.3</span>: Triangle Law</center></figcaption>
+                            </figure>
+                        </div>
+
+                        Consider the vectors \(\vec{A}\) and \(\vec{B}\) as shown in <a href="#img1.3">Figure 1.3</a>. When, the three vectors \(\vec{A}\), \(\vec{B}\) and \(\vec{R}\) forms a triangle with the tail of \(\vec{B}\) on the head of \(\vec{A}\), the traingle law of vector addition can be stated as : 
+
+                        <br/><br/>
+
+
+                        The <b>resultant</b> (or sum of) the vectors \(\vec{A}\) and \(\vec{B}\), \(\vec{R}\) is the vector from the the tail of \(\vec{A}\) to the head of \(\vec{B}\). 
+                        
+                        <br/>
+                        <br/>
+                        This is known as Triangle law of vector addition as the three vectors involved are forming a triangle for the rule to apply.
+                        
+
+                        <br/><br/>
+                        
+
+                        
+                        <p class="clrb" id="trainglelaweg"><b>Example:</b></p>
+
+                        <div class="imgdiv" style="float: left;">
+                            <figure>
+                                    <img src="/images/v14.png" alt="Force acting on a plate in differnet directions." width="200px;" id="img1.4"/>
+                                    <figcaption><center><span style="color: red;">Fig 1.4</span>: Resultant of forces on a plate </center></figcaption>
+                            </figure>
+                        </div>
+
+                        <p>
+                        If we apply force \(\vec{A}\) and \(\vec{B}\) on a plate as shown in <a href="#img1.4">Figure 1.4</a>, then the plate would have a net motion in the direction of \(\vec{R}\) as shown. This is the insight over the triangle law.
+                        One may notice that the vectors are <b>pararllelly translated</b> and then made into triangle of <a href="#img1.3">Figure 1.3</a>.
+                        
+                        This shows that the vectors,  irrespective of their position in space, represent the exactly same thing as long as their magnitude and direction are the same.
+                        </p>
+                        <br/><br/>
+
+
+                        
+                    </p>
+
+
+
+
+
+
+
+                    <br/><br/>
+
+
+                    <li class="clrb" id="parallelogramlaw"><b><u>Parallelogram Law</u>:</b></li>
+
+                    <p>
+                        Again, consider the vectors \(\vec{A}\) and \(\vec{B}\) arranged (by parallel translation) such that the tail of \(\vec{A}\) and \(\vec{B}\) coincides. Now, the parallelogram law can be stated as follows: 
+
+
+                    </p>
+
+                    <div class="imgdiv" style="float: right;">
+                        <figure>
+                                <img src="/images/v15.png" alt="Image associated with Parallelogram law of vector addition" width="230px;" id="img1.5"/>
+                                <figcaption><center><span style="color: red;">Fig 1.5</span>: Parallelogram Law </center></figcaption>
+                        </figure>
+                    </div>
+
+                    <p>
+                        The resultant or the sum of two vectors, \(\vec{A}\) and \(\vec{B}\) is the diagonal of the parallelogram formed by \(\vec{A}\) and \(\vec{B}\) as adjacent sides, directed from the point of coincidence of tail of the two vectors to the opposite vertex of the parallelogram i.e. the vector \(\vec{R}\) in the <a href="#img1.5">Figure 1.5</a>.
+                    </p>
+
+                    <p>
+                        This is the same as the <a href="#trianglelaw">Triangle law</a> as we can parallelly translate the vector \(\vec{B}\) to the right side of the paralleogram and form the triangle as was in the <a href="#img1.3">Figure 1.3</a>. But, the two of them have their own significance as we use Parallelogram law to find the <a href="#magnitudeofresultantvector">magnitude of resultant vector</a> and triangle law in expressing one vector as <a href="#differenceofvectors">difference of two</a>, to say one of many uses.
+                    </p>
+
+
+                    <p class="clrb"><b>Example :</b></p>
+
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                                <img src="/images/v16.png" alt="Example image of parallelogram law" width="200px;" id="img1.6"/>
+                                <figcaption><center><span style="color: red;">Fig 1.6</span>:Resultant using parallelgram law </center></figcaption>
+                        </figure>
+                    </div>
+
+
+                    <p>
+                        Consider the <a href="#img1.6">Figure 1.6</a> as shown. It is just a reimagination of the <a href="trianglelaweg">Triangle Law Example</a> using the Paralellogram Law. Some may find this one more intuitive as the forces \(\vec{A}\) and \(\vec{B}\) are shown so as to form a parallelogram, imagning the forces to be pull forces instead of push forces as was in the <a href="#img1.4">Figure 1.4</a>. These eamples illustrates the variety of methods, each having their own beauty, to analyse a given situation.
+                    </p>
+                    <p>We now move towards quantifying the above analysis.</p>
+
+                </ol>
+            
+
+
+                <!-- <br/><br/>
+                <ul class="mainlist">
+                    <li style="font-size: 18px;" class="clrb" id="magnitudeofresultantvector"><b><u>Magnitude of Resultant vector</u>:</b></li>
+
+
+                    <p>
+                        Consider two vectors \(\vec{a}\) and \(\vec{b}\) (with magnitudes \(a\) and \(b\) respectively), with an angle \(\theta\) between the two vectors, when they are joined tail to tail.
+                        <br/>
+                        It can be noted that whenever we say <b>angle between two vectors</b>, we talk about this angle only (i.e. when they are joined tail to tail.)
+                    </p>
+
+
+
+                </ul> -->
+
+
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+    
+
+
+    <footer>
+        <p style="align-self: center; padding-left: 10px; text-shadow: 0 0 1px white;"> &copy; 2025 <a href="/index.html">Physics Derived</a>. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    const navLinks = document.querySelectorAll('nav a');
+
+    
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+            
+        }
+    });
+
+    function ocnav() {
+        var nav = document.getElementById("nav");
+        var navbar = document.getElementById("navbar");
+        var navclo = document.getElementById("navclo")
+        var computedStyle = window.getComputedStyle(nav);
+
+
+        window.addEventListener("resize", function() {
+            if (window.innerWidth > 700) {
+                nav.style.display = "flex";
+                navbar.style.display = "none";
+                navclo.style.display = "none";
+
+            }
+            else{
+                nav.style.display = "none";
+                navbar.style.display = "block";
+                navclo.style.display = "none";
+            }
+        });
+        // Check if the current display is "none" using computed style
+        if (computedStyle.display === "none") {
+            nav.style.display = "block";  // Show the nav
+            navbar.style.display = "none";
+            navclo.style.display = "block";
+
+        }
+
+        else{
+            nav.style.display = "none";
+            navbar.style.display = "block";
+            navclo.style.display = "none";
+        
+        }
+    }
+    </script>
+    
+</body>
+</html>

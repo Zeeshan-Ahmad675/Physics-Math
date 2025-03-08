@@ -26,15 +26,16 @@
         ul a:hover{
             text-decoration: underline;
         }
-
-
-        .mathbox{
-            display: flex; 
-            justify-content: center; 
-            align-items: start;
-            flex-wrap: wrap;
-            left: 0;
+        ul.c1ul>li::marker{
+            content:"→ ";
+            font-size: 20px;
         }
+        ul.mainlist>li::marker{
+            content: "✶ ";
+            font-size: 20px;
+        }
+        
+
 
         .clrb{
             clear: both;
@@ -58,19 +59,7 @@
         }
 
 
-        mjx-container[display="true"] {
-            font-size: 110% !important;
-            text-align: left !important;
-            width: 100% !important;
-            margin-left: 6% !important;
-            padding: 20px;
-        }
-
-
-        mjx-mtable {
-            text-align: left !important;
-            margin-left: 10px;
-        }
+        
 
         
 
@@ -81,11 +70,8 @@
                 text-align: center;
             }
             mjx-mtable {
-            margin-left: 0px;
+            margin-left: 0;
             }
-        }
-        @media screen and (max-width: 607px) {
-           
         }
     </style>
 </head>
@@ -142,16 +128,14 @@
 
 
         <h2 id="basicgeometry">1. Basic Geometry</h2>
-        <ul>
 
+        <ul class="mainlist">
 
-
-
-            <li style="text-decoration: underline; font-size: 110%;" id="pythagoras"><b>Pythagoras Theorem:</b></li>
+            <li style="font-size: 110%;" id="pythagoras"><b><u>Pythagoras Theorem</u>:</b></li>
 
             <div class="imgdiv" style="float: right;">
                 <figure>
-                        <img src="/images/rangle.png" alt="An image of a right angled triangle" width="180px;" id="img1.1"/>
+                        <img src="/images/mp11.png" alt="An image of a right angled triangle" width="180px;" id="img1.1"/>
                         <figcaption><center><span style="color: red;">Fig 1.1</span>: Right angled <br/>triangle</center></figcaption>
                 </figure>
             </div>
@@ -163,7 +147,7 @@
 
             <p>Here is a simple proof using triangle similarity.</p>
 
-            <ul>
+            <ul class="c1ul">
                 <br/>
                 <br/>
                 <li class="clrb"><b><u>Proof</u>:</b></li>
@@ -220,7 +204,7 @@
 
 
 
-            <ul>
+            <ul class="c1ul">
                 <br/><br/>
                 <li><b><u>2 dimensional case:</u></b></li>
                 <p id="eq1.2">For two points in the two dimensional plane, say \(A(x_1,y_1)\) and \(B(x_2,y_2)\), the distance between them is:
@@ -230,7 +214,7 @@
 
                 <div class="imgdiv" style="float: right;">
                     <figure>
-                            <img src="/images/distance2d.png" alt="Figure describing the distance between two points in 2 dimensions" width="290px;" id="img1.2"/>
+                            <img src="/images/mp12.png" alt="Figure describing the distance between two points in 2 dimensions" width="290px;" id="img1.2"/>
                             <figcaption><center><span style="color: red;">Fig 1.2</span>: Distance in 2 dimensions<br/></center></figcaption>
                     </figure>
                 </div>
@@ -270,7 +254,7 @@
 
                     <div class="imgdiv" style="float: right;">
                         <figure>
-                                <img src="/images/distance3d.png" alt="Figure describing the distance between two points in 3 dimensions" width="290px;" id="img1.3"/>
+                                <img src="/images/mp13.png" alt="Figure describing the distance between two points in 3 dimensions" width="290px;" id="img1.3"/>
                                 <figcaption><center><span style="color: red;">Fig 1.3</span>: Distance in 3 dimensions<br/></center></figcaption>
                         </figure>
                     </div>
@@ -296,7 +280,7 @@
 
                 <div class="imgdiv" style="float: left;">
                     <figure>
-                            <img src="/images/distance23d.png" alt="Figure describing the distance between two points in 2 dimensions" width="230px;" id="img1.4"/>
+                            <img src="/images/mp14.png" alt="Figure describing the distance between two points in 2 dimensions" width="230px;" id="img1.4"/>
                             <figcaption><center><span style="color: red;">Fig 1.4</span>: Top view of the points in 3D<br/></center></figcaption>
                     </figure>
                 </div>
@@ -354,7 +338,7 @@
             We start by defining some some relations in between the angle and side length of the <a href="#img1.1">right angled triangle</a>, and move towards a general form.
         </p>
 
-        <ul>
+        <ul class="mainlist">
             <br/><br/>
             <li style="font-size: 110%;" id=""><b><u>Some
                 definitions</u>:</b></li> 
@@ -364,7 +348,7 @@
 
                 <div class="imgdiv" style="float: right;">
                     <figure>
-                            <img src="/images/trigdef.png" alt="An image of a right angled triangle" width="180px;" id="img2.1"/>
+                            <img src="/images/mp21.png" alt="An image of a right angled triangle" width="180px;" id="img2.1"/>
                             <figcaption><center><span style="color: red;">Fig 2.1</span>: Right angled triangle<br/> with side lengths</center></figcaption>
                     </figure>
                 </div>

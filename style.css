@@ -13,6 +13,20 @@ p{
     line-height: 1.5;
 }
 
+mjx-container[display="true"] {
+    font-size: 110% !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin-left: 6% !important;
+    padding: 20px;
+}
+
+
+mjx-mtable {
+    text-align: left !important;
+    margin-left: 10px;
+}
+
 
 main{
     width: 85%;
