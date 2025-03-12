@@ -15,8 +15,9 @@
             padding: 0;
             list-style-position: inside;
         }
-        a{
+        main a:link{
             text-decoration: none;
+            color: #3366CC;
         }
         ol a:hover{
             text-decoration: underline;
@@ -104,7 +105,16 @@
         <nav id="nav">
             <a href="/index.html" title="Home"><div class="nav-item">Home</div></a>
             <a href="/about.html" title="About this site"><div class="nav-item">About</div></a>
-            <a href="/chapters.html" title="List of Chapters"><div class="nav-item">Chapters</div></a>
+            
+            <div style="overflow: visible; height: 56px;" id="navchap">
+                <a href="/chapters.html" title="List of Chapters"><div class="nav-item" style="text-align: center;">Chapters</div></a>
+
+                <div style="background-color: rgb(219, 217, 217);" id="chapterlist">
+                    <a href="Mathematical_methods_in_physics.html"><div style="width: 100%; color: black; text-align: center;">Mathematical Methods</div></a>
+                    <a href="vectors.html"><div style="width: 100%; color: black; text-align: center;">Vectors</div></a>
+                </div>
+            </div>
+
             <a href="/contact.html" title="Contact Us"><div class="nav-item">Contact</div></a>
             <a href="/further.html"><div class="nav-item">Further</div></a>
         </nav>
@@ -137,7 +147,7 @@
         <h2 id="introduction">1. Introduction</h2>
 
         <p>
-            In our everyday-life, we encounter mainly three quantities - <b>Scalars, Vectors</b> and <b>Higher rank Tensors</b>. To say, Scalar and Vectors are zero and 1st rank tensors, respectively. But, we won't be discussing higher rank tensors here.
+            In our everyday-life, we encounter three quantities - <b>Scalars, Vectors</b> and <b>Higher rank Tensors</b>. To say, Scalar and Vectors are zero and 1st rank tensors, respectively. But, we won't be discussing higher rank tensors here.
             <br/><br/>
 
             <ul class="mainlist">
@@ -240,12 +250,12 @@
 
                         <div class="imgdiv" style="float: right;">
                             <figure>
-                                    <img src="/images/v13.png" alt="Figure displaying the triangle law of vector addition." width="180px;" id="img1.3"/>
-                                    <figcaption><center><span style="color: red;">Fig 1.3</span>: Triangle Law</center></figcaption>
+                                    <img src="/images/v21.png" alt="Figure displaying the triangle law of vector addition." width="180px;" id="img2.1"/>
+                                    <figcaption><center><span style="color: red;">Fig 2.1</span>: Triangle Law</center></figcaption>
                             </figure>
                         </div>
 
-                        Consider the vectors \(\vec{A}\) and \(\vec{B}\) as shown in <a href="#img1.3">Figure 1.3</a>. When, the three vectors \(\vec{A}\), \(\vec{B}\) and \(\vec{R}\) forms a triangle with the tail of \(\vec{B}\) on the head of \(\vec{A}\), the traingle law of vector addition can be stated as : 
+                        Consider the vectors \(\vec{A}\) and \(\vec{B}\) as shown in <a href="#img2.1">Figure 2.1</a>. When, the three vectors \(\vec{A}\), \(\vec{B}\) and \(\vec{R}\) forms a triangle with the tail of \(\vec{B}\) on the head of \(\vec{A}\), the traingle law of vector addition can be stated as : 
 
                         <br/><br/>
 
@@ -261,18 +271,18 @@
                         
 
                         
-                        <p class="clrb" id="trainglelaweg"><b>Example:</b></p>
+                        <p class="clrb" id="trianglelaweg"><b>Example:</b></p>
 
                         <div class="imgdiv" style="float: left;">
                             <figure>
-                                    <img src="/images/v14.png" alt="Force acting on a plate in differnet directions." width="200px;" id="img1.4"/>
-                                    <figcaption><center><span style="color: red;">Fig 1.4</span>: Resultant of forces on a plate </center></figcaption>
+                                    <img src="/images/v22.png" alt="Force acting on a plate in differnet directions." width="200px;" id="img2.2"/>
+                                    <figcaption><center><span style="color: red;">Fig 2.2</span>: Resultant of forces on a plate </center></figcaption>
                             </figure>
                         </div>
 
                         <p>
-                        If we apply force \(\vec{A}\) and \(\vec{B}\) on a plate as shown in <a href="#img1.4">Figure 1.4</a>, then the plate would have a net motion in the direction of \(\vec{R}\) as shown. This is the insight over the triangle law.
-                        One may notice that the vectors are <b>pararllelly translated</b> and then made into triangle of <a href="#img1.3">Figure 1.3</a>.
+                        If we apply force \(\vec{A}\) and \(\vec{B}\) on a plate as shown in <a href="#img2.2">Figure 2.2</a>, then the plate would have a net motion in the direction of \(\vec{R}\) as shown. This is the insight over the triangle law.
+                        One may notice that the vectors are <b>pararllelly translated</b> and then made into triangle of <a href="#img2.1">Figure 2.1</a>.
                         
                         This shows that the vectors,  irrespective of their position in space, represent the exactly same thing as long as their magnitude and direction are the same.
                         </p>
@@ -301,17 +311,17 @@
 
                     <div class="imgdiv" style="float: right;">
                         <figure>
-                                <img src="/images/v15.png" alt="Image associated with Parallelogram law of vector addition" width="230px;" id="img1.5"/>
-                                <figcaption><center><span style="color: red;">Fig 1.5</span>: Parallelogram Law </center></figcaption>
+                                <img src="/images/v23.png" alt="Image associated with Parallelogram law of vector addition" width="230px;" id="img2.3"/>
+                                <figcaption><center><span style="color: red;">Fig 2.3</span>: Parallelogram Law </center></figcaption>
                         </figure>
                     </div>
 
                     <p>
-                        The resultant or the sum of two vectors, \(\vec{A}\) and \(\vec{B}\) is the diagonal of the parallelogram formed by \(\vec{A}\) and \(\vec{B}\) as adjacent sides, directed from the point of coincidence of tail of the two vectors to the opposite vertex of the parallelogram i.e. the vector \(\vec{R}\) in the <a href="#img1.5">Figure 1.5</a>.
+                        The resultant or the sum of two vectors, \(\vec{A}\) and \(\vec{B}\) is the diagonal of the parallelogram formed by \(\vec{A}\) and \(\vec{B}\) as adjacent sides, directed from the point of coincidence of tail of the two vectors to the opposite vertex of the parallelogram i.e. the vector \(\vec{R}\) in the <a href="#img2.3">Figure 2.3</a>.
                     </p>
 
                     <p>
-                        This is the same as the <a href="#trianglelaw">Triangle law</a> as we can parallelly translate the vector \(\vec{B}\) to the right side of the paralleogram and form the triangle as was in the <a href="#img1.3">Figure 1.3</a>. But, the two of them have their own significance as we use Parallelogram law to find the <a href="#magnitudeofresultantvector">magnitude of resultant vector</a> and triangle law in expressing one vector as <a href="#differenceofvectors">difference of two</a>, to say one of many uses.
+                        This is the same as the <a href="#trianglelaw">Triangle law</a> as we can parallelly translate the vector \(\vec{B}\) to the right side of the paralleogram and form the triangle as was in the <a href="#img2.1">Figure 2.1</a>. But, the two of them have their own significance as we use Parallelogram law to find the <a href="#magnitudeofresultantvector">magnitude of resultant vector</a> and triangle law in expressing one vector as <a href="#differenceofvectors">difference of two</a>, to say one of many uses.
                     </p>
 
 
@@ -319,14 +329,14 @@
 
                     <div class="imgdiv" style="float: left;">
                         <figure>
-                                <img src="/images/v16.png" alt="Example image of parallelogram law" width="200px;" id="img1.6"/>
-                                <figcaption><center><span style="color: red;">Fig 1.6</span>:Resultant using parallelgram law </center></figcaption>
+                                <img src="/images/v24.png" alt="Example image of parallelogram law" width="200px;" id="img2.4"/>
+                                <figcaption><center><span style="color: red;">Fig 2.4</span>:Resultant using parallelgram law </center></figcaption>
                         </figure>
                     </div>
 
 
                     <p>
-                        Consider the <a href="#img1.6">Figure 1.6</a> as shown. It is just a reimagination of the <a href="trianglelaweg">Triangle Law Example</a> using the Paralellogram Law. Some may find this one more intuitive as the forces \(\vec{A}\) and \(\vec{B}\) are shown so as to form a parallelogram, imagning the forces to be pull forces instead of push forces as was in the <a href="#img1.4">Figure 1.4</a>. These eamples illustrates the variety of methods, each having their own beauty, to analyse a given situation.
+                        Consider the <a href="#img2.4">Figure 2.4</a> as shown. It is just a reimagination of the <a href="#trianglelaweg">Triangle Law Example</a> using the Paralellogram Law. Some may find this one more intuitive as the forces \(\vec{A}\) and \(\vec{B}\) are shown so as to form a parallelogram, imagining the forces to be <b>pull</b> forces instead of <b>push</b> forces as was in the <a href="#img2.2">Figure 2.2</a>. These eamples illustrates the variety of methods, each having their own beauty, to analyse a given situation.
                     </p>
                     <p>We now move towards quantifying the above analysis.</p>
 
@@ -334,23 +344,123 @@
             
 
 
-                <!-- <br/><br/>
+
+
+
+                <br/><br/>
                 <ul class="mainlist">
-                    <li style="font-size: 18px;" class="clrb" id="magnitudeofresultantvector"><b><u>Magnitude of Resultant vector</u>:</b></li>
+                    <li style="font-size: 18px;" class="clrb" id="magnitudeofresultantvector"><b><u>Magnitude and direction of Resultant vector</u>:</b></li>
 
 
                     <p>
-                        Consider two vectors \(\vec{a}\) and \(\vec{b}\) (with magnitudes \(a\) and \(b\) respectively), with an angle \(\theta\) between the two vectors, when they are joined tail to tail.
+                        Consider two vectors \(\vec{a}\) and \(\vec{b}\) (with magnitudes \(a\) and \(b\) respectively), with an angle \(\theta\) between the two vectors, when they are joined tail to tail, as shown in the <a href="#img2.5">Figure 2.5</a>.
                         <br/>
-                        It can be noted that whenever we say <b>angle between two vectors</b>, we talk about this angle only (i.e. when they are joined tail to tail.)
+                        It can be noted that whenever we say <mark><b>angle between two vectors</b></mark>, we talk about this angle only (i.e. when they are joined tail to tail.)
+                    </p>
+
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                                <img src="/images/v25.png" alt="Image regarding magnitude of resultant vector" width="250px;" id="img2.5"/>
+                                <figcaption><center><span style="color: red;">Fig 2.5</span>:Magnitude of resultant vector</center></figcaption>
+                        </figure>
+                    </div>
+
+
+                    <p>
+                        Using <a href="#parallelogramlaw">parallelogram law</a>, we can draw the parallelogram \(PSRT\) and assign the diagonal \(PQ\) as the resultant vector \(\vec{R}\). Also, \(SR = PT = b\). Further, using simple <a href="Mathematical_methods_in_physics.html#trigonometry">trigonometry</a>, we get the side lengths of the right angled triangle, \(\triangle RQS\) as :
+
+                        $$
+                            \begin{align}
+                            SQ &= b\cos{\theta} \\
+                            RQ &= b\sin{\theta}
+                            \end{align}
+                        $$
+
+
+                        <p id="eq2.1" class="clrb">Now, from the right angled triangle \(\triangle PQR\) and using <a href="Mathematical_methods_in_physics.html#pythagoras">pythagoras theorem</a>,</p> 
+
+                        $$
+                        \begin{align}
+                        |R|^2 &= (a+b\cos{\theta})^2 + (b\sin{\theta})^2 \\
+                        \implies R^2 &= a^2+ b^2 \cos^2{\theta} + 2ab\cos{\theta} + b^2\sin^2{\theta} \\
+                        \implies R &= \sqrt{a^2+b^2 + 2ab\cos{\theta}}\hspace{1cm} (2.1)
+                        \end{align} 
+                        $$
+
+                        In the last step we used the identity, \(\sin^2{\theta} + \cos^2{\theta} = 1\).
+                        Equation <a href="#eq2.1">2.1</a> gives the <b>magnitude</b> of the resultant of two vectors described above.
+
+                    </p>
+
+                    <p id="eq2.2">
+                        Now, for the <b>direction</b> of the resultant vector, say it is at an angle \(\phi\) with the vector \(\vec{a}\) as shown in <a href="#img2.5">Figure 2.5</a>. Then, from \(\triangle PQR\), we get:
+
+                        $$
+                        \begin{align}
+                            \tan{\phi} &= \frac{QR}{PQ} = \frac{b\sin{\theta}}{a+b\cos{\theta}} \\
+                            \implies \phi &= \tan^{-1}\left(\frac{b\sin{\theta}}{a+b\cos{\theta}}\right) \hspace{1cm} (2.2)
+                        \end{align}
+                        $$
+                    </p>
+
+                    <p>
+                        <b>Special Case\(\left(|\vec{a}|=|\vec{b}|\right)\):</b> When the two vectors \(\vec{a}\) and \(\vec{b}\) have the same length, say \(a\) and angle between them be \(\theta\). Then, using equation <a href="#eq2.1">2.1</a>, the resultant would have magnitude as: 
+
+                        $$
+                        \begin{align}
+                            R &= \sqrt{a^2 + a^2 + 2a^2 \cos{\theta}}\\
+                            \implies R &= \sqrt{2a^2(1+\cos{\theta})}\\
+                            \implies R &= \sqrt{2a^2\times 2\cos^2{\left(\frac{\theta}{2}\right)}}\\
+                            \implies  R &= 2a\cos{\left(\frac{\theta}{2}\right)} \hspace{1cm} (2.3)
+                        \end{align}
+                        $$
+
+                        In this case, the resultant vector would be along the angle bisector of between the two vectors i.e. \(\phi=\frac{\theta}{2}\).
+                    </p>
+
+                    <br/><br/>
+                    <li><b><u>Difference of two vectors</u>:</b></li>
+
+                    <p>
+                        The difference of two vectors is the sum of the first vector and the negative of the vector being subtracted. Consider the same vectors \(\vec{a}\) and \(\vec{b}\) again as shown in <a href="img2.6">Figure 2.6</a>.
                     </p>
 
 
 
-                </ul> -->
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                                <img src="/images/v26.png" alt="Image regarding magnitude of resultant vector" width="250px;" id="img2.6"/>
+                                <figcaption><center><span style="color: red;">Fig 2.6</span>: Difference of two vectors</center></figcaption>
+                        </figure>
+                    </div>
 
+                    <p>
+                        We have to find the difference \(\vec{a}-\vec{b}\). So, we rewrite it as \((\vec{a}+(-\vec{b}))\). And clearly, this represents the diagonal of the parallelogram formed by \(\vec{a}\) and \(-\vec{b}\) as its resultant, as shown in figure.
+                    </p>
 
-        </p>
+                    <p>
+                        Since, here the angle between \(\vec{a}\) and \(\vec{b}\) is \(\theta\), so the angle between \(\vec{a}\) and \(-\vec{b}\) (the vectors which originally have to be "added") would be \((\pi-\theta)\). Now, using the equation <a href="#eq2.1">2.1</a> for the magnitude of \(\vec{R}\), we get:
+                    </p>
+
+                    <p class="clrb">
+                        The magnitude of the resultant vector after subtracting the two vectors:
+                    </p>
+
+                    $$
+                    \begin{align}
+                       |\vec{R}| = |\vec{a}-\vec{b}| &= \sqrt{a^2 + b^2 + 2ab \cos(\pi-\theta)} \\
+
+                       R &= \sqrt{a^2 + b^2 - 2ab\cos\theta}\\
+
+                       (\because \cos(\pi-\theta) &= -\cos{\theta})
+                    \end{align}
+                    $$
+
+                    <p>
+                        If you have noticed, we have taken the magnitude of the negative vector, \(-\vec{b}\) to be the same \(b\). This is because the length of the vector remains the same even after negating it. The angle \(\phi\) that gives the direction of \(\vec{R}\) is calculated in the same way.
+
+                </ul>
+            </p>
 
 
 

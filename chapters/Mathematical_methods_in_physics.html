@@ -14,8 +14,12 @@
             padding: 0;
             list-style-position: inside;
         }
-        a{
+        main a{
             text-decoration: none;
+            color: #3366CC
+        }
+        main a:visited{
+            color: purple;
         }
         ol a:hover{
             text-decoration: underline;
@@ -99,7 +103,16 @@
         <nav id="nav">
             <a href="/index.html" title="Home"><div class="nav-item">Home</div></a>
             <a href="/about.html" title="About this site"><div class="nav-item">About</div></a>
-            <a href="/chapters.html" title="List of Chapters"><div class="nav-item">Chapters</div></a>
+            
+            <div style="overflow: visible; height: 56px;" id="navchap">
+                <a href="/chapters.html" title="List of Chapters"><div class="nav-item" style="text-align: center;">Chapters</div></a>
+
+                <div style="background-color: rgb(219, 217, 217);" id="chapterlist">
+                    <a href="Mathematical_methods_in_physics.html"><div style="width: 100%; color: black; text-align: center;">Mathematical Methods</div></a>
+                    <a href="vectors.html"><div style="width: 100%; color: black; text-align: center;">Vectors</div></a>
+                </div>
+            </div>
+ 
             <a href="/contact.html" title="Contact Us"><div class="nav-item">Contact</div></a>
             <a href="/further.html"><div class="nav-item">Further</div></a>
         </nav>

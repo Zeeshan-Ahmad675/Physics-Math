@@ -76,6 +76,18 @@ nav{
 .nav-item{
     padding: 18px;
 }
+
+#chapterlist{
+    display: none;
+}
+#chapterlist div{
+    padding: 18px;
+    border-bottom: 1px solid black;
+}
+#navchap:hover div{
+    display: block;
+}
+
 nav a{
     text-decoration: none;
     color: white;
@@ -172,6 +184,7 @@ footer{
 }
 footer a{
     color: hsl(170, 100%, 50%);
+    text-decoration: none;
 }
 
 
@@ -280,6 +293,9 @@ footer a{
         text-align: center;
         animation-name: anime;
         animation-duration: 1s;
+    }
+    #navchap:hover #chapterlist{
+        display: none;
     }
     #navbar{
         display: block;
