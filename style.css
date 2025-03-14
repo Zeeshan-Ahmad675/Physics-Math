@@ -119,6 +119,24 @@ nav a.active {
 
 /* Main Content */
 
+#downloadBtn{
+    font-size: 15px;
+    background-color: hsl(0, 0%, 78%);
+    border-radius: 15px;
+    border: none;
+    padding: 8px;
+}
+#downloadBtn a{
+    color: hsl(211, 100%, 50%);
+}
+#downloadBtn:hover{
+    background-color: hsl(0, 0%, 83%);
+}
+#downloadBtn:active{
+    background-color: hsl(0, 0%, 88%);
+}
+
+
 main{
     margin: 8px;
 }

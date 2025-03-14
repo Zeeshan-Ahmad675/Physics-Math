@@ -31,7 +31,7 @@
             text-decoration: underline;
         }
         ul.c1ul>li::marker{
-            content:"→ ";
+            content:"➝ ";
             font-size: 20px;
         }
         ul.mainlist>li::marker{
@@ -124,6 +124,17 @@
             <h1>Mathematical Methods</h1>
         </center>
 
+
+        <!-- <span><b>Read Offline in PDF</b></span>
+        <button id="downloadBtn">
+            <a href="/Mathematical Methods.pdf" download="Mathematical Methods.pdf">
+                Download PDF
+            </a>
+        </button>
+
+        <hr/> -->
+        
+
         <p>The reader is assumed to have some <mark>basic understanding of geometry and algebra</mark>. <br/>Topics covered in this section are as follows:</p>
         
         <ol>
@@ -188,9 +199,9 @@
                     <div class="mathbox">
                     $$
                     \begin{align}
-                    AB=AD+BD &\implies AB =  \frac{BC^2}{AB} + \frac{AC^2}{AB} \\
+                    AB=AD+BD &\implies AB =  \frac{BC^2}{AB} + \frac{AC^2}{AB} \\[4pt]
 
-                    &\implies AB^2 = BC^2+AC^2\\
+                    &\implies AB^2 = BC^2+AC^2\\[4pt]
                     
                     &\implies c^2 = a^2+b^2
                     \end{align}
@@ -238,8 +249,10 @@
                 <div>
                     $$
                     \begin{aligned}
-                    &AB^2= AC^2+BC^2 \\
-                     \implies &r^2 = (x_2-x_1)^2+(y_2-y_1)^2 \\
+                    &AB^2= AC^2+BC^2 \\[4pt]
+
+                    \implies &r^2 = (x_2-x_1)^2+(y_2-y_1)^2 \\[4pt]
+
                     \implies &r = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
                     \end{aligned}
                     $$
@@ -545,13 +558,115 @@
 
 
 
+
+
+            <br/><br/>
+            <li style="font-size: 110%;" id=""><b><u>Pythagorean Trigonometric Identities</u>:</b></li> 
+
+            <p>Some of the real "building block" identities of trigonometry are as follows: </p>
+            
+            <ul class="c1ul">
+                <li><b><u>Fundamental Pythagorean Identity</u>:</b></li>
+
+                <p id="eq2.4">
+                    To start with, consider the <a href="#img2.1">Figure 2.1</a> again. Let's try to calculate the sum of square of \(\sin{\theta}\) and \(\cos{\theta}\):
+
+                    $$
+                    \begin{align}
+                        \sin^2{\theta} + \cos^2{\theta} &= \left(\frac{p}{h}\right)^2 + \left(\frac{b}{h}\right)^2 \\
+
+                        \implies \sin^2{\theta} + \cos^2{\theta} &= \frac{p^2 + b^2}{h^2}\\
+
+                        \implies \sin^2{\theta} + \cos^2{\theta} &= \frac{h^2}{h^2} \\
+
+                        \implies \sin^2{\theta} + \cos^2{\theta} &= 1 \hspace{1cm} (2.4) 
+                    \end{align}
+                    $$
+
+                    The last equation (<a href="#eq2.4">Eq. 2.4</a>) is the required fundamental pythagorean identity. We have used the <a href="#pythagoras">pythagoras theorem</a> to proceed to the third equation from second.
+                </p>
+
+
+                <li><b><u>Other pythagorean identities</u>:</b></li>
+
+                <p id="eq2.5">
+                    Two other pythagorean identities are:
+
+                    $$
+                    \begin{align}
+                        1 + \tan^2{\theta} &= \sec^2{\theta} \hspace{1cm} (2.5) \\[5pt]
+
+                        1 + \cot^2{\theta} &= \csc^2{\theta} \hspace{1cm} (2.6) 
+                    \end{align}
+                    $$
+
+                    These are easily derived from the fundamental identity, as equation <a href="#eq2.5">2.5</a> can be derived by dividing the equation<a href="#eq2.4"> 2.4</a> on both sides by \(\cos^2{\theta}\) and equation <a href="#eq2.5">2.6</a>, by dividing both side of <a href="#eq2.4">2.4</a> by \(\sin^2{\theta}\), as is done below:
+
+                    $$
+                    \begin{align}
+                        &\sin^2{\theta} + \cos^2{\theta} = 1 \\[4pt]
+
+                       
+                    
+                        \implies &\frac{\sin^2{\theta} + \cos^2{\theta}}{\cos^2{\theta}} = \frac{1}{\cos^2{\theta}} \\[4pt]
+
+                        \implies &\tan^2{\theta} + 1 = \sec^2{\theta}
+                    \end{align}
+                    $$
+
+                    and 
+
+                    $$
+                    \begin{align}
+                        &\sin^2{\theta} + \cos^2{\theta} = 1 \\[4pt]
+
+                       
+                    
+                        \implies &\frac{\sin^2{\theta} + \cos^2{\theta}}{\sin^2{\theta}} = \frac{1}{\sin^2{\theta}} \\[4pt]
+
+                        \implies &1 + \cot^2{\theta} = \csc^2{\theta}
+                    \end{align}
+                    $$
+
+                    These identities are extremely useful for analyzing trigonometry further, as we would see in the upcoming sections.
+                </p>
+            </ul>
+
+
+
+
+            <br/><br/>
+            <li style="font-size: 110%;" id=""><b><u>Review and talk on angles</u>:</b></li> 
+
+            <p>
+                Till now, we have been handling angles in degrees as one can see in <a href="#table2.1">table 2.1</a>. By convention, \(360^{\circ}\) is the whole angle about a point. Further, we say that the right angle is \(90^{\circ}\) and so on. Now, we move towards defining a new unit of angle measure, <b>raidans</b>.
+            </p>
+
+            <p>
+                <b>One radian</b> is defined as the angle subtended at the center of circle by an <b>arc of length equal to the radius</b>, of the circle in consideration. This is shown in the <a href="#img2.2">figure 2.2</a>.
+            </p>
+
+            <div class="imgdiv" style="float: right;">
+                <figure>
+                        <img src="/images/mp22.png" alt="Image showing 1 radian as angle subtended by an arc of length equal to rasius of circle at its center" width="220px;" id="img2.2"/>
+                        <figcaption><center><span style="color: red;">Fig 2.2</span>: Definition of 1 radian</center></figcaption>
+                </figure>
+            </div>
+
+            <p>
+                It is often denoted simply as "rad" or sometimes by superscripting the angle value by "c" (example, \(1^{\text{c}})\). Also, if no any unit has been mentioned, then the unit is considered to be radians.
+            </p>
+
+            <p>
+                But why is the shift from degrees to radians is required? The answer is quite simple: because radian is a natural measure of angle, while degree is just an arbitrary convention. Radian pops up in <a href="#">differentiation</a>, <a href="#">Taylor's theorem</a>, and even in simple geometry, as we will observe in due course.
+            </p>
+
+
+
+
+
             <!-- <br/><br/>
-            <li style="font-size: 110%;" id=""><b><u>Basic Trigonometric Identities</u>:</b></li>  -->
-
-
-
-            <!-- <br/><br/>
-            <li style="font-size: 110%;" id=""><b><u>Reviewing angles and ahead</u>:</b></li>  -->
+            <li style="font-size: 110%;" id=""><b><u>Reviewing angles and ahead</u>:</b></li> -->
 
         </ul>
 
