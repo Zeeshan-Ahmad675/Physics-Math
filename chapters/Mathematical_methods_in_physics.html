@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
     <title>Mathematical Methods</title>
 
-    <style>
+    <style> 
         ul,ol{
             margin: 0;
             padding: 0;
@@ -654,19 +654,162 @@
             </div>
 
             <p>
-                It is often denoted simply as "rad" or sometimes by superscripting the angle value by "c" (example, \(1^{\text{c}})\). Also, if no any unit has been mentioned, then the unit is considered to be radians.
+                It is often denoted simply as "rad" or sometimes by superscripting the angle value by "c" (example, \(1^{\text{c}}\)). Also, if no any unit has been mentioned, then the unit is considered to be radians.
             </p>
 
             <p>
                 But why is the shift from degrees to radians is required? The answer is quite simple: because radian is a natural measure of angle, while degree is just an arbitrary convention. Radian pops up in <a href="#">differentiation</a>, <a href="#">Taylor's theorem</a>, and even in simple geometry, as we will observe in due course.
             </p>
-            <br/><br/><br/><br/>
+            
+
+            <br/><br/>
+            <ul class="c1ul">
+                <li class="clrb"><b><u>Relation between degree and radian</u>:</b></li>
+
+                <p>
+                    Consider the <a href="#img2.2">figure 2.2</a> again. The total angle about the point <span style="color: #1565C0;">O</span> is \(360^{\circ}\) in degrees. Also, one radian is the angle subtended by the arc of length \(r\), at the center. Further, since the circumference of circle with radius \(r\) is \(2\pi r\), so there can be
+                    
+                    $$
+                        \frac{2\pi r}{r} = 2\pi 
+                    $$
+
+                    arcs of length \(r\) about the whole circumference. This gives the total angle to be \(2\pi\) rads about the point <span style="color: #1565C0">O</span> in the circle.
+                </p>
+
+                <p id="eq2.7">
+                    The above argument shows that:
+
+                    $$
+                    \begin{align}
+                        360^{\circ} &= 2\pi \text{ rads} \hspace{2cm} (2.7)\\[4px]
+
+                        \implies 1^{\circ} &= \frac{2\pi}{360} \text{ rads} 
+                        \implies \boxed{1^{\circ}= \frac{\pi}{180} \text{ rads}}
+                    \end{align}
+                    $$
+                    and 
+                    $$
+                    \boxed{1\text{ rad}= \left(\frac{180}{\pi}\right)^{\circ}}
+                    $$
+
+
+                    One can check the following easily: 
+
+                    <table id="table2.2">
+                        <thead>
+                            <caption><span style="color: red;">Table 2.2</span>: Angles in degree with their corresponding radian value</caption>
+                            <tr style="background-color: lightblue; text-align: center;">
+                                <th>Degree\(^{\circ}\)</th>
+                                <th>Radian\(^{\text{c}}\)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(0\)</td>
+                                <td>\(0\)</td>
+                            </tr>
+
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(30\)</td>
+                                <td>\(\pi/6\)</td>
+                            </tr>
+
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(45\)</td>
+                                <td>\(\pi/4\)</td>
+                            </tr>
+
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(60\)</td>
+                                <td>\(\pi/3\)</td>
+                            </tr>
+
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(90\)</td>
+                                <td>\(\pi/2\)</td>
+                            </tr>
+
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(120\)</td>
+                                <td>\(2\pi/3\)</td>
+                            </tr>
+
+                            <tr style="background-color: aliceblue; text-align: center;">
+                                <td>\(180\)</td>
+                                <td>\(\pi\)</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr style="background-color: white;">
+                                <td colspan="2">\(...\) and so on.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
+                </p>
+            </ul>
+
+            <br/>
+            <ul class="c1ul">
+                <li><b><u>An important relation</u>:</b></li>
+
+                <p>
+                    By now, it should be clear that there is some relation between the radius, arc length and angle and angle subtended at the center of the circle. This relation looks really neat when the angle is taken in unit of radian. Let's now turn to it.
+                </p>
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/mp23.png" alt="Image showing the relation between angle, radius and arc length" width="220px;" id="img2.3"/>
+                            <figcaption><center><span style="color: red;">Fig 2.3</span>: Angle subtended by arc <br/>of length \(l\) in radians</center></figcaption>
+                    </figure>
+                </div>
+    
+
+                <p id="eq2.8">
+                    Say, we have a circle with radius \(r\) and consider an arc of length \(l\) about the cicumference that subtends an angle \(\theta \text{ rads}\) at the center if the circle, as in <a href="#img2.3">figure 2.3</a>. Clearly, <b>number of arcs</b> (in the mathematical sense) of length  \(r\) contained in length \(l\) is \(l/r\).  And since, each such arc subtends one radian at the center of the circle, total angle subtended by the arc of length \(l\) is:
+
+                    $$
+                        \theta^{\text{ c}} = \frac{l}{r} \hspace{1cm} (2.8)
+                    $$
+
+                    The superscript \(^\text{c}\) over \(\theta\) indicates that the angle should be measured in radians for this relation to hold.
+                </p>
+
+                <p>
+                    Clearly, this relation can be restated by measuring the angle in degrees using <a href="#eq2.7">eq 2.7</a> in <a href="#eq2.8">eq 2.8</a> to get:
+
+
+                    $$
+                        \theta^{\circ} = \frac{\pi}{180}\left(\frac{l}{r}\right)
+                    $$
+
+                    Here, the superscript \(^\circ\) over \(\theta\) indicates the angle is to be measured in degrees. One can see that the relation in radians is more intuitive and natural than that in degrees.
+                </p>
+            </ul>
+
+
 
 
 
 
             <!-- <br/><br/>
-            <li style="font-size: 110%;" id=""><b><u>Reviewing angles and ahead</u>:</b></li> -->
+            <li c;ass="clrb"><b><u>Angle Sum relations</u>:</b></li>
+  
+            <p>
+                The angle sum relations in trigonometry  for a function, relates the function of, say \((A+B)\) to the function(s) of \(A\) and \(B\) individually. For example,
+
+                $$
+                    \sin{(A+B)} = \sin{A}\cos{B} + \cos{A}\sin{B}
+                $$
+
+                is one the angle sum relations. The above equation would be our base for building further relations for diffrent function. First, let's see how we get it in the first place.
+            </p> -->
+
+
+
 
         </ul>
 
