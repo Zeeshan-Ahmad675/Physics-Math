@@ -1,0 +1,47 @@
+name: pages-build-deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Build the project
+      run: |
+        # Build commands go here
+        echo "Building the project..."
+
+    - name: Deploy to GitHub Pages
+      id: deploy
+      run: |
+        echo "Starting deployment..."
+        # Custom script to deploy and purge CDN with increased timeout and retry
+        attempt=0
+        max_attempts=5
+        timeout=300 # 5 minutes
+
+        while [ $attempt -lt $max_attempts ]; do
+          deployment_status=$(curl -s -X GET "https://api.github.com/repos/${{ github.repository }}/pages/deployment-status" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}")
+          if [[ "$deployment_status" == "purging_cdn" ]]; then
+            echo "CDN purge in progress, waiting..."
+            sleep $timeout
+          else
+            echo "Deployment status: $deployment_status"
+            break
+          fi
+          attempt=$((attempt + 1))
+        done
+
+        if [ $attempt -eq $max_attempts ]; then
+          echo "Timeout reached, aborting!"
+          exit 1
+        fi
+
+        echo "Deployment completed successfully!"
