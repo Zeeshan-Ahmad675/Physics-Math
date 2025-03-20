@@ -1,6 +1,11 @@
 /* General setup */
 * {
     box-sizing: border-box;
+    scroll-margin-top: 100px;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -46,8 +51,10 @@ header{
     position: sticky;
     top: 0;
     height: 56px;
-    z-index: 1;
+    z-index: 1000;
 }
+
+
 
 #name{
     padding-left: 8px;
@@ -72,6 +79,7 @@ nav{
     width: 60%;
     max-width: 600px;
     right: 0;
+    z-index: 3;
 }
 .nav-item{
     padding: 18px;
@@ -79,6 +87,9 @@ nav{
 
 #chapterlist{
     display: none;
+}
+#navchap{
+    z-index: 1000;
 }
 #chapterlist div{
     padding: 18px;
@@ -102,9 +113,11 @@ nav a.active {
 
 #navbar{
     display: none;
+    cursor: pointer;
 }
 #navclo{
     display: none;
+    cursor: pointer;
 }
 .navdiv{
     height: 3px;
@@ -136,6 +149,66 @@ nav a.active {
     background-color: hsl(0, 0%, 88%);
 }
 
+
+
+#mainfnav:hover>ol{
+    display: block;
+}
+#mainfnav{
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    left: 2%;
+    z-index: 2;
+    font-size: 0.8em;
+}
+
+#bfnav div{
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 3px;
+}
+#bfnav{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 2px;
+    background-color: white;
+    cursor:pointer;
+}
+#bfnav:hover{
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: 0 0 2px black;
+}
+
+
+#bfnavi{
+    display: none;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 0 0 2px black;
+    padding: 4px;
+}
+#bfnavi li{
+    list-style-type: none;
+}
+#bfnavi li{
+    padding: 2px;
+    margin: 2px;
+}
+#bfnavi>li{
+    border: 2px solid black;
+}
+#bfnavi a{
+    color: black;
+}
+#bfnavi li li:hover{
+    background-color: hsl(0, 0%, 95%);
+    text-decoration: underline;
+}
+#bfnavi li li:hover a{
+    color:hsl(230, 77%, 48%);
+}
 
 main{
     margin: 8px;

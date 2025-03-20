@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="/style.css"/>
     <link rel="icon" type="image/x-icon" href="https://physicsderived.club/favicon.ico"/>
@@ -49,7 +49,7 @@
         table {
             margin: auto;
             width: 100%;
-            max-width: 700px;
+            max-width: 800px;
             border-collapse: collapse;
         }
 
@@ -133,18 +133,78 @@
         </button>
 
         <hr/> -->
+
+        <div id="mainfnav">
+            <div>
+                <div id="bfnav" title="List of Contents">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <ol id="bfnavi">
+                <li><a href="#basicgeometry"  style="font-weight: bold;">Basic Geometry</a>
+    
+                    <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+                        <li><a href="#Pythagoras_Theorem">Pythagoras Theorem</a></li>
+                        <li><a href="#Distance_Formula">Distance Formula</a></li>
+                    </ol>
+    
+                </li>
+                <li><a href="#trigonometry"  style="font-weight: bold;">Trigonometry</a>
+                
+                    <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+    
+                        <li><a href="#Trigonometry_Some_Definitions">Some Definitions</a></li>
+                        <li><a href="#Pythagorean_Trigonometric_Identities">Pythagorean Trigonometric Identities</a></li>
+                        <li><a href="#Review_and_talk_on_angles">Review and Talk on Angles</a></li>
+                        <li><a href="#Redefining_trigonometric_functions">Redefining Trigonometric Functions</a></li>
+                        <li><a href="#Angle_Sum_relations">Angle Sum Relations</a></li>
+                    </ol>
+    
+                </li>
+                <!-- <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li> -->
+            </ol>
+        </div>
+
         
 
         <p>The reader is assumed to have some <mark>basic understanding of geometry and algebra</mark>. <br/>Topics covered in this section are as follows:</p>
         
         <ol>
-            <li><a href="#basicgeometry">Basic Geometry</a></li>
-            <li><a href="#trigonometry">Trigonometry</a></li>
+            <li><a href="#basicgeometry"  style="font-weight: bold;">Basic Geometry</a>
+
+                <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+
+                    <li><a href="#Pythagoras_Theorem">Pythagoras Theorem</a></li>
+                    <li><a href="#Distance_Formula">Distance Formula</a></li>
+                </ol>
+
+            </li>
+            <li><a href="#trigonometry"  style="font-weight: bold;">Trigonometry</a>
+            
+                <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+
+
+                    <li><a href="#Trigonometry_Some_Definitions">Some Definitions</a></li>
+                    <li><a href="#Pythagorean_Trigonometric_Identities">Pythagorean Trigonometric Identities</a></li>
+                    <li><a href="#Review_and_talk_on_angles">Review and Talk on Angles</a></li>
+                    <li><a href="#Redefining_trigonometric_functions">Redefining Trigonometric Functions</a></li>
+                    <li><a href="#Angle_Sum_relations">Angle Sum Relations</a></li>
+                </ol>
+
+            </li>
+            <!-- <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#"></a></li> -->
         </ol>
+        <br/>
         <mark style="background-color: rgb(229, 228, 228);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
         <hr>
 
@@ -155,7 +215,7 @@
 
         <ul class="mainlist">
 
-            <li style="font-size: 110%;" id="pythagoras"><b><u>Pythagoras Theorem</u>:</b></li>
+            <li style="font-size: 110%;" id="Pythagoras_Theorem"><b><u>Pythagoras Theorem</u>:</b></li>
 
             <div class="imgdiv" style="float: right;">
                 <figure>
@@ -165,7 +225,7 @@
             </div>
             
             <p id="eq1.1">For a right angled triangle, as shown in <a href="#img1.1">Figure 1.1</a>, with the hypotenuse \(c\), base \(b\), and height \(a\): 
-                $$c^2=a^2+b^2 \hspace{1cm}(1.1)$$
+                $$c^2=a^2+b^2 \hspace{1cm} \color{red}{(1.1)}$$
             
             This relation was given by ancient Greek philosopher, Pythagoras upon whom the theorem is named. <br/>This thorem would be used for finding most prominantly the length of <a href="vectors.html">vectors</a>, followed by its traditional applications in finding the side length of right-angled triangles and much more.</p>
 
@@ -222,7 +282,7 @@
 
 
             <br/><br/>
-            <li style="font-size: 110%;"><b><u>Distance Formula for 2 and 3 dimensions:</u></b></li>
+            <li style="font-size: 110%;" id="Distance_Formula"><b><u>Distance Formula for 2 and 3 dimensions:</u></b></li>
 
             <p>The distance formula is used to calculate the distance between two points in space. Now, the space can be of any dimensions (at least, theoretically) but, for now, we are concerned with only the 2 and 3 dimensional space.<br/><br/>Lets consider them both one by one.</p>
 
@@ -233,7 +293,7 @@
                 <li><b><u>2 dimensional case:</u></b></li>
                 <p id="eq1.2">For two points in the two dimensional plane, say \(A(x_1,y_1)\) and \(B(x_2,y_2)\), the distance between them is:
 
-                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}  \hspace{1cm} (1.2)$$
+                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}  \hspace{1cm} \color{red}{(1.2)}$$
                 </p>
 
                 <div class="imgdiv" style="float: right;">
@@ -243,7 +303,7 @@
                     </figure>
                 </div>
 
-                <p>Consider the <a href="#img1.2">Figure 1.2</a> shown. The points \(A\) and \(B\) are shown, with the horizontal distance along the \(x\)-axis as \(x_2-x_1\) and the vertical distance along the \(y\)-axis as \(y_2-y_1\). Further, we apply the <a href="#pythagoras">Pythagoras Theorem</a> to the \(\triangle ABC\), so as to find the length of side \(AB\) using the sides \(AC\) and \(BC\), as below.
+                <p>Consider the <a href="#img1.2">Figure 1.2</a> shown. The points \(A\) and \(B\) are shown, with the horizontal distance along the \(x\)-axis as \(x_2-x_1\) and the vertical distance along the \(y\)-axis as \(y_2-y_1\). Further, we apply the <a href="#Pythagoras_Theorem">Pythagoras Theorem</a> to the \(\triangle ABC\), so as to find the length of side \(AB\) using the sides \(AC\) and \(BC\), as below.
                 </p>
 
                 <div>
@@ -274,7 +334,7 @@
                 <p id="eq1.3">In the three dimensional "normal" space, the distance between two points \(A(x_1,y_1,z_1)\) and \(B(x_2,y_2,z_2)\) is given by:
 
                     
-                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2} \hspace{1cm}(1.3)$$
+                    $$r=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2} \hspace{1cm} \color{red}{(1.3)}$$
                 
 
 
@@ -315,7 +375,7 @@
 
 
                 <p>
-                    Then, we again employ the <a href="#pythagoras">Pythagoras theorem</a>, this time for the triangle with two vertices as \(A\) and \(B\) and the <span style="background-color: #CCFF66">green</span> segment as the base. So, we get:
+                    Then, we again employ the <a href="#Pythagoras_Theorem">Pythagoras theorem</a>, this time for the triangle with two vertices as \(A\) and \(B\) and the <span style="background-color: #CCFF66">green</span> segment as the base. So, we get:
 
                     $$
                     \begin{aligned}
@@ -332,7 +392,7 @@
                     <b>One special case: </b>A case which arises very frequently, especially when dealing with <a href="vectors.html">vectors</a>, is the distance of a point, say \((x,y,z)\) from the origin \((0,0,0)\). Using equation <a href="#eq1.3">1.3</a> ,we get this distance to be:
 
                     $$
-                        r = \sqrt{x^2+y^2+z^2} \hspace{2cm} (1.4)
+                        r = \sqrt{x^2+y^2+z^2} \hspace{2cm} \color{red}{(1.4)}
                     $$
 
                     This is often referred as the length of a vector from origin to the point \((x,y,z)\).
@@ -366,7 +426,7 @@
 
         <ul class="mainlist">
             <br/><br/>
-            <li style="font-size: 110%;" id=""><b><u>Some
+            <li style="font-size: 110%;" id="Trigonometry_Some_Definitions"><b><u>Some
                 definitions</u>:</b></li> 
 
             <p>
@@ -392,39 +452,53 @@
                         <li>
                             <b><u>Sine of \(\theta\) :</u></b>
 
-                            <p>
+                            <p id="eq2.1">
                                 Sine of angle \(\theta\) is defined as the ratio of the length of the perpendicular and the hypotenuse and is denoted as:
 
                                 $$
-                                \sin{\theta}=\frac{p}{h} \hspace{1cm} (2.1)
+                                \sin{\theta}=\frac{p}{h} \hspace{1cm} \color{red}{(2.1)}
                                 $$
 
-                                Upon rearranging, we get \(p=h \sin{\theta}\). Thus, \(p\) is said to be the <a href="vectors.html">projection</a> of \(h\) over the perpendicular side. This is much useful when dealing with <a href="vectors.html">vector projection</a>.
+                                Upon rearranging, we get \(p=h \sin{\theta}\). Thus, \(p\) is said to be the <a href="vectors.html">projection</a> of \(h\) over the perpendicular side. This is much useful when dealing with <a href="vectors.html">vector projection</a>. Further, we see from \(\angle CAB\) that: 
+
+                                $$
+                                \begin{align}
+                                    \sin{(90^{\circ}-\theta)} &= \frac{b}{h} = \cos{\theta} \\[4px]
+
+                                    \implies \sin{(90^{\circ}-\theta)} &= \cos{\theta} \hspace{1cm} \color{red}{(2.1 \text{ i})}
+                                \end{align}
+                                $$
+
+                                This is done using the definition of \(\cos{\theta}\) (see below).
                             </p>
                         </li>
 
                         <li>
                             <b><u>Cosine of \(\theta\) :</u></b>
 
-                            <p>
+                            <p id="eq2.2">
                                 Cosine of angle \(\theta\) is defined as the ratio of the length of the base and the hypotenuse and is denoted as:
 
                                 $$
-                                \cos{\theta}=\frac{b}{h}\hspace{1cm} (2.2)
+                                \cos{\theta}=\frac{b}{h}\hspace{1cm} \color{red}{(2.2)}
                                 $$
 
-                                As before, \(b=h \cos{\theta}\). Thus, \(b\) is the <a href="vectors.html">projection</a> of \(h\) on the base.
+                                As before, \(b=h \cos{\theta}\). Thus, \(b\) is the <a href="vectors.html">projection</a> of \(h\) on the base. Again, 
+
+                                $$\cos{(90^{\circ}-\theta)}= \sin{\theta} \hspace{1cm} \color{red}{(2.2 \text{ i})}$$
+
+                                This relation's extension to all the trigonometric functions is left to the reader as an exercise.
                             </p>
                         </li>
 
                         <li>
                             <b><u>Tangent of \(\theta\) :</u></b>
 
-                            <p>
+                            <p id="eq2.3">
                                 Tangent of angle \(\theta\) is the ratio of sine and cosine of \(\theta\) or, length of the perpendicular and the base. It is denoted as:
 
                                 $$
-                                \tan{\theta}=\frac{\sin{\theta}}{\cos{\theta}}=\frac{p}{b} \hspace{1cm}(2.3)
+                                \tan{\theta}=\frac{\sin{\theta}}{\cos{\theta}}=\frac{p}{b} \hspace{1cm}\color{red}{(2.3)}
                                 $$
 
                                 Now, \(\tan{\theta}\) has an immense significance as it represents the <a href="#trigonometry">slope</a> (how slant is the line with respect to the \(x\)-axis) of the hypotenuse. 
@@ -479,10 +553,10 @@
 
             <br/>
             <table id="table2.1" border="1" style="background-color: black;">
-                <caption><span style="color: red;">Table  2.1</span>: Values of trigonmetric functions at some common angles</caption>
+                <caption><span style="color: red;">Table  2.1</span>: Values of trigonometric functions at some common angles</caption>
                 <thead>
                     <tr style="background-color: lightblue;">
-                        <th width="100">Function \(/ \theta\)</th>
+                        <th width="100">Function &#8595 \( \theta\)</th>
                         <th>\(0^{\circ}\)</th>
                         <th>\(30^{\circ}\)</th>
                         <th>\(45^{\circ}\)</th>
@@ -561,7 +635,7 @@
 
 
             <br/><br/>
-            <li style="font-size: 110%;" id=""><b><u>Pythagorean Trigonometric Identities</u>:</b></li> 
+            <li style="font-size: 110%;" id="Pythagorean_Trigonometric_Identities"><b><u>Pythagorean Trigonometric Identities</u>:</b></li> 
 
             <p>Some of the real "building block" identities of trigonometry are as follows: </p>
             
@@ -579,11 +653,11 @@
 
                         \implies \sin^2{\theta} + \cos^2{\theta} &= \frac{h^2}{h^2} \\
 
-                        \implies \sin^2{\theta} + \cos^2{\theta} &= 1 \hspace{1cm} (2.4) 
+                        \implies \sin^2{\theta} + \cos^2{\theta} &= 1 \hspace{1cm} \color{red}{(2.4)} 
                     \end{align}
                     $$
 
-                    The last equation (<a href="#eq2.4">Eq. 2.4</a>) is the required fundamental pythagorean identity. We have used the <a href="#pythagoras">pythagoras theorem</a> to proceed to the third equation from second.
+                    The last equation (<a href="#eq2.4">Eq. 2.4</a>) is the required fundamental pythagorean identity. We have used the <a href="#Pythagoras_Theorem">pythagoras theorem</a> to proceed to the third equation from second.
                 </p>
 
 
@@ -594,9 +668,9 @@
 
                     $$
                     \begin{align}
-                        1 + \tan^2{\theta} &= \sec^2{\theta} \hspace{1cm} (2.5) \\[5pt]
+                        1 + \tan^2{\theta} &= \sec^2{\theta} \hspace{1cm} \color{red}{(2.5)} \\[5pt]
 
-                        1 + \cot^2{\theta} &= \csc^2{\theta} \hspace{1cm} (2.6) 
+                        1 + \cot^2{\theta} &= \csc^2{\theta} \hspace{1cm} \color{red}{(2.6)} 
                     \end{align}
                     $$
 
@@ -633,10 +707,10 @@
             </ul>
 
 
-
+            
 
             <br/><br/>
-            <li style="font-size: 110%;" id=""><b><u>Review and talk on angles</u>:</b></li> 
+            <li style="font-size: 110%;" id="Review_and_talk_on_angles"><b><u>Review and talk on angles</u>:</b></li> 
 
             <p>
                 Till now, we have been handling angles in degrees as one can see in <a href="#table2.1">table 2.1</a>. By convention, \(360^{\circ}\) is the whole angle about a point. Further, we say that the right angle is \(90^{\circ}\) and so on. Now, we move towards defining a new unit of angle measure, <b>raidans</b>.
@@ -681,7 +755,7 @@
 
                     $$
                     \begin{align}
-                        360^{\circ} &= 2\pi \text{ rads} \hspace{2cm} (2.7)\\[4px]
+                        360^{\circ} &= 2\pi \text{ rads} \hspace{2cm} \color{red}{(2.7)}\\[4px]
 
                         \implies 1^{\circ} &= \frac{2\pi}{360} \text{ rads} 
                         \implies \boxed{1^{\circ}= \frac{\pi}{180} \text{ rads}}
@@ -772,7 +846,7 @@
                     Say, we have a circle with radius \(r\) and consider an arc of length \(l\) about the cicumference that subtends an angle \(\theta \text{ rads}\) at the center if the circle, as in <a href="#img2.3">figure 2.3</a>. Clearly, <b>number of arcs</b> (in the mathematical sense) of length  \(r\) contained in length \(l\) is \(l/r\).  And since, each such arc subtends one radian at the center of the circle, total angle subtended by the arc of length \(l\) is:
 
                     $$
-                        \theta^{\text{ c}} = \frac{l}{r} \hspace{1cm} (2.8)
+                        \theta^{\text{ c}} = \frac{l}{r} \hspace{1cm} \color{red}{(2.8)}
                     $$
 
                     The superscript \(^\text{c}\) over \(\theta\) indicates that the angle should be measured in radians for this relation to hold.
@@ -792,21 +866,693 @@
 
 
 
+            <br/><br/>
+            <li style="font-size: 110%;" id="Redefining_trigonometric_functions"><b><u>Redefining trigonometric functions</u>:</b></li> 
+
+            <p>
+                The definition of trigonometric functions, as in the <a href="#Trigonometry_Some_Definitions">first section</a>, was totally based on lengths and was valid only for acute angles, which makes the functions to be positive only. And this is enough to work in analytical geometry. But, to understand our surrounding better, we needed the sine and cosine for all real numbers, as we would see soon. To facilitate this, we need to <b>redefine</b> those functions.
+            </p>
+
+            <p>
+                The redifinition is done such that we can encompass all the real numbers as its domain (the input we provide to a function). For this, we use a unit circle (circle with radius 1), as shown in <a href="#img2.4">figure 2.4</a>.
+            </p>
+
+            <div class="imgdiv" style="float: right;">
+                <figure>
+                        <img src="/images/mp24.png" alt="Unit circle image respresenting the right angled traingle used for broader definition of the trig functions" width="240px;" id="img2.4"/>
+                        <figcaption><center><span style="color: red;">Fig 2.4</span>: Unit circle</center></figcaption>
+                </figure>
+            </div>
+
+            <p id="eq2.9">
+                From the previous definition, 
+
+                $$
+                \begin{align}
+                    \cos{\theta} &= \frac{OA}{OB} = x \hspace{1cm} \color{red}{(2.9\text{ i})}\\[4px] 
+                    \sin{\theta} &= \frac{AB}{OB} = y \hspace{1cm} \color{red}{(2.9\text{ ii})}
+                \end{align}
+                $$
+
+                If we consider this to be the <b>base definition</b> of sine and cosine with \(x\) and \(y\) as the <b>coordinates (including sign)</b> of the point making angle \(\theta\) with \(x\)-axis through the origin <span style="color:rgb(21,102,192)">O</span> as the vertex, then we can easily extend out these functions to all real numbers. To say,
+                <br/><br/>
+                
+                Sine of an angle \(\theta\), the angle subtended by a line segment (for refrence, <span style="color:rgb(21,102,192)">OB</span> in figure), with the \(x\)-axis at the center of a unit circle on which <span style="color:rgb(21,102,192)">B</span> is lying, is given as the <b>ratio of \(y\)-coordinate (with sign)</b> of point <span style="color:rgb(21,102,192)">B</span> and the <b>length</b> (always positive) of the hypotenuse (or line segment <span style="color:rgb(21,102,192)">OB</span>) i.e.
+
+                $$
+                    \sin{\theta} = \frac{y}{|OB|} = y
+                $$
+
+                Similarly, 
+
+                $$
+                    \cos{\theta} = \frac{x}{|OB|} =x
+                $$
+
+                This can be extended to other trigonometric functions  in a similar way.(from here, we refer to all trigonometric functions just by saying "functions" in this section).
+            </p>
+
+            <br/>
+            <ul class="c1ul" id="clrb">
+                <li><b><u>Function of negative acute angles</u>:</b></li>
+
+                <p id="eq2.10.1">
+                    We begin by extending our analysis to the negative real numbers first, before moving beyond the acute angles. Again consider the <a href="#img2.4">figure 2.4</a>. We have, \(\sin{\theta} = y\). And, using our new definition (from figure):
+
+                    $$
+                    \begin{align}
+                        \sin{(-\theta)} &= \frac{-y}{|OB'|} = -y \\[4px]
+
+                        \implies \sin{(-\theta)} &= - \sin{\theta} \hspace{1cm} \color{red}{(2.10 \text{ i})}
+                    \end{align}
+                    $$
+
+                    Further, \(\cos{\theta} = x\) and from figure, 
+                </p>
+                <p id="eq2.10.2">
+                    $$
+                    \begin{align}
+                        \cos{(-\theta)} &= \frac{x}{|OB'|} = x \\[4px]
+
+                        \implies \cos{(-\theta)} &= \cos{\theta} \hspace{1cm} \color{red}{(2.10 \text{ ii})}
+
+                    \end{align}
+                    $$
+
+                    For \(\tan{(-\theta)}\), we have: 
+
+                    $$
+                    \begin{align}
+                        \tan{(-\theta)} &= \frac{\sin{(-\theta)}}{\cos{(-\theta)}} \\[4px]
+
+                        \implies \tan{(-\theta)} &= \frac{-\sin{\theta}}{\cos{\theta}} = -\tan{\theta}
+                    \end{align}
+                    $$
+
+                    A similar extension to other trigonometric functions can be done, leading to :
+
+                    $$
+                    \begin{align}
+                        \csc{(-\theta)} &= -\csc{\theta} \\
+                        \sec{(-\theta)} &= \sec{\theta} \\
+                        \cot{(-\theta)} &= -\cot{\theta}
+                    \end{align}
+                    $$
+                </p>
+
+                <br/>
+                <li><b><u>Function of any real angle</u>:</b></li>
+
+                <p>
+                    By the title, "function of any real angle" we mean that, having done with the function of negative acute angle, we now move to expanding this system to any real number in terms of the known value of acute angles.
+                </p>
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/mp25.png" alt="Image showing the angle phi and theta for phi lying the range of pi/2 to pi" width="220px;" id="img2.5"/>
+                            <figcaption><center><span style="color: red;">Fig 2.5</span>: The angle \(\phi\) and its<br/> corresponding angle \(\theta\)</center></figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    <b><u>For angles between \(\pi/2\) and \(\pi\)</u>:</b>
+                    <br/><br/>
+
+                    Consider an angle \(\phi\) \((\pi/2 \le \phi \leq \pi )\) as shown in <a href="#img2.5">figure 2.5</a>. We want to find \(\sin{\phi}\). This can be written as:
+                </p>
+
+                <p id="eq.11.1"><b><u>CASE 1</u>: \((\pi/2 + \theta = \phi)\)</b><br/>
+
+                    $$
+                    \begin{align}
+                        \sin{\phi} &= \sin{\left(\frac{\pi}{2} + \theta\right)} \\[4px]
+
+                        &= \sin{\left(\frac{\pi}{2}- (-\theta)\right)}\\[4px]
+
+                        &= \cos{(-\theta)}\hspace{1cm} \text{(using eq (2.1 i))}\\[6px]
+
+                        \sin{\left(\frac{\pi}{2}+\theta\right)} &= \cos{\theta} \hspace{1cm} (\text{using eq (2.11)}) \hspace{1cm} \color{red}{(2.11 \text{ i})} 
+                        
+
+                    \end{align}
+                    $$
+
+                
+                    This relation is useful for finding sine of angles greater than \(90^{\circ}\), here \(\phi\), till the angle \(\theta\) is acute, as we know geometrically,the values of trigonometric functions for acute angles only. This is done for cosine as below: 
+                </p>
+                <p id="eq2.11.2">
+                    $$
+                    \begin{align}
+                        \cos{\phi} &= \cos{\left(\frac{\pi}{2} + \theta\right)} \\[4px]
+
+                        &= \cos{\left(\frac{\pi}{2}- (-\theta)\right)}\\[4px]
+
+                        &= \sin{(-\theta)}\hspace{1cm} \text{(using eq (2.2 i))}\\[6px]
+
+                        \cos{\left(\frac{\pi}{2}+\theta\right)} &= -\sin{\theta} \hspace{1cm} (\text{using eq (2.10)}) \hspace{1cm} \color{red}{(2.11 \text{ ii})}  
+                        
+
+                    \end{align}
+                    $$
+
+                </p>
+                <p id="eq2.11.3">
+                    Using, these we can find this relation for tan function :
+
+                    $$
+                    \begin{align} 
+                        \tan{\left(\frac{\pi}{2}+\theta\right)} &= \frac{\sin(\frac{\pi}{2}+\theta)}{\cos{(\frac{\pi}{2}+\theta)}}\\[4px]
+
+                        &=\frac{\cos{\theta}}{-\sin{\theta}}\\[4px]
+
+                        \tan{\left(\frac{\pi}{2}+\theta\right)} &= -\cot{\theta} \hspace{1cm} \color{red}{(2.11 \text{ iii})}
+                    \end{align}
+                    $$
+
+                    This can be extended to other trigonometric functions in a similar way, to find the following:
+
+                    \begin{align}
+                        \csc{\left(\frac{\pi}{2}+\theta\right)} &= \sec{\theta} \\[4px]
+                        \sec{\left(\frac{\pi}{2}+\theta\right)} &= -\csc{\theta}\\[4px] 
+                        \cot{\left(\frac{\pi}{2}+\theta\right)} &= -\tan{\theta}
+                    \end{align}
+                    
+                </p>
+                <br/>
+
+                <p  id="eq2.12.1"><b><u>CASE 2</u>: \((\phi + \theta = \pi)\)</b>
+                        
+                    Here, \(\sin{\phi}\) can be written as: (from <a href="#img2.5">figure 2.5</a>)
+                    
+                    $$
+                    \begin{align}
+                        \sin{\phi} &= \sin{(\pi-\theta)} \\[4px]
+
+                        &= \sin{\left(\frac{\pi}{2}-\left(\theta - \frac{\pi}{2}\right)\right)}\\[4px]
+
+                        &= \cos{\left(\theta - \frac{\pi}{2}\right)} \hspace{1.5cm} (\text{using eq (2.1 i)} ) \\[6px]
+
+                         \sin{(\pi-\theta)} &= \cos{\left(-\left(\frac{\pi}{2} - \theta\right)\right)} \\[4px]
+
+                        &= \cos{\left(\frac{\pi}{2}-\theta\right)} \hspace{1.5cm} (\text{using eq (2.11)}) \\[6px]
+                         
+                       \sin{(\pi-\theta)} &= \sin{\theta} \hspace{2cm} \color{red}{(2.12 \text{ i})}
+                    \end{align}
+                    $$
+                </p>
+                <p id="eq2.12.2">
+                    This can be worked out for other functions as below:
+
+                    $$
+                    \begin{align}
+                        \cos{(\pi-\theta)} &= \cos{\left(\frac{\pi}{2} - \left(\theta - \frac{\pi}{2}\right)\right)} \\[4px]
+
+                        &= \sin{\left(\theta-\frac{\pi}{2}\right)} \hspace{1cm} (\text{using eq (2.2 i)}) \\[6px]
+
+                        \cos{(\pi-\theta)} &= \sin{\left(-\left(\frac{\pi}{2} - \theta\right)\right)}\\[4px]
+
+                        &=-\sin{\left(\frac{\pi}{2}-\theta\right)} \hspace{1cm} (\text{using eq (2.10)}) \\[6px]
+
+                        \cos{(\pi-\theta)} &= -\cos{\theta} \hspace{2cm} \color{red}{(2.12 \text{ ii})}
 
 
 
-            <!-- <br/><br/>
-            <li c;ass="clrb"><b><u>Angle Sum relations</u>:</b></li>
+                    \end{align}
+                    $$
+                </p>
+                <p id="eq2.12.3">
+                    and,
+
+                    $$
+                    \begin{align} 
+                        \tan{(\pi-\theta)} &= \frac{\sin(\pi-\theta)}{\cos{(\pi-\theta)}}\\[4px]
+
+                        &=\frac{\sin{\theta}}{-\cos{\theta}}\\[4px]
+
+                        \tan{(\pi-\theta)} &= -\tan{\theta} \hspace{1cm} \color{red}{(2.12 \text{ iii})}
+                    \end{align}
+                    $$
+
+                    Similarly, we get:
+
+                    $$
+                    \begin{align}
+                        \csc{(\pi-\theta)} &= \csc{\theta} \\[4px]
+                        \sec{(\pi-\theta)} &= -\sec{\theta}\\[4px] 
+                        \cot{(\pi-\theta)} &= -\cot{\theta}
+                    \end{align}
+                    $$
+
+                    Now, since all the functions are positive for acute angles (the coordinates are positive, as in the acute angle case, the end of the angle arm is in the first quadrant), and \(\theta\) is acute too. So, from the ongoing discussion, we can say that <span style="font-weight:550">for angles in second quadrant (here, \(\phi\)), only \(\sin{\phi}\) and \(\csc{\phi}\) are positive and other functions are negative</span>. Similarly, we observe that in third and fourth quadrant have \(\tan{\phi}\), \(\cot{\phi}\) and \(\cos{\phi}\), \(\sec{\phi}\) positive and other functions negative, respectively.
+                </p>
+
+                <p>
+                    Further, it is observable that when the argument of the function contains \(\pi/2\), the function changes to its corresponding function along with indicating its sign in that quadrant. For example, \(\cos{\left(\pi/2+\theta\right) = -\sin{\theta}}\).
+                    <br/><br/>
+                    But when the argument contain \(\pi\) in it, the function doesn't change but its sign is still indicated. For, example, \(\cos{\left(\pi-\theta\right) = -\cos{\theta}}\). <span style="color: red; font-weight: bold;">It is notable that \(\theta\) must be acute</span>, as then only we can correctly predict the quadrant.<br/>
+
+                    This trend continues even for angles in third and fouth quadrant as is indicated in the <a href="#table2.3">Table 2.3</a> and <a href="#table2.4">Table 2.4</a>
+                </p>
+
+                <table id="table2.3" style="text-align: center;">
+                    <thead>
+                        <caption><span style="color: red">Table 2.3</span>: Sign of functions in different quadrants</caption>
+
+                        <tr style="background-color: lightblue">
+                            <th width="100px">Func &#8595 Quadrant &#8594</th>
+                            <th width="100px">I</th>
+                            <th width="100px">II</th>
+                            <th width="100px">III</th>
+                            <th width="100px">IV</th>
+                        </tr>
+                    </thead>
+
+                    <tbody  style="background-color: aliceblue">
+                        <tr>
+                            <td>\(\sin{\phi}\)</td>
+                            <td>\(+\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                            <td>\(-\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos{\phi}\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                            <td>\(-\)</td>
+                            <td>\(+\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan{\phi}\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\csc{\phi}\)</td>
+                            <td>\(+\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                            <td>\(-\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sec{\phi}\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                            <td>\(-\)</td>
+                            <td>\(+\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cot{\phi}\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                            <td>\(+\)</td>
+                            <td>\(-\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <br/>
+
+
+                
+                <table id="table2.4" style="text-align: center;">
+                    <thead>
+                        <caption><span style="color: red">Table 2.4</span>: Change of functions for different arguments</caption>
+
+                        <tr style="background-color: lightblue">
+                            <th width="100px">Func &#8595 Argument &#8594</th>
+                            <th width="100px">\(\pi/2 \pm \theta\)</th>
+                            <th width="100px">\(\pi \pm \theta\)</th>
+                            <th width="100px">\(3\pi/2 \pm \theta\)</th>
+                            <th width="100px">\(2\pi \pm \theta\)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody  style="background-color: aliceblue">
+                        <tr>
+                            <td style="background-color: lightblue;">\(\sin{\phi}\)</td>
+                            <td>\(\cos{\phi}\)</td>
+                            <td> <span style="color: red;">*</span></td>
+                            <td>\(\cos{\phi}\)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: lightblue;">\(\cos{\phi}\)</td>
+                            <td>\(\sin{\phi}\)</td>
+                            <td></td>
+                            <td>\(\sin{\phi}\)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: lightblue;">\(\tan{\phi}\)</td>
+                            <td>\(\cot{\phi}\)</td>
+                            <td></td>
+                            <td>\(\cot{\phi}\)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: lightblue;">\(\csc{\phi}\)</td>
+                            <td>\(\sec{\phi}\)</td>
+                            <td></td>
+                            <td>\(\sec{\phi}\)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: lightblue;">\(\sec{\phi}\)</td>
+                            <td>\(\csc{\phi}\)</td>
+                            <td></td>
+                            <td>\(\csc{\phi}\)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: lightblue;">\(\cot{\phi}\)</td>
+                            <td>\(\tan{\phi}\)</td>
+                            <td></td>
+                            <td>\(\tan{\phi}\)</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr style="font-size: 0.8em;">
+                            <td  colspan="5">Here, \(\phi\) is the argument. <br/><span style="color: red;">*</span> Blank table cell means <b>no change</b>.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+                <p>
+                    Now, we can write (or deduce) the remaining relations of the third and fourth quadrants using the above tables. It is easy to verify these using the method employed above for the second quadrant.
+                </p>
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/mp26.png" alt="Image showing the angle phi which is greater than pi and less than 3 pi/2, that is lies in the third quadrant." width="230px;" id="img2.6"/>
+                            <figcaption><center><span style="color: red;">Fig 2.6</span>: Diagram showing the angle <br/> \(\phi\) such that \((\pi \leq \phi \leq 3\pi/2)\)</center></figcaption>
+                    </figure>
+                </div>
+
+                <p><b><u>For angles between \(\pi\) and \(3\pi/2\)</u>:</b>
+                    <br/>The accompanying diagram is shown in <a href="#img2.6">figure 2.6</a>.
+                </p>
+
+                <p id="eq2.13"><b><u>CASE 1</u>: \((\pi + \theta = \phi)\)</b><br/>  
+                    The following relations come out: 
+                    $$
+                    \begin{align}
+                        \sin{\left(\pi + \theta\right)} &= -\sin{\theta} \hspace{1cm} \color{red}{(2.13 \text{ i})} \\[4px]
+                        \cos{\left(\pi + \theta\right)} &= -\cos{\theta} \hspace{1cm} \color{red}{(2.13 \text{ ii})} \\[4px]
+                        \tan{\left(\pi + \theta\right)} &= \tan{\theta} \hspace{1cm} \color{red}{(2.13 \text{ iii})} \\[4px]
+                        \csc{\left(\pi + \theta\right)} &= -\csc{\theta} \\[4px]
+                        \sec{\left(\pi + \theta\right)} &= -\sec{\theta} \\[4px]
+                        \cot{\left(\pi + \theta\right)} &= \cot{\theta} \\[4px]
+                    \end{align}
+                    $$
+                </p>
+
+                <p id="eq2.14" class="clrb"><b><u>CASE 2</u>: \((\phi + \theta = 3\pi/2)\)</b><br/>  
+                    The following relations come out: (see figure)
+                    $$
+                    \begin{align}
+                        \sin{\left(\frac{3\pi}{2} - \theta\right)} &= -\cos{\theta} \hspace{1cm} \color{red}{(2.14 \text{ i})} \\[4px]
+                        \cos{\left(\frac{3\pi}{2} - \theta\right)} &= -\sin{\theta} \hspace{1cm} \color{red}{(2.14 \text{ ii})} \\[4px]
+                        \tan{\left(\frac{3\pi}{2} - \theta\right)} &= \cot{\theta} \hspace{1cm} \color{red}{(2.14 \text{ iii})} \\[4px]
+                        \csc{\left(\frac{3\pi}{2} - \theta\right)} &= -\sec{\theta} \\[4px]
+                        \sec{\left(\frac{3\pi}{2} - \theta\right)} &= -\csc{\theta} \\[4px]
+                        \cot{\left(\frac{3\pi}{2} - \theta\right)} &= \tan{\theta} \\[4px]
+                    \end{align}
+                    $$
+                </p>
+
+
+
+                <br/>
+                <br/>
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/mp27.png" alt="Image showing the angle phi which is greater than 3 pi by 2 and less than 2 pi, that is lies in the third quadrant." width="230px;" id="img2.7"/>
+                            <figcaption><center><span style="color: red;">Fig 2.7</span>: Diagram showing the angle <br/> \(\phi\) such that \((3\pi/2 \leq \phi \leq 2\pi)\)</center></figcaption>
+                    </figure>
+                </div>
+
+                <p><b><u>For angles between \(3\pi/2\) and \(2\pi\)</u>:</b>
+                    <br/>Again, the accompanying diagram is shown in <a href="#img2.7">figure 2.7</a>.
+                </p>
+
+                <p id="eq2.15"><b><u>CASE 1</u>: \((3\pi/2 + \theta = \phi)\)</b><br/>  
+                    The following relations come out: 
+                    $$
+                    \begin{align}
+                        \sin{\left(\frac{3\pi}{2} + \theta\right)} &= -\cos{\theta} \hspace{1cm} \color{red}{(2.15\text{ i})} \\[4px]
+                        \cos{\left(\frac{3\pi}{2} + \theta\right)} &= \sin{\theta} \hspace{1cm} \color{red}{(2.15 \text{ ii})} \\[4px]
+                        \tan{\left(\frac{3\pi}{2} + \theta\right)} &= -\cot{\theta} \hspace{1cm} \color{red}{(2.15 \text{ iii})} \\[4px]
+                        \csc{\left(\frac{3\pi}{2} + \theta\right)} &= -\sec{\theta} \\[4px]
+                        \sec{\left(\frac{3\pi}{2} + \theta\right)} &= \csc{\theta} \\[4px]
+                        \cot{\left(\frac{3\pi}{2} + \theta\right)} &= -\tan{\theta} \\[4px]
+                    \end{align}
+                    $$
+                </p>
+
+                <p id="eq2.16" class="clrb\left(\frac{3\pi}{2} + \theta\right)"><b><u>CASE 2</u>: \((\phi + \theta = 2\pi)\)</b><br/>  
+                    The following relations come out: (catch it up from the figure)
+                    $$
+                    \begin{align}
+                        \sin{\left(2\pi - \theta\right)} &= -\sin{\theta} \hspace{1cm} \color{red}{(2.16\text{ i})} \\[4px]
+                        \cos{\left(2\pi - \theta\right)} &= \cos{\theta} \hspace{1cm} \color{red}{(2.16 \text{ ii})} \\[4px]
+                        \tan{\left(2\pi - \theta\right)} &= -\tan{\theta} \hspace{1cm} \color{red}{(2.16 \text{ iii})} \\[4px]
+                        \csc{\left(2\pi - \theta\right)} &= -\csc{\theta} \\[4px]
+                        \sec{\left(2\pi - \theta\right)} &= \sec{\theta} \\[4px]
+                        \cot{\left(2\pi - \theta\right)} &= \cot{\theta} \\[4px]
+                    \end{align}
+                    $$
+                </p>
+
+                <br/>
+                <table id="table2.5" border="1" style="background-color: black;">
+                    <caption><span style="color: red;">Table  2.5</span>: Values of trigonometric functions at some common angles (expanded)</caption>
+                    <thead>
+                        <tr style="background-color: lightblue;">
+                            <th width="100">Function &#8595 \( \theta^{\text{ c}}\) &#8594</th>
+                            <th>\(0\)</th>
+                            <th>\(\pi/6\)</th>
+                            <th>\(\pi/4\)</th>
+                            <th>\(\pi/3\)</th>
+                            <th>\(\pi/2\)</th>
+                            <th>\(2\pi/3\)</th>
+                            <th>\(3\pi/4\)</th>
+                            <th>\(5\pi/6\)</th>
+                            <th>\(\pi\)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\sin{\theta}\)</td>
+                            <td>\(0\)</td>
+                            <td>\(1/2\)</td>
+                            <td>\(1/\sqrt{2}\)</td>
+                            <td>\(\sqrt{3}/2\)</td>
+                            <td>\(1\)</td>
+                            <td>\(\sqrt{3}/2\)</td>
+                            <td>\(1/\sqrt{2}\)</td>
+                            <td>\(1/2\)</td>
+                            <td>\(0\)</td>
+                        </tr>
+
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\cos{\theta}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(\sqrt{3}/2\)</td>
+                            <td>\(1/\sqrt{2}\)</td>
+                            <td>\(1/2\)</td>
+                            <td>\(0\)</td>
+                            <td>\(-1/2\)</td>
+                            <td>\(-1/\sqrt{2}\)</td>
+                            <td>\(-\sqrt{3}/2\)</td>
+                            <td>\(-1\)</td>
+                        </tr>
+
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\tan{\theta}\)</td>
+                            <td>\(0\)</td>
+                            <td>\(1/\sqrt{3}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(\sqrt{3}\)</td>
+                            <td>\(\infty \)<span style="color: red;">*</span></td>
+                            <td>\(-\sqrt{3}\)</td>
+                            <td>\(-1\)</td>
+                            <td>\(-1/\sqrt{3}\)</td>
+                            <td>\(0\)</td>
+                        </tr>
+
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\csc{\theta}\)</td>
+                            <td>\(\infty \)</td>
+                            <td>\(2\)</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>\(2/\sqrt{3}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(2/\sqrt{3}\)</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>\(2\)</td>
+                            <td>\(\infty\)</td>
+                        </tr>
+
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\sec{\theta}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(2/\sqrt{3}\)</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>\(2\)</td>
+                            <td>\(\infty \)</td>
+                            <td>\(-2\)</td>
+                            <td>\(-\sqrt{2}\)</td>
+                            <td>\(-2/\sqrt{3}\)</td>
+                            <td>\(-1\)</td>
+                        </tr>
+
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\cot{\theta}\)</td>
+                            <td>\(\infty \)</td>
+                            <td>\(\sqrt{3}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(1/\sqrt{3}\)</td>
+                            <td>\(0\)</td>
+                            <td>\(-1/\sqrt{3}\)</td>
+                            <td>\(-1\)</td>
+                            <td>\(-\sqrt{3}\)</td>
+                            <td>\(-\infty\)</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot style="font-weight: bold; background-color: white;">
+                        <tr>
+                            <td colspan="10"><span style="color: red;">*</span>here, \(\infty\) represents infinity or undefined</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <br/>
+
+
+
+                <p>
+                    So, we have successfully extended our functions from negative acute angles to positive \(2\pi\) radians. To complete the story, we need to say something about the negative obtuse and more smaller angles and about angles above \(2\pi\) radians.
+                </p>
+
+                <div class="imgdiv" style="float: right;">
+                    <figure>
+                            <img src="/images/mp28.png" alt="Image showing the angle negative phi which is an obtuse negative angle, completing negative pi radians with negative theta" width="230px;" id="img2.8"/>
+                            <figcaption><center><span style="color: red;">Fig 2.8</span>: The negative obtuse <br/>angle case</center></figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    Consider the case of negative obtuse and reflex angles. As we handled the positive obtuse and reflex angles, negatives are handled in the same way with the only difference being the sign. Let's take one example for this : 
+
+                    <br/><br/>
+
+                    If there is a negative obtuse angle \(-\phi\) as shown in <a href="#img2.8">figure 2.8</a>, with \(-\theta\) completing \(-\pi\) radians i.e. \(-(\phi+\theta) = -\pi\). Then, lets compute the sine of \(-\phi\):
+
+                    $$
+                    \begin{align}
+                        \sin{(-\phi)} &=\sin{(-\pi-(-\theta))} = \sin{(-(\pi-\theta))} \\[4px]
+                        &= -\sin{(\pi-\theta)} \\[4px]
+                        \sin{(-\phi)} &= -\sin{\theta}
+
+                    \end{align}
+                    $$
+
+                    So, in this way we can calculate the functions of negative obtuse angles and reflex angles too, using the same approach as for positive angles,but with appropriate sign adjustments. Pattern can be found in this part too, which is left as exercise to the readers. (Hint: They are similar to the positive angles, if we just account for the negative sign in the beginning using relations <a href="#eq2.10.1">eqs 2.10</a>)
+
+                </p>
+
+                <p class="clrb">
+                    But, one question to this theme remains. What about the angles greater than \(2\pi\) and less than \(-2\pi\)? To this we now turn. Consider what would happen in our unit circle picture, when we take an angle, say \((2\pi+ \phi)\), where \(\phi < 2\pi\). Referring to the <a href="#img2.4">figure 2.4</a>, the segment <span style="color: rgb(21,102, 192)">OB</span> is just making an angle \(\phi\) with the segment <span style="color: rgb(21,102, 192)">OA</span>, as \(2\pi\) is indicating a \(360^{\circ}\) turn or a complete rotation. Hence, fucntion of any angle beyond \(2\pi\) radians can be written as function of angle less than \(2\pi\), which can be dealt with as in the above sections.
+                </p>
+
+                
+                <p>
+                    This is similar for negative angles less than \(-2\pi\)
+                    radians. We can turn then into angles greater than \(-2\pi\) and then compute them as described above. Let's take an example to compute \(\sin{(2\pi + \pi/6)}\) :
+
+                    $$
+                    \begin{align}
+                        \sin{\left(2\pi + \frac{\pi}{6}\right)} &= \sin{\frac{\pi}{6}} = \frac{1}{2}
+                    \end{align}
+                    $$
+
+                    Since, \(\pi/6\) represnts \(30^{\circ}\). 
+                </p>
+
+                <p>
+                    With this, we have completely extended our trigonometric function's domain to all real numbers. One last thing to emphasize here is that we have been calling the domain to be all real <b>numbers</b>. But, we include angles in the functions as domain. The thing is that the angles are dimensionless quantities and are treated equivalently as simple numbers (this notion is quite useful in Calculus). We have been calling it in angles so as to present its physical picture. Further, it is advisable to think them as this only i.e. in terms of angles and use them as numbers just in calculations.
+                </p>
+
+            </ul>
+
+            
+
+
+
+            
+
+
+            <br/><br/>
+            <li class="clrb" style="font-size: 110%;" id="Angle_Sum_relations"><b><u>Angle Sum relations</u>:</b></li>
   
             <p>
-                The angle sum relations in trigonometry  for a function, relates the function of, say \((A+B)\) to the function(s) of \(A\) and \(B\) individually. For example,
+                The angle sum relations in trigonometry  for a function, relates the function of, say \((\theta + \phi)\) to the function(s) of \(\theta\) and \(\phi\) individually. For example,
 
                 $$
-                    \sin{(A+B)} = \sin{A}\cos{B} + \cos{A}\sin{B}
+                    \sin{(\theta + \phi)} = \sin{\theta}\cos{\phi} + \cos{\theta}\sin{\phi} 
+                $$
+            </p>
+
+            
+            <div class="imgdiv" style="float: right;">
+                <figure>
+                        <img src="/images/mp29.png" alt="Image corresponding to the proof of angle sum relation of sine" width="220px;" id="img2.9"/>
+                        <figcaption><center><span style="color: red;">Fig 2.9</span>: Visualization for sum of  <br/>two distinct angles and their sine</center></figcaption>
+                </figure>
+            </div>
+
+            <p>
+                It is one of the angle sum relations. The above equation would be our base for building further relations for diffrent function. But, let's see how we get this one in the first place. Consider the <a href="#img2.9">figure 2.9</a> shown.
+            </p>
+
+            <p>
+                Here, from the <a href="#eq2.1">definition of sine</a>, we get: 
+                
+                $$
+                \begin{align}
+                    \sin{(\theta + \phi)} &= \frac{DF}{AD} = \frac{DE + EF}{AD} \\[4px]
+
+                    &=\frac{DE}{AD} + \frac{EF}{AD}\\[4px]
+
+                    &= \left(\frac{DE}{DC}\right)\left(\frac{DC}{AD}\right) + \frac{BC}{AD}
+
+                \end{align}
+                $$
+                </p>
+
+                <p class="clrb" id="eq2.17">
+                The last step uses the fact that \(EF=BC\). Now, we again use the definitions of sine and cosine in the triangles \(\triangle ABC, \triangle ADC\) and \(\triangle DEC\) to get: 
+
+                $$
+                \begin{align}
+                    \sin{(\theta+\phi)} &= \left(\frac{DE}{DC}\right)\left(\frac{DC}{AD}\right) + \left(\frac{BC}{AC}\right)\left(\frac{AC}{AD}\right) \\[4px]
+
+                    \implies \sin{(\theta+ \phi)} &= \cos{\theta}\sin{\phi} +\sin{\theta}\cos{\phi} \\[4px]
+
+                    \implies \sin{(\theta+ \phi)} &= \sin{\theta}\cos{\phi}+ \cos{\theta}\sin{\phi} \hspace{1cm} \color{red}{(2.17)}
+                \end{align}
                 $$
 
-                is one the angle sum relations. The above equation would be our base for building further relations for diffrent function. First, let's see how we get it in the first place.
-            </p> -->
+                This proves the angle sum relation for sine.
+            </p>
 
 
 
@@ -847,7 +1593,20 @@
 
 
     <script>
-    const navLinks = document.querySelectorAll('nav a');
+    // const header = document.querySelector('header');
+    // console.log(header);
+    // const headerOffset = header.offsetTop;
+
+    // window.addEventListener('scroll', () => {
+    //     if(window.pageYOffset >= headerOffset){
+    //         header.classList.add('sticky');
+    //     }
+    //     else{
+    //         header.classList.remove('sticky');
+    //     }
+    // })
+    
+    // const navLinks = document.querySelectorAll('nav a');
 
     
     navLinks.forEach(link => {

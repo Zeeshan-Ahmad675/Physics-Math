@@ -130,28 +130,84 @@
             <h1>Vectors</h1>
         </center>
 
+        <div id="mainfnav">
+            <div>
+                <div id="bfnav" title="List of Contents">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <ol id="bfnavi">
+                <li><a href="#Introduction" style="font-weight: bold">Introduction</a>
+    
+                    <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+                        <li><a href="#Scalars">Scalars</a></li>
+                        <li><a href="#Vectors">Vectors</a></li>
+                    </ol>
+    
+                </li>
+                <li><a href="#Addition_of_Vectors" style="font-weight: bold">Addition of Vectors</a>
+                
+                    <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+    
+                        <li><a href="#Triangle_Law">Triangle Law</a></li>
+                        <li><a href="#Parallelogram_Law">Parallelogram Law</a></li>
+                        <li><a href="#Magnitude_and_Direction_of_Resultant">Magnitude and Direction of Resultant</a></li>
+                        <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li>
+                    </ol>
+    
+                </li>
+                <!-- <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li> -->
+            </ol>
+        </div>
+
         <p>Topics covered in this section are: </p>
 
         <ol>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#additionofvectors">Addition of Vectors</a></li>
+            <li><a href="#Introduction" style="font-weight: bold">Introduction</a>
+
+                <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+                    <li><a href="#Scalars">Scalars</a></li>
+                    <li><a href="#Vectors">Vectors</a></li>
+                </ol>
+
+            </li>
+            <li><a href="#Addition_of_Vectors" style="font-weight: bold">Addition of Vectors</a>
+
+                <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+                    <li><a href="#Triangle_Law">Triangle Law</a></li>
+                    <li><a href="#Parallelogram_Law">Parallelogram Law</a></li>
+                    <li><a href="#Magnitude_and_Direction_of_Resultant">Magnitude and Direction of Resultant</a></li>
+                    <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li>
+                </ol>
+
+            </li>
+
+            <!-- <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#"></a></li> -->
         </ol>
 
         <mark style="background-color: rgb(229, 228, 228);"><span style="color: red;">*</span> Further topics would be added based on need.</mark>
         <hr>
 
-        <h2 id="introduction">1. Introduction</h2>
+        <h2 id="Introduction">1. Introduction</h2>
 
         <p>
             In our everyday-life, we encounter three quantities - <b>Scalars, Vectors</b> and <b>Higher rank Tensors</b>. To say, Scalar and Vectors are zero and 1st rank tensors, respectively. But, we won't be discussing higher rank tensors here.
             <br/><br/>
 
             <ul class="mainlist">
-                <li><b><u>Scalar</u>:</b></li>
+                <li id="Scalars"><b><u>Scalars</u>:</b></li>
 
                 <p>
                     <b>Definition: </b>Scalars are the quantities which have only magnitudes but no direction.
@@ -174,7 +230,7 @@
 
                 <br/><br/>
 
-                <li><b><u>Vectors</u>:</b></li>
+                <li id="Vectors"><b><u>Vectors</u>:</b></li>
 
 
                 <p>
@@ -239,12 +295,12 @@
 
 
         <br/><br/>
-        <h2 id="additionofvectors">2. Addition of Vectors</h2>
+        <h2 id="Addition_of_Vectors">2. Addition of Vectors</h2>
         
             <p>Additon of two vectors is performed using two laws: 
 
                 <ol style="list-style-type: lower-roman;">
-                    <li id="trianglelaw"><b><u>Triangle Law</u>:</b></li>
+                    <li id="Triangle_Law"><b><u>Triangle Law</u>:</b></li>
 
                     <p>
 
@@ -301,7 +357,7 @@
                     <br/><br/>
 
 
-                    <li class="clrb" id="parallelogramlaw"><b><u>Parallelogram Law</u>:</b></li>
+                    <li class="clrb" id="Parallelogram_Law"><b><u>Parallelogram Law</u>:</b></li>
 
                     <p>
                         Again, consider the vectors \(\vec{A}\) and \(\vec{B}\) arranged (by parallel translation) such that the tail of \(\vec{A}\) and \(\vec{B}\) coincides. Now, the parallelogram law can be stated as follows: 
@@ -321,7 +377,7 @@
                     </p>
 
                     <p>
-                        This is the same as the <a href="#trianglelaw">Triangle law</a> as we can parallelly translate the vector \(\vec{B}\) to the right side of the paralleogram and form the triangle as was in the <a href="#img2.1">Figure 2.1</a>. But, the two of them have their own significance as we use Parallelogram law to find the <a href="#magnitudeofresultantvector">magnitude of resultant vector</a> and triangle law in expressing one vector as <a href="#differenceofvectors">difference of two</a>, to say one of many uses.
+                        This is the same as the <a href="#Triangle_Law">Triangle law</a> as we can parallelly translate the vector \(\vec{B}\) to the right side of the paralleogram and form the triangle as was in the <a href="#img2.1">Figure 2.1</a>. But, the two of them have their own significance as we use Parallelogram law to find the <a href="#Magnitude_and_Direction_of_Resultant">magnitude of resultant vector</a> and triangle law in expressing one vector as <a href="#Difference_of_two_Vectors">difference of two</a>, to say one of many uses.
                     </p>
 
 
@@ -349,7 +405,7 @@
 
                 <br/><br/>
                 <ul class="mainlist">
-                    <li style="font-size: 18px;" class="clrb" id="magnitudeofresultantvector"><b><u>Magnitude and direction of Resultant vector</u>:</b></li>
+                    <li style="font-size: 18px;" class="clrb" id="Magnitude_and_Direction_of_Resultant"><b><u>Magnitude and direction of Resultant vector</u>:</b></li>
 
 
                     <p>
@@ -367,7 +423,7 @@
 
 
                     <p>
-                        Using <a href="#parallelogramlaw">parallelogram law</a>, we can draw the parallelogram \(PSRT\) and assign the diagonal \(PQ\) as the resultant vector \(\vec{R}\). Also, \(SR = PT = b\). Further, using simple <a href="Mathematical_methods_in_physics.html#trigonometry">trigonometry</a>, we get the side lengths of the right angled triangle, \(\triangle RQS\) as :
+                        Using <a href="#Parallelogram_Law">parallelogram law</a>, we can draw the parallelogram \(PSRT\) and assign the diagonal \(PQ\) as the resultant vector \(\vec{R}\). Also, \(SR = PT = b\). Further, using simple <a href="Mathematical_methods_in_physics.html#trigonometry">trigonometry</a>, we get the side lengths of the right angled triangle, \(\triangle RQS\) as :
 
                         $$
                             \begin{align}
@@ -377,7 +433,7 @@
                         $$
 
 
-                        <p id="eq2.1" class="clrb">Now, from the right angled triangle \(\triangle PQR\) and using <a href="Mathematical_methods_in_physics.html#pythagoras">pythagoras theorem</a>,</p> 
+                        <p id="eq2.1" class="clrb">Now, from the right angled triangle \(\triangle PQR\) and using <a href="Mathematical_methods_in_physics.html#Pythagoras_Theorem">pythagoras theorem</a>,</p> 
 
                         $$
                         \begin{align}
@@ -419,10 +475,10 @@
                     </p>
 
                     <br/><br/>
-                    <li><b><u>Difference of two vectors</u>:</b></li>
+                    <li style="font-size: 110%" id="Difference_of_two_Vectors"><b><u>Difference of two vectors</u>:</b></li>
 
                     <p>
-                        The difference of two vectors is the sum of the first vector and the negative of the vector being subtracted. Consider the same vectors \(\vec{a}\) and \(\vec{b}\) again as shown in <a href="img2.6">Figure 2.6</a>.
+                        The difference of two vectors is the sum of the first vector and the negative of the vector being subtracted. Consider the same vectors \(\vec{a}\) and \(\vec{b}\) again as shown in <a href="#img2.6">Figure 2.6</a>.
                     </p>
 
 
