@@ -75,6 +75,8 @@
                 float: none !important;
                 display: block;
                 text-align: center;
+                margin-top: 30px !important;
+                margin-bottom: 30px !important;
             }
             mjx-mtable {
             margin-left: 0;
@@ -136,6 +138,12 @@
             <h1>Mathematical Methods</h1>
         </center>
 
+
+        <div id="fixedmodediv">
+            <div id="modediv" onclick="modechange()">
+                <div id="modebut"></div>
+            </div>
+        </div>
 
         <!-- <span><b>Read Offline in PDF</b></span>
         <button id="downloadBtn">
@@ -957,7 +965,7 @@
                     \begin{align}
                         \tan{(-\theta)} &= \frac{\sin{(-\theta)}}{\cos{(-\theta)}} \\[4px]
 
-                        \implies \tan{(-\theta)} &= \frac{-\sin{\theta}}{\cos{\theta}} = -\tan{\theta}
+                        \implies \tan{(-\theta)} &= \frac{-\sin{\theta}}{\cos{\theta}} = -\tan{\theta} \hspace{1cm} \color{red}{(2.10 \text{ iii})}
                     \end{align}
                     $$
 
@@ -1248,7 +1256,7 @@
                     </tbody>
 
                     <tfoot>
-                        <tr style="font-size: 0.8em;">
+                        <tr style="font-size: 0.8em; background-color: white;">
                             <td  colspan="5">Here, \(\phi\) is the argument. <br/><span style="color: red;">*</span> Blank table cell means <b>no change</b>.</td>
                         </tr>
                     </tfoot>
@@ -1685,7 +1693,7 @@
             </div>
 
             <p>
-                It is one of the angle sum relations. The above equation would be our base for building further relations for diffrent function. But, let's see how we get this one in the first place. Consider the <a href="#img2.9">figure 2.9</a> shown.
+                The above relation is one of the angle sum relations. This equation would be our base for building further relations for different function. But, let's see how we get this one in the first place. Consider the <a href="#img2.9">figure 2.9</a> shown.
             </p>
 
             <p>
@@ -1701,9 +1709,9 @@
 
                 \end{align}
                 $$
-                </p>
+            </p>
 
-                <p class="clrb" id="eq2.17">
+            <p class="clrb" id="eq2.17">
                 The last step uses the fact that \(EF=BC\). Now, we again use the definitions of sine and cosine in the triangles \(\triangle ABC, \triangle ADC\) and \(\triangle DEC\) to get: 
 
                 $$
@@ -1712,13 +1720,86 @@
 
                     \implies \sin{(\theta+ \phi)} &= \cos{\theta}\sin{\phi} +\sin{\theta}\cos{\phi} \\[4px]
 
-                    \implies \sin{(\theta+ \phi)} &= \sin{\theta}\cos{\phi}+ \cos{\theta}\sin{\phi} \hspace{1cm} \color{red}{(2.17)}
+                    \implies \sin{(\theta+ \phi)} &= \sin{\theta}\cos{\phi}+ \cos{\theta}\sin{\phi} \hspace{1cm} \color{red}{(2.17 \text{ i})}
                 \end{align}
                 $$
 
-                This proves the angle sum relation for sine.
+                This proves one of the angle sum relation for sine. For every trigonometric function, we would give two relations: one for \((\theta + \phi)\) and other for \((\theta - \phi)\). 
             </p>
 
+
+            <ul class="c1ul">
+                <li><b><u>For sine</u> :</b></li>
+    
+                <p>
+                    Above, we derived the expression for \(\sin{(\theta + \phi)}\), now let's see what is \(\sin{(\theta- \phi)}\):
+    
+    
+                    $$
+                    \begin{align}
+                        \sin{(\theta - \phi)} &= \sin{\left(\theta + (-\phi)\right)} \\[4px]
+    
+                        \sin{(\theta - \phi)} &= \sin{\theta}\cos{(-\phi)} + \cos{\theta}\sin{(-\phi)} \hspace{1cm} (\text{using, eq 2.17})\\[4px]
+    
+                        \sin{(\theta - \phi)} &= \sin{\theta}\cos{\phi} - \cos{\theta}\sin{\phi} \hspace{1cm} (\text{using, eqs 2.10}) \\[4px] 
+                        & \hspace{5cm} \color{red}{(2.17\text{ ii})}  
+    
+                    \end{align}
+                    $$
+    
+                    In the steps above, we have employed the negative angle property of \(\sin\) and \(\cos\) along with \(\text{eq 2.17}\) as indicated. With this, we got our desired relations for sine.
+                </p>
+    
+                <li><b><u>For cosine</u>:</b></li>
+    
+                <p>
+                    To find \(\cos{(\theta + \phi)}\), we work out as following:
+    
+                    $$
+                    \begin{align}
+                        \cos{(\theta + \phi)} &= \sin{\left(\frac{\pi}{2}- (\theta + \phi)\right)} \hspace{1cm} (\text{using, eq 2.1 i})\\[4px]
+    
+                        &= \sin{\left(\left(\frac{\pi}{2} - \theta\right) + \phi\right)}\\[4px]
+    
+                        &= \sin{\left(\frac{\pi}{2} - \theta\right)}\cos{(\phi)} - \cos{\left(\frac{\pi}{2} - \theta\right)}\sin{(\phi)} \\[4px]
+    
+                        \cos{(\theta + \phi)} &= \cos{\theta}\cos{\phi} - \sin{\theta}\sin{\phi} \hspace{1cm} \color{red}{\text{(2.18 i)}}
+                    \end{align}
+                    $$
+    
+                    For moving from last second to the last equation above we again employ \(\text{eq(2.1 i)}\) and \(\text{eq(2.2 i)}\). Further, deriving \(\cos{(\theta - \phi)}\) is the same as was for \(\sin{(\theta - \phi)}\). This is left for the reader as an exercise. The result would be :
+    
+                    $$
+                        \cos{(\theta - \phi)} = \cos{\theta}\cos{\phi} + \sin{\theta}\sin{\phi} \hspace{1cm} \color{red}{\text{(2.18 ii)}}
+                    $$
+                </p>
+    
+                <li><b><u>For tangent</u>:</b></li>
+    
+                <p>
+                    To find \(\tan{(\theta + \phi)}\), we go as follows: 
+    
+                    $$
+                    \begin{align}
+                        \tan{(\theta + \phi)} &= \frac{\sin{(\theta + \phi)}}{\cos{(\theta + \phi)}} \\[4px]
+    
+                        &= \frac{\sin{\theta}\cos{\phi} + \cos{\theta}\sin{\phi}}{\cos{\theta}\cos{\phi} - \sin{\theta}\sin{\phi}} \\[4px]
+    
+                        &= \frac{\frac{\sin{\theta}\cos{\phi} + \cos{\theta}\sin{\phi}}{\cos{\theta}\cos{\phi}}}{\frac{\cos{\theta}\cos{\phi} - \sin{\theta}\sin{\phi}}{\cos{\theta}\cos{\phi}}} \\[4px]
+    
+                        \tan{(\theta + \phi)} &= \frac{\tan{\theta} + \tan{\phi}}{1 - \tan{\theta}\tan{\phi}} \hspace{1cm} \color{red}{\text{(2.19 i)}}
+                    \end{align}
+                    $$
+    
+    
+                    This is the (to say) the most useful form of \(\tan{(\theta + \phi)}\), as it can take many forms as is vivid from the above calculation. Similarly, we can find \(\tan{(\theta - \phi)}\) using the negative angle properties of \(\tan\) \((\text{eq (2.10 iii)})\), which again is left as an exercise. The result is mentioned here: 
+    
+                    $$
+                        \tan{(\theta - \phi)} = \frac{\tan{\theta} - \tan{\phi}}{1 + \tan{\theta}\tan{\phi}} \hspace{1cm} \color{red}{(2.19 \text{ ii})}
+                    $$
+                </p>
+    
+            </ul>
 
 
 
@@ -1755,6 +1836,7 @@
 
 
 
+    <script src="/index.js"></script>
 
 
     <script>

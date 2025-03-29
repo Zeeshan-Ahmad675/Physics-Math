@@ -37,9 +37,14 @@ main{
     width: 85%;
     justify-self: center;
     z-index: 10px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 19px;
+    /* box-shadow: 0 0 4px black; */
 }
+
+
+
+
 /* Header and nav bar */
 
 header{
@@ -52,6 +57,7 @@ header{
     top: 0;
     height: 56px;
     z-index: 1000;
+    box-shadow: 0 0 8px white;
 }
 
 
@@ -125,6 +131,54 @@ nav a.active {
     background-color: white;
     margin: 3px;
 }
+
+
+
+
+#fixedmodediv{
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    z-index: 20;
+    cursor: pointer;
+}
+#modediv{
+    background-color: black;
+    width: 45px;
+    height: 25px;
+    z-index: 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 0;
+}
+
+#modebut{
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    box-shadow: 0 0px 5px grey;
+}
+
+
+
+/* Light theme styles */
+[data-theme="light"] {
+    background-color: white;
+    color: black;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] {
+    background-color: black;
+    color: white;
+}
+
 
 
 
@@ -237,8 +291,8 @@ main{
     gap: 20px;
 }
 .chbox{
-    border: 2px solid black;
-    box-shadow: 0px 0px 3px black;
+    /* border: 2px solid black;
+    box-shadow: 0px 0px 3px black; */
     padding: 8px;
     text-align: center;
 }
@@ -248,7 +302,7 @@ main{
 }
 .chbox:hover{
     scale: 1.02;
-    background-color: hsl(180, 100%, 98%);
+    /* background-color: hsl(180, 100%, 98%); */
 }
 
 #divgrid a{
@@ -272,6 +326,7 @@ footer{
     height: 80px;
     color: white;
     padding: 8px;
+    box-shadow: 0 0 8px white;
 }
 footer a{
     color: hsl(170, 100%, 50%);
