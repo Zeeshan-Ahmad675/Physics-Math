@@ -187,6 +187,7 @@
                         <li><a href="#Review_and_talk_on_angles">Review and Talk on Angles</a></li>
                         <li><a href="#Redefining_trigonometric_functions">Redefining Trigonometric Functions</a></li>
                         <li><a href="#Angle_Sum_relations">Angle Sum Relations</a></li>
+                        <li><a href="#Some_important_results">Some important results</a></li>
                     </ol>
     
                 </li>
@@ -221,6 +222,7 @@
                     <li><a href="#Review_and_talk_on_angles">Review and Talk on Angles</a></li>
                     <li><a href="#Redefining_trigonometric_functions">Redefining Trigonometric Functions</a></li>
                     <li><a href="#Angle_Sum_relations">Angle Sum Relations</a></li>
+                    <li><a href="#Some_important_results">Some important results</a></li>
                 </ol>
 
             </li>
@@ -1832,6 +1834,117 @@
             </p>
     
             </ul>
+            <br/><br/>
+
+            <li id="Some_important_results"><b><u>Some important results</u>:</b>
+            
+                <p>
+                    With all the theoretical framework in our hand, let's calculate some trigonometric identities which would prove to be helpful in our ananlysis later on.
+                </p>
+
+                <ul class="c1ul">
+                    <li>\(\underline{\sin{(2\theta)}}\)</li>
+
+                    <p>
+                        Using, \(\text{eq(2.17 i)}\) for \(\theta = \phi\), we get: 
+
+                        $$
+                        \begin{align}
+                            \sin{(2\theta)} &= \sin{(\theta + \theta)}  \\[4px]
+
+                            \implies \sin{(2\theta)} &= \sin{\theta}\cos{\theta} + \cos{\theta}\sin{\theta} \\[4px]
+
+                            \implies \sin{(2\theta)} &= 2\sin{\theta}\cos{\theta} \hspace{1cm} \color{red}{\text{(2.21)}} \\
+
+                        \end{align}
+                        $$
+
+                        This equation is much important when simplifying trigononmetric equations in our analysis. 
+                    </p>
+
+
+
+
+                    <li>\(\underline{\cos{(2\theta)}}\)</li>
+
+                    <p>
+                        Using, \(\text{eq(2.18 i)}\) for \(\theta = \phi\), we get: 
+
+                        $$
+                        \begin{align}
+                            \cos{(2\theta)} &= \cos{(\theta + \theta)}  \\[4px]
+
+                            \implies \cos{(2\theta)} &= \cos{\theta}\cos{\theta} - \sin{\theta}\sin{\theta} \\[4px]
+
+                            \implies \cos{(2\theta)} &= \cos^2{\theta} - \sin^2{\theta} \hspace{1cm} \color{red}{\text{(2.22)}} \\[4px]
+
+                            &= 2\cos^2{\theta} - 1 \\[4px]
+
+                            &= 1 -2\sin^2{\theta} \\
+                        \end{align}
+                        $$
+
+                        The last two steps of conversion uses the relation \(\text{eq (2.4)}\) i.e. \(\sin^2{\theta}+ \cos^2{\theta} = 1\). Again, the three forms are equivalent in terms of mathematics and also in terms of use in the analysis. 
+                    
+                        In a similar way, we can deduce higher order \(\sin\) and \(\cos\) i.e. for \(3\theta\) or maybe \(4\theta\). But, we would rarely need them. One is done here: 
+                    </p>
+
+                        <li>\(\underline{\sin{(3\theta)}}\)</li>
+
+                    <p>
+                        Again, using \(\text{eq(2.17 i)}\) for \(\theta = \phi\), we get:
+                        
+                        $$
+                        \begin{align}
+                            \sin{(3\theta)} &= \sin{(2\theta + \theta)}  \\[4px]
+
+                            \implies \sin{(3\theta)} &= \sin{(2\theta)}\cos{\theta} + \cos{(2\theta)}\sin{\theta} \\[4px]
+
+                            \implies \sin{(3\theta)} &= 2\sin{\theta}\cos{\theta}\cos{\theta} + (\cos^2{\theta}-\sin^2{\theta})\sin{\theta} \\[4px]
+
+                            \implies \sin{(3\theta)} &= 2\sin{\theta}\cos^2{\theta} + \cos^2{\theta}\sin{\theta}-\sin^3{\theta} \\[4px]
+
+                            \implies \sin{(3\theta)} &= 3\sin{\theta}(1-\sin^2{\theta}) -\sin^3{\theta} \\[4px]
+
+                            \implies \sin{(3\theta)} &= 3\sin{\theta} -4\sin^3{\theta} \hspace{1cm} \color{red}{\text{(2.23)}} \\[4px]
+
+
+                        \end{align}
+                        $$
+
+                    Here, we used the last two results along with the angle sum relation. For, cosine it turns out to be (left as an exercise): 
+
+                    $$
+                    \cos{(3\theta)} = 4\cos^3{\theta} - 3\cos{\theta} \hspace{1cm} \color{red}{(2.24)} 
+                    $$
+
+
+                    </p>
+
+                </ul>
+
+            </li>
+
+            <p>
+                One noticeable thing which turns out here is that, <b>using these relations we can decrease the degree of equations</b> (or trigonometric functions) to linear. This is helpful in <a href="#integration">integrating</a> trignometric functions of higher orders. One example follows here (can be skipped until calculus section): 
+            </p>
+
+            <p>
+                Lets perform indefinite integration of \(\sin^2{\theta}\) with respect to \(\theta\):
+
+                $$
+                \begin{align}
+                    I &= \int{\sin^2{\theta}} \text{ d}\theta \\[4px]
+
+                    I &= \int{\frac{1-\cos{(2\theta)}}{2}} \text{ d}\theta \hspace{1cm} \text{(using, eq (2.22))}\\[4px]
+
+                    I &= \frac{1}{2} \left(\int{\text{d}\theta} - \int{\cos{(2\theta)}}\text{ d}\theta \right) + C\\[4px]
+
+                    I &= \frac{1}{2} \left( \theta - \frac{\sin{(2\theta)}}{2} \right) + C = \frac{\theta}{2} - \frac{\sin{2\theta}}{4} + C
+                \end{align}
+                $$
+            </p>
+
 
 
 
