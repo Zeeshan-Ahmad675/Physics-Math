@@ -90,15 +90,27 @@ nav{
 .nav-item{
     padding: 18px;
 }
-
-#chapterlist{
-    display: none;
-}
 #navchap{
     z-index: 1000;
+    position: relative;
+}
+#chapterlist{
+    display: none;
+    width: 180px;
+    position: absolute;
+    font-size: small;
+    border: 1px solid black;
+    border-radius: 15px;
+    right: -40%;
+    margin-top: 2px;
+    overflow: hidden;
 }
 #chapterlist div{
-    padding: 18px;
+    padding: 15px;
+    /* border-bottom: 1px solid black; */
+}
+#chapterlist a:not(:last-child) {
+    display: block;
     border-bottom: 1px solid black;
 }
 #navchap:hover div{
@@ -135,6 +147,9 @@ nav a.active {
 
 
 
+
+/* Mode toggle button */
+
 #fixedmodediv{
     position: fixed;
     top: 65px;
@@ -151,7 +166,6 @@ nav a.active {
     border-radius: 15px;
     padding: 0;
 }
-
 #modebut{
     background-color: white;
     width: 25px;
@@ -163,7 +177,20 @@ nav a.active {
     top: 0;
     margin: 0;
     box-shadow: 0 0px 5px grey;
+    text-align: center;
+    font-size: 12px;
 }
+#sun{
+    justify-self: center;
+    margin-top: 4px ;
+    color: orange;
+}
+#moon{
+    justify-self: center;
+    margin-top: 4px; 
+    color: #ffffff;
+}
+
 
 
 

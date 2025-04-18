@@ -1,6 +1,9 @@
 modediv = document.getElementById("modediv");
 modebut = document.getElementById("modebut");
 fixedmodediv = document.getElementById("fixedmodediv");
+sun = document.getElementById("sun");
+moon = document.getElementById("moon");
+
 // body = document.querySelector("body");
 // main = document.querySelector("main");
 
@@ -110,12 +113,14 @@ function modechange() {
     if (currentMode === 'dark') {
         body.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        modediv.style.backgroundColor = "black";
+        modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modediv.style.border = "2px solid white";
         modebut.style.backgroundColor = "white";
-        modebut.style.border = "3px solid black";
+        modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
         modebut.style.transition = "transform 0.5s ease";
-        modebut.style.transform = `translateX(0px)`;   
+        modebut.style.transform = `translateX(0px)`;
+        sun.style.display = "block";
+        moon.style.display = "none";  
         main.style.boxShadow = "0 0 4px black" 
         fixedmodediv.title = "Dark Mode Toggle";
 
@@ -157,10 +162,12 @@ function modechange() {
         localStorage.setItem('theme', 'dark');
         modediv.style.backgroundColor = "white";
         modediv.style.border = "2px solid black";
-        modebut.style.backgroundColor = "black";
+        modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modebut.style.border = "3px solid white";
         modebut.style.transition = "transform 0.5s ease";
         modebut.style.transform = `translateX(20px)`;
+        sun.style.display = "none";
+        moon.style.display = "block";  
         main.style.boxShadow = "0 0 4px white";
         fixedmodediv.title = "Light Mode Toggle";
 
@@ -213,12 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentMode = body.getAttribute('data-theme');
 
     if (currentMode === 'light') {
-        modediv.style.backgroundColor = "black";
+        modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modediv.style.border = "2px solid white";
         modebut.style.backgroundColor = "white";
-        modebut.style.border = "3px solid black";
+        modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
         modebut.style.transition = "transform 0.5s ease";
-        modebut.style.transform = `translateX(0px)`; 
+        modebut.style.transform = `translateX(0px)`;
+        sun.style.display = "block";
+        moon.style.display = "none";  
         main.style.boxShadow = "0 0 4px black"
         fixedmodediv.title = "Dark Mode Toggle";
  
@@ -258,10 +267,12 @@ document.addEventListener('DOMContentLoaded', () => {
     else {
         modediv.style.backgroundColor = "white";
         modediv.style.border = "2px solid black";
-        modebut.style.backgroundColor = "black";
+        modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modebut.style.border = "3px solid white";
         modebut.style.transition = "transform 0.5s ease";
         modebut.style.transform = `translateX(20px)`;
+        sun.style.display = "none";
+        moon.style.display = "block";  
         main.style.boxShadow = "0 0 4px white";
         fixedmodediv.title = "Light Mode Toggle";
 
