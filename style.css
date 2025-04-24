@@ -215,19 +215,22 @@ nav a.active {
 
 #downloadBtn{
     font-size: 15px;
-    background-color: hsl(0, 0%, 78%);
-    border-radius: 15px;
+    background-color: hsl(195, 79%, 52%);
+    border-radius: 20px;
     border: none;
-    padding: 8px;
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 8px hsl(195, 79%, 32%);
 }
 #downloadBtn a{
-    color: hsl(211, 100%, 50%);
+    color: white;
 }
 #downloadBtn:hover{
-    background-color: hsl(0, 0%, 83%);
+    background-color: hsl(195, 79%, 42%);
 }
 #downloadBtn:active{
-    background-color: hsl(0, 0%, 88%);
+    background-color: hsl(195, 79%, 32%);
 }
 
 
@@ -290,6 +293,13 @@ nav a.active {
 #bfnavi li li:hover a{
     color:hsl(230, 77%, 48%);
 }
+
+
+
+main a:visited{
+    color: rgb(85, 26, 139);
+}
+
 
 main{
     margin: 8px;
@@ -382,7 +392,7 @@ footer a{
 
 
 
-/* Animations for nav and header */
+/* Animations for nav and header and download-Heading*/
 
 @keyframes anime{
     from{transform: translateX(-100%)}
