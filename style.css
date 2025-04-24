@@ -196,7 +196,7 @@ nav a.active {
 
 /* Light theme styles */
 [data-theme="light"] {
-    background-color: white;
+    background-color: #fafafa;
     color: black;
 }
 
