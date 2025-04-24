@@ -202,7 +202,7 @@ nav a.active {
 
 /* Dark theme styles */
 [data-theme="dark"] {
-    background-color: black;
+    background-color: hsl(200, 2%, 30%);
     color: white;
 }
 
@@ -297,7 +297,7 @@ nav a.active {
 
 
 main a:visited{
-    color: rgb(85, 26, 139);
+    color: rgb(114, 73, 227);
 }
 
 

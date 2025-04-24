@@ -121,6 +121,7 @@ function modechange() {
         modebut.style.transform = `translateX(0px)`;
         sun.style.display = "block";
         moon.style.display = "none";  
+        main.style.backgroundColor = "white";
         main.style.boxShadow = "0 0 4px black" 
         fixedmodediv.title = "Dark Mode Toggle";
 
@@ -161,7 +162,7 @@ function modechange() {
         body.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
         modediv.style.backgroundColor = "white";
-        modediv.style.border = "2px solid black";
+        modediv.style.border = "2px solid hsl(200, 2%, 30%)";
         modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modebut.style.border = "3px solid white";
         modebut.style.transition = "transform 0.5s ease";
@@ -169,6 +170,7 @@ function modechange() {
         sun.style.display = "none";
         moon.style.display = "block";  
         main.style.boxShadow = "0 0 4px white";
+        main.style.backgroundColor = "hsl(216, 5%, 18%)";
         fixedmodediv.title = "Light Mode Toggle";
 
 
@@ -228,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modebut.style.transform = `translateX(0px)`;
         sun.style.display = "block";
         moon.style.display = "none";  
+        main.style.backgroundColor = "white";
         main.style.boxShadow = "0 0 4px black"
         fixedmodediv.title = "Dark Mode Toggle";
  
@@ -266,13 +269,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     else {
         modediv.style.backgroundColor = "white";
-        modediv.style.border = "2px solid black";
+        modediv.style.border = "2px solid hsl(200, 2%, 30%)";
         modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modebut.style.border = "3px solid white";
         modebut.style.transition = "transform 0.5s ease";
         modebut.style.transform = `translateX(20px)`;
         sun.style.display = "none";
         moon.style.display = "block";  
+        main.style.backgroundColor = "hsl(216, 5%, 18%)";
         main.style.boxShadow = "0 0 4px white";
         fixedmodediv.title = "Light Mode Toggle";
 
