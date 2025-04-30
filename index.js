@@ -326,9 +326,9 @@ window.onloadTurnstileCallback = function () {
       callback: function (token) {
         console.log(`Challenge Success ${token}`);
         setTimeout(() => {
-            document.querySelector("header").style.display = "flex";
-            document.querySelector("main").style.display = "block";
-            document.querySelector("footer").style.display = "block";
+            document.querySelector(".header").style.display = "flex";
+            document.querySelector(".main").style.display = "block";
+            document.querySelector(".footer").style.display = "block";
             document.getElementById("myWidget").style.display = "none";
         }, 2000);
       },
