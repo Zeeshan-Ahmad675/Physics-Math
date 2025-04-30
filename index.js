@@ -314,23 +314,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
-
-
-
-
-window.onloadTurnstileCallback = function () {
-    turnstile.render("#myWidget", {
-      sitekey: "0x4AAAAAABXmpfheTX1nepAz",
-      callback: function (token) {
-        console.log(`Challenge Success ${token}`);
-        setTimeout(() => {
-            document.querySelector(".header").style.display = "flex";
-            document.querySelector(".main").style.display = "block";
-            document.querySelector(".footer").style.display = "block";
-            document.getElementById("myWidget").style.display = "none";
-        }, 2000);
-      },
-    });
-  };
