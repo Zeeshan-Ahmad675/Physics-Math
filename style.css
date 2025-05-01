@@ -295,10 +295,6 @@ nav a.active {
 }
 
 
-main a:link{
-    text-decoration: none;
-    color: hsl(920, 100%, 50%);
-}
 main a:visited{
     color: rgb(114, 73, 227);
 }
