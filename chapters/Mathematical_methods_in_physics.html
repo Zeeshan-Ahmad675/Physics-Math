@@ -87,12 +87,12 @@
         }
 
         @media screen and (max-width: 700px) {
-            .table25{
+            /* .table25{
                 display: table;
             }
             #table25{
                 display: none;
-            }
+            } */
         }
     </style>
 </head>
@@ -486,7 +486,9 @@
                                 $$
                                 \sin{\theta}=\frac{p}{h} \hspace{1cm} \color{red}{(2.1)}
                                 $$
+                            </p>
 
+                            <p id="eq2.1.1">
                                 Upon rearranging, we get \(p=h \sin{\theta}\). Thus, \(p\) is said to be the <a href="vectors.html">projection</a> of \(h\) over the perpendicular side. This is much useful when dealing with <a href="vectors.html">vector projection</a>. Further, we see from \(\angle CAB\) that: 
 
                                 $$
@@ -510,7 +512,9 @@
                                 $$
                                 \cos{\theta}=\frac{b}{h}\hspace{1cm} \color{red}{(2.2)}
                                 $$
+                            </p>
 
+                            <p id="eq2.2.1">
                                 As before, \(b=h \cos{\theta}\). Thus, \(b\) is the <a href="vectors.html">projection</a> of \(h\) on the base. Again, 
 
                                 $$\cos{(90^{\circ}-\theta)}= \sin{\theta} \hspace{1cm} \color{red}{(2.2 \text{ i})}$$
@@ -580,81 +584,85 @@
 
 
             <br/>
-            <table id="table2.1" border="1" style="background-color: black;">
-                <caption><span style="color: red;">Table  2.1</span>: Values of trigonometric functions at some common angles</caption>
-                <thead>
-                    <tr style="background-color: lightblue;">
-                        <th width="100">Function &#8595 \( \theta\)</th>
-                        <th>\(0^{\circ}\)</th>
-                        <th>\(30^{\circ}\)</th>
-                        <th>\(45^{\circ}\)</th>
-                        <th>\(60^{\circ}\)</th>
-                        <th>\(90^{\circ}\)</th>
-                    </tr>
-                </thead>
 
-                <tbody>
-                    <tr align="center" style="background-color: aliceblue;">
-                        <td>\(\sin{\theta}\)</td>
-                        <td>\(0\)</td>
-                        <td>\(1/2\)</td>
-                        <td>\(1/\sqrt{2}\)</td>
-                        <td>\(\sqrt{3}/2\)</td>
-                        <td>\(1\)</td>
-                    </tr>
+            <div style="overflow:auto;">
+                <table id="table2.1" border="1" style="background-color: black;">
+                    <caption><span style="color: red;">Table  2.1</span>: Values of trigonometric functions at some common angles</caption>
+                    <thead>
+                        <tr style="background-color: lightblue;">
+                            <th width="100">Function &#8595 \( \theta\)</th>
+                            <th>\(0^{\circ}\)</th>
+                            <th>\(30^{\circ}\)</th>
+                            <th>\(45^{\circ}\)</th>
+                            <th>\(60^{\circ}\)</th>
+                            <th>\(90^{\circ}\)</th>
+                        </tr>
+                    </thead>
 
-                    <tr align="center" style="background-color: aliceblue;">
-                        <td>\(\cos{\theta}\)</td>
-                        <td>\(1\)</td>
-                        <td>\(\sqrt{3}/2\)</td>
-                        <td>\(1/\sqrt{2}\)</td>
-                        <td>\(1/2\)</td>
-                        <td>\(0\)</td>
-                    </tr>
+                    <tbody>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\sin{\theta}\)</td>
+                            <td>\(0\)</td>
+                            <td>\(1/2\)</td>
+                            <td>\(1/\sqrt{2}\)</td>
+                            <td>\(\sqrt{3}/2\)</td>
+                            <td>\(1\)</td>
+                        </tr>
 
-                    <tr align="center" style="background-color: aliceblue;">
-                        <td>\(\tan{\theta}\)</td>
-                        <td>\(0\)</td>
-                        <td>\(1/\sqrt{3}\)</td>
-                        <td>\(1\)</td>
-                        <td>\(\sqrt{3}\)</td>
-                        <td>\(\inf \)<span style="color: red;">*</span></td>
-                    </tr>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\cos{\theta}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(\sqrt{3}/2\)</td>
+                            <td>\(1/\sqrt{2}\)</td>
+                            <td>\(1/2\)</td>
+                            <td>\(0\)</td>
+                        </tr>
 
-                    <tr align="center" style="background-color: aliceblue;">
-                        <td>\(\csc{\theta}\)</td>
-                        <td>\(\inf \)<span style="color: red;">*</span></td>
-                        <td>\(2\)</td>
-                        <td>\(\sqrt{2}\)</td>
-                        <td>\(2/\sqrt{3}\)</td>
-                        <td>\(1\)</td>
-                    </tr>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\tan{\theta}\)</td>
+                            <td>\(0\)</td>
+                            <td>\(1/\sqrt{3}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(\sqrt{3}\)</td>
+                            <td>\(\inf \)<span style="color: red;">*</span></td>
+                        </tr>
 
-                    <tr align="center" style="background-color: aliceblue;">
-                        <td>\(\sec{\theta}\)</td>
-                        <td>\(1\)</td>
-                        <td>\(2/\sqrt{3}\)</td>
-                        <td>\(\sqrt{2}\)</td>
-                        <td>\(2\)</td>
-                        <td>\(\inf \)<span style="color: red;">*</span></td>
-                    </tr>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\csc{\theta}\)</td>
+                            <td>\(\inf \)<span style="color: red;">*</span></td>
+                            <td>\(2\)</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>\(2/\sqrt{3}\)</td>
+                            <td>\(1\)</td>
+                        </tr>
 
-                    <tr align="center" style="background-color: aliceblue;">
-                        <td>\(\cot{\theta}\)</td>
-                        <td>\(\inf \)<span style="color: red;">*</span></td>
-                        <td>\(\sqrt{3}\)</td>
-                        <td>\(1\)</td>
-                        <td>\(1/\sqrt{3}\)</td>
-                        <td>\(0\)</td>
-                    </tr>
-                </tbody>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\sec{\theta}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(2/\sqrt{3}\)</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>\(2\)</td>
+                            <td>\(\inf \)<span style="color: red;">*</span></td>
+                        </tr>
 
-                <tfoot style="font-weight: bold; background-color: white;">
-                    <tr>
-                        <td colspan="6"><span style="color: red;">*</span>here, \(\inf\) represents infinity or undefined</td>
-                    </tr>
-                </tfoot>
-            </table>
+                        <tr align="center" style="background-color: aliceblue;">
+                            <td>\(\cot{\theta}\)</td>
+                            <td>\(\inf \)<span style="color: red;">*</span></td>
+                            <td>\(\sqrt{3}\)</td>
+                            <td>\(1\)</td>
+                            <td>\(1/\sqrt{3}\)</td>
+                            <td>\(0\)</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot style="font-weight: bold; background-color: white;">
+                        <tr>
+                            <td colspan="6"><span style="color: red;">*</span>here, \(\inf\) represents infinity or undefined</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
             <br/>
             
 
@@ -694,13 +702,15 @@
                 <p id="eq2.5">
                     Two other pythagorean identities are:
 
-                    $$
-                    \begin{align}
-                        1 + \tan^2{\theta} &= \sec^2{\theta} \hspace{1cm} \color{red}{(2.5)} \\[5pt]
+                    <p id="eq2.6">
+                        $$
+                        \begin{align}
+                            1 + \tan^2{\theta} &= \sec^2{\theta} \hspace{1cm} \color{red}{(2.5)} \\[5pt]
 
-                        1 + \cot^2{\theta} &= \csc^2{\theta} \hspace{1cm} \color{red}{(2.6)} 
-                    \end{align}
-                    $$
+                            1 + \cot^2{\theta} &= \csc^2{\theta} \hspace{1cm} \color{red}{(2.6)} 
+                        \end{align}
+                        $$
+                    </p>
 
                     These are easily derived from the fundamental identity, as equation <a href="#eq2.5">2.5</a> can be derived by dividing the equation<a href="#eq2.4"> 2.4</a> on both sides by \(\cos^2{\theta}\) and equation <a href="#eq2.5">2.6</a>, by dividing both side of <a href="#eq2.4">2.4</a> by \(\sin^2{\theta}\), as is done below:
 
@@ -797,58 +807,60 @@
 
                     One can check the following easily: 
 
-                    <table id="table2.2">
-                        <thead>
-                            <caption><span style="color: red;">Table 2.2</span>: Angles in degree with their corresponding radian value</caption>
-                            <tr style="background-color: lightblue; text-align: center;">
-                                <th>Degree\(^{\circ}\)</th>
-                                <th>Radian\(^{\text{c}}\)</th>
-                            </tr>
-                        </thead>
+                    <div style="overflow:auto;">
+                        <table id="table2.2">
+                            <thead>
+                                <caption><span style="color: red;">Table 2.2</span>: Angles in degree with their corresponding radian value</caption>
+                                <tr style="background-color: lightblue; text-align: center;">
+                                    <th>Degree\(^{\circ}\)</th>
+                                    <th>Radian\(^{\text{c}}\)</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(0\)</td>
-                                <td>\(0\)</td>
-                            </tr>
+                            <tbody>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(0\)</td>
+                                    <td>\(0\)</td>
+                                </tr>
 
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(30\)</td>
-                                <td>\(\pi/6\)</td>
-                            </tr>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(30\)</td>
+                                    <td>\(\pi/6\)</td>
+                                </tr>
 
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(45\)</td>
-                                <td>\(\pi/4\)</td>
-                            </tr>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(45\)</td>
+                                    <td>\(\pi/4\)</td>
+                                </tr>
 
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(60\)</td>
-                                <td>\(\pi/3\)</td>
-                            </tr>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(60\)</td>
+                                    <td>\(\pi/3\)</td>
+                                </tr>
 
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(90\)</td>
-                                <td>\(\pi/2\)</td>
-                            </tr>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(90\)</td>
+                                    <td>\(\pi/2\)</td>
+                                </tr>
 
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(120\)</td>
-                                <td>\(2\pi/3\)</td>
-                            </tr>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(120\)</td>
+                                    <td>\(2\pi/3\)</td>
+                                </tr>
 
-                            <tr style="background-color: aliceblue; text-align: center;">
-                                <td>\(180\)</td>
-                                <td>\(\pi\)</td>
-                            </tr>
-                        </tbody>
+                                <tr style="background-color: aliceblue; text-align: center;">
+                                    <td>\(180\)</td>
+                                    <td>\(\pi\)</td>
+                                </tr>
+                            </tbody>
 
-                        <tfoot>
-                            <tr style="background-color: white;">
-                                <td colspan="2">\(...\) and so on.</td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                            <tfoot>
+                                <tr style="background-color: white;">
+                                    <td colspan="2">\(...\) and so on.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
 
 
                 </p>
@@ -912,20 +924,26 @@
                 </figure>
             </div>
 
-            <p id="eq2.9">
-                From the previous definition, 
+            <p id="eq2.9.1">
+                From the previous definition,
 
-                $$
-                \begin{align}
-                    \cos{\theta} &= \frac{OA}{OB} = x \hspace{1cm} \color{red}{(2.9\text{ i})}\\[4px] 
-                    \sin{\theta} &= \frac{AB}{OB} = y \hspace{1cm} \color{red}{(2.9\text{ ii})}
-                \end{align}
-                $$
+                <p id="eq2.9.2">
+                    $$
+                    \begin{align}
+                        \cos{\theta} &= \frac{OA}{OB} = x \hspace{1cm} \color{red}{(2.9\text{ i})}\\[4px] 
+                        \sin{\theta} &= \frac{AB}{OB} = y \hspace{1cm} \color{red}{(2.9\text{ ii})}
+                    \end{align}
+                    $$
+                </p>
+                <p>
+                    If we consider this to be the <b>base definition</b> of sine and cosine with \(x\) and \(y\) as the <b>coordinates (including sign)</b> of the point making angle \(\theta\) with \(x\)-axis through the origin <span style="color:rgb(21,102,192)">O</span> as the vertex, then we can easily extend out these functions to all real numbers. To say,
+                </p>
 
-                If we consider this to be the <b>base definition</b> of sine and cosine with \(x\) and \(y\) as the <b>coordinates (including sign)</b> of the point making angle \(\theta\) with \(x\)-axis through the origin <span style="color:rgb(21,102,192)">O</span> as the vertex, then we can easily extend out these functions to all real numbers. To say,
-                <br/><br/>
+                <br/>
                 
-                Sine of an angle \(\theta\), the angle subtended by a line segment (for refrence, <span style="color:rgb(21,102,192)">OB</span> in figure), with the \(x\)-axis at the center of a unit circle on which <span style="color:rgb(21,102,192)">B</span> is lying, is given as the <b>ratio of \(y\)-coordinate (with sign)</b> of point <span style="color:rgb(21,102,192)">B</span> and the <b>length</b> (always positive) of the hypotenuse (or line segment <span style="color:rgb(21,102,192)">OB</span>) i.e.
+                <p>
+                    Sine of an angle \(\theta\), the angle subtended by a line segment (for refrence, <span style="color:rgb(21,102,192)">OB</span> in figure), with the \(x\)-axis at the center of a unit circle on which <span style="color:rgb(21,102,192)">B</span> is lying, is given as the <b>ratio of \(y\)-coordinate (with sign)</b> of point <span style="color:rgb(21,102,192)">B</span> and the <b>length</b> (always positive) of the hypotenuse (or line segment <span style="color:rgb(21,102,192)">OB</span>) i.e.
+                </p>
 
                 $$
                     \sin{\theta} = \frac{y}{|OB|} = y
@@ -937,7 +955,9 @@
                     \cos{\theta} = \frac{x}{|OB|} =x
                 $$
 
-                This can be extended to other trigonometric functions  in a similar way.(from here, we refer to all trigonometric functions just by saying "functions" in this section).
+                <p>
+                    This can be extended to other trigonometric functions  in a similar way.(from here, we refer to all trigonometric functions just by saying "functions" in this section).
+                </p>
             </p>
 
             <br/>
@@ -966,7 +986,8 @@
 
                     \end{align}
                     $$
-
+                </p>
+                <p id="eq2.10.3">
                     For \(\tan{(-\theta)}\), we have: 
 
                     $$
@@ -1142,133 +1163,136 @@
                     This trend continues even for angles in third and fouth quadrant as is indicated in the <a href="#table2.3">Table 2.3</a> and <a href="#table2.4">Table 2.4</a>
                 </p>
 
-                <table id="table2.3" style="text-align: center;">
-                    <thead>
-                        <caption><span style="color: red">Table 2.3</span>: Sign of functions in different quadrants</caption>
+                <div style="overflow:auto;">
+                    <table id="table2.3" style="text-align: center;">
+                        <thead>
+                            <caption><span style="color: red">Table 2.3</span>: Sign of functions in different quadrants</caption>
 
-                        <tr style="background-color: lightblue">
-                            <th width="100px">Func &#8595 Quadrant &#8594</th>
-                            <th width="100px">I</th>
-                            <th width="100px">II</th>
-                            <th width="100px">III</th>
-                            <th width="100px">IV</th>
-                        </tr>
-                    </thead>
+                            <tr style="background-color: lightblue">
+                                <th width="100px">Func &#8595 Quadrant &#8594</th>
+                                <th width="100px">I</th>
+                                <th width="100px">II</th>
+                                <th width="100px">III</th>
+                                <th width="100px">IV</th>
+                            </tr>
+                        </thead>
 
-                    <tbody  style="background-color: aliceblue">
-                        <tr>
-                            <td>\(\sin{\phi}\)</td>
-                            <td>\(+\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                            <td>\(-\)</td>
-                        </tr>
-                        <tr>
-                            <td>\(\cos{\phi}\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                            <td>\(-\)</td>
-                            <td>\(+\)</td>
-                        </tr>
-                        <tr>
-                            <td>\(\tan{\phi}\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                        </tr>
-                        <tr>
-                            <td>\(\csc{\phi}\)</td>
-                            <td>\(+\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                            <td>\(-\)</td>
-                        </tr>
-                        <tr>
-                            <td>\(\sec{\phi}\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                            <td>\(-\)</td>
-                            <td>\(+\)</td>
-                        </tr>
-                        <tr>
-                            <td>\(\cot{\phi}\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                            <td>\(+\)</td>
-                            <td>\(-\)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <tbody  style="background-color: aliceblue">
+                            <tr>
+                                <td>\(\sin{\phi}\)</td>
+                                <td>\(+\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                                <td>\(-\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(\cos{\phi}\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                                <td>\(-\)</td>
+                                <td>\(+\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(\tan{\phi}\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(\csc{\phi}\)</td>
+                                <td>\(+\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                                <td>\(-\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(\sec{\phi}\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                                <td>\(-\)</td>
+                                <td>\(+\)</td>
+                            </tr>
+                            <tr>
+                                <td>\(\cot{\phi}\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                                <td>\(+\)</td>
+                                <td>\(-\)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <br/>
                 <br/>
 
 
-                
-                <table id="table2.4" style="text-align: center;">
-                    <thead>
-                        <caption><span style="color: red">Table 2.4</span>: Change of functions for different arguments</caption>
+                <div style="overflow:auto;">
+                    <table id="table2.4" style="text-align: center;">
+                        <thead>
+                            <caption><span style="color: red">Table 2.4</span>: Change of functions for different arguments</caption>
 
-                        <tr style="background-color: lightblue">
-                            <th width="100px">Func &#8595 Argument &#8594</th>
-                            <th width="100px">\(\pi/2 \pm \theta\)</th>
-                            <th width="100px">\(\pi \pm \theta\)</th>
-                            <th width="100px">\(3\pi/2 \pm \theta\)</th>
-                            <th width="100px">\(2\pi \pm \theta\)</th>
-                        </tr>
-                    </thead>
+                            <tr style="background-color: lightblue">
+                                <th width="100px">Func &#8595 Argument &#8594</th>
+                                <th width="100px">\(\pi/2 \pm \theta\)</th>
+                                <th width="100px">\(\pi \pm \theta\)</th>
+                                <th width="100px">\(3\pi/2 \pm \theta\)</th>
+                                <th width="100px">\(2\pi \pm \theta\)</th>
+                            </tr>
+                        </thead>
 
-                    <tbody  style="background-color: aliceblue">
-                        <tr>
-                            <td style="background-color: lightblue;">\(\sin{\phi}\)</td>
-                            <td>\(\cos{\phi}\)</td>
-                            <td> <span style="color: red;">*</span></td>
-                            <td>\(\cos{\phi}\)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: lightblue;">\(\cos{\phi}\)</td>
-                            <td>\(\sin{\phi}\)</td>
-                            <td></td>
-                            <td>\(\sin{\phi}\)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: lightblue;">\(\tan{\phi}\)</td>
-                            <td>\(\cot{\phi}\)</td>
-                            <td></td>
-                            <td>\(\cot{\phi}\)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: lightblue;">\(\csc{\phi}\)</td>
-                            <td>\(\sec{\phi}\)</td>
-                            <td></td>
-                            <td>\(\sec{\phi}\)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: lightblue;">\(\sec{\phi}\)</td>
-                            <td>\(\csc{\phi}\)</td>
-                            <td></td>
-                            <td>\(\csc{\phi}\)</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="background-color: lightblue;">\(\cot{\phi}\)</td>
-                            <td>\(\tan{\phi}\)</td>
-                            <td></td>
-                            <td>\(\tan{\phi}\)</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
+                        <tbody  style="background-color: aliceblue">
+                            <tr>
+                                <td style="background-color: lightblue;">\(\sin{\phi}\)</td>
+                                <td>\(\cos{\phi}\)</td>
+                                <td> <span style="color: red;">*</span></td>
+                                <td>\(\cos{\phi}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: lightblue;">\(\cos{\phi}\)</td>
+                                <td>\(\sin{\phi}\)</td>
+                                <td></td>
+                                <td>\(\sin{\phi}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: lightblue;">\(\tan{\phi}\)</td>
+                                <td>\(\cot{\phi}\)</td>
+                                <td></td>
+                                <td>\(\cot{\phi}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: lightblue;">\(\csc{\phi}\)</td>
+                                <td>\(\sec{\phi}\)</td>
+                                <td></td>
+                                <td>\(\sec{\phi}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: lightblue;">\(\sec{\phi}\)</td>
+                                <td>\(\csc{\phi}\)</td>
+                                <td></td>
+                                <td>\(\csc{\phi}\)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: lightblue;">\(\cot{\phi}\)</td>
+                                <td>\(\tan{\phi}\)</td>
+                                <td></td>
+                                <td>\(\tan{\phi}\)</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
 
-                    <tfoot>
-                        <tr style="font-size: 0.8em; background-color: white;">
-                            <td  colspan="5">Here, \(\phi\) is the argument. <br/><span style="color: red;">*</span> Blank table cell means <b>no change</b>.</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                        <tfoot>
+                            <tr style="font-size: 0.8em; background-color: white;">
+                                <td  colspan="5">Here, \(\phi\) is the argument. <br/><span style="color: red;">*</span> Blank table cell means <b>no change</b>.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
 
 
                 <p>
@@ -1359,109 +1383,112 @@
                 </p>
 
                 <br/>
-                <table id="table25" border="1" style="background-color: black;">
-                    <caption><span style="color: red;">Table  2.5</span>: Values of trigonometric functions at some common angles (expanded)</caption>
-                    <thead>
-                        <tr style="background-color: lightblue;">
-                            <th width="100">Function &#8595 \( \theta^{\text{ c}}\) &#8594</th>
-                            <th>\(0\)</th>
-                            <th>\(\pi/6\)</th>
-                            <th>\(\pi/4\)</th>
-                            <th>\(\pi/3\)</th>
-                            <th>\(\pi/2\)</th>
-                            <th>\(2\pi/3\)</th>
-                            <th>\(3\pi/4\)</th>
-                            <th>\(5\pi/6\)</th>
-                            <th>\(\pi\)</th>
-                        </tr>
-                    </thead>
 
-                    <tbody>
-                        <tr align="center" style="background-color: aliceblue;">
-                            <td>\(\sin{\theta}\)</td>
-                            <td>\(0\)</td>
-                            <td>\(1/2\)</td>
-                            <td>\(1/\sqrt{2}\)</td>
-                            <td>\(\sqrt{3}/2\)</td>
-                            <td>\(1\)</td>
-                            <td>\(\sqrt{3}/2\)</td>
-                            <td>\(1/\sqrt{2}\)</td>
-                            <td>\(1/2\)</td>
-                            <td>\(0\)</td>
-                        </tr>
+                <div style="overflow:auto;">
+                    <table id="table2.5" border="1" style="background-color: black;">
+                        <caption><span style="color: red;">Table  2.5</span>: Values of trigonometric functions at some common angles (expanded)</caption>
+                        <thead>
+                            <tr style="background-color: lightblue;">
+                                <th width="100">Function &#8595 \( \theta^{\text{ c}}\) &#8594</th>
+                                <th>\(0\)</th>
+                                <th>\(\pi/6\)</th>
+                                <th>\(\pi/4\)</th>
+                                <th>\(\pi/3\)</th>
+                                <th>\(\pi/2\)</th>
+                                <th>\(2\pi/3\)</th>
+                                <th>\(3\pi/4\)</th>
+                                <th>\(5\pi/6\)</th>
+                                <th>\(\pi\)</th>
+                            </tr>
+                        </thead>
 
-                        <tr align="center" style="background-color: aliceblue;">
-                            <td>\(\cos{\theta}\)</td>
-                            <td>\(1\)</td>
-                            <td>\(\sqrt{3}/2\)</td>
-                            <td>\(1/\sqrt{2}\)</td>
-                            <td>\(1/2\)</td>
-                            <td>\(0\)</td>
-                            <td>\(-1/2\)</td>
-                            <td>\(-1/\sqrt{2}\)</td>
-                            <td>\(-\sqrt{3}/2\)</td>
-                            <td>\(-1\)</td>
-                        </tr>
+                        <tbody>
+                            <tr align="center" style="background-color: aliceblue;">
+                                <td>\(\sin{\theta}\)</td>
+                                <td>\(0\)</td>
+                                <td>\(1/2\)</td>
+                                <td>\(1/\sqrt{2}\)</td>
+                                <td>\(\sqrt{3}/2\)</td>
+                                <td>\(1\)</td>
+                                <td>\(\sqrt{3}/2\)</td>
+                                <td>\(1/\sqrt{2}\)</td>
+                                <td>\(1/2\)</td>
+                                <td>\(0\)</td>
+                            </tr>
 
-                        <tr align="center" style="background-color: aliceblue;">
-                            <td>\(\tan{\theta}\)</td>
-                            <td>\(0\)</td>
-                            <td>\(1/\sqrt{3}\)</td>
-                            <td>\(1\)</td>
-                            <td>\(\sqrt{3}\)</td>
-                            <td>\(\infty \)<span style="color: red;">*</span></td>
-                            <td>\(-\sqrt{3}\)</td>
-                            <td>\(-1\)</td>
-                            <td>\(-1/\sqrt{3}\)</td>
-                            <td>\(0\)</td>
-                        </tr>
+                            <tr align="center" style="background-color: aliceblue;">
+                                <td>\(\cos{\theta}\)</td>
+                                <td>\(1\)</td>
+                                <td>\(\sqrt{3}/2\)</td>
+                                <td>\(1/\sqrt{2}\)</td>
+                                <td>\(1/2\)</td>
+                                <td>\(0\)</td>
+                                <td>\(-1/2\)</td>
+                                <td>\(-1/\sqrt{2}\)</td>
+                                <td>\(-\sqrt{3}/2\)</td>
+                                <td>\(-1\)</td>
+                            </tr>
 
-                        <tr align="center" style="background-color: aliceblue;">
-                            <td>\(\csc{\theta}\)</td>
-                            <td>\(\infty \)</td>
-                            <td>\(2\)</td>
-                            <td>\(\sqrt{2}\)</td>
-                            <td>\(2/\sqrt{3}\)</td>
-                            <td>\(1\)</td>
-                            <td>\(2/\sqrt{3}\)</td>
-                            <td>\(\sqrt{2}\)</td>
-                            <td>\(2\)</td>
-                            <td>\(\infty\)</td>
-                        </tr>
+                            <tr align="center" style="background-color: aliceblue;">
+                                <td>\(\tan{\theta}\)</td>
+                                <td>\(0\)</td>
+                                <td>\(1/\sqrt{3}\)</td>
+                                <td>\(1\)</td>
+                                <td>\(\sqrt{3}\)</td>
+                                <td>\(\infty \)<span style="color: red;">*</span></td>
+                                <td>\(-\sqrt{3}\)</td>
+                                <td>\(-1\)</td>
+                                <td>\(-1/\sqrt{3}\)</td>
+                                <td>\(0\)</td>
+                            </tr>
 
-                        <tr align="center" style="background-color: aliceblue;">
-                            <td>\(\sec{\theta}\)</td>
-                            <td>\(1\)</td>
-                            <td>\(2/\sqrt{3}\)</td>
-                            <td>\(\sqrt{2}\)</td>
-                            <td>\(2\)</td>
-                            <td>\(\infty \)</td>
-                            <td>\(-2\)</td>
-                            <td>\(-\sqrt{2}\)</td>
-                            <td>\(-2/\sqrt{3}\)</td>
-                            <td>\(-1\)</td>
-                        </tr>
+                            <tr align="center" style="background-color: aliceblue;">
+                                <td>\(\csc{\theta}\)</td>
+                                <td>\(\infty \)</td>
+                                <td>\(2\)</td>
+                                <td>\(\sqrt{2}\)</td>
+                                <td>\(2/\sqrt{3}\)</td>
+                                <td>\(1\)</td>
+                                <td>\(2/\sqrt{3}\)</td>
+                                <td>\(\sqrt{2}\)</td>
+                                <td>\(2\)</td>
+                                <td>\(\infty\)</td>
+                            </tr>
 
-                        <tr align="center" style="background-color: aliceblue;">
-                            <td>\(\cot{\theta}\)</td>
-                            <td>\(\infty \)</td>
-                            <td>\(\sqrt{3}\)</td>
-                            <td>\(1\)</td>
-                            <td>\(1/\sqrt{3}\)</td>
-                            <td>\(0\)</td>
-                            <td>\(-1/\sqrt{3}\)</td>
-                            <td>\(-1\)</td>
-                            <td>\(-\sqrt{3}\)</td>
-                            <td>\(-\infty\)</td>
-                        </tr>
-                    </tbody>
+                            <tr align="center" style="background-color: aliceblue;">
+                                <td>\(\sec{\theta}\)</td>
+                                <td>\(1\)</td>
+                                <td>\(2/\sqrt{3}\)</td>
+                                <td>\(\sqrt{2}\)</td>
+                                <td>\(2\)</td>
+                                <td>\(\infty \)</td>
+                                <td>\(-2\)</td>
+                                <td>\(-\sqrt{2}\)</td>
+                                <td>\(-2/\sqrt{3}\)</td>
+                                <td>\(-1\)</td>
+                            </tr>
 
-                    <tfoot style="font-weight: bold; background-color: white;">
-                        <tr>
-                            <td colspan="10"><span style="color: red;">*</span>here, \(\infty\) represents infinity or undefined</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                            <tr align="center" style="background-color: aliceblue;">
+                                <td>\(\cot{\theta}\)</td>
+                                <td>\(\infty \)</td>
+                                <td>\(\sqrt{3}\)</td>
+                                <td>\(1\)</td>
+                                <td>\(1/\sqrt{3}\)</td>
+                                <td>\(0\)</td>
+                                <td>\(-1/\sqrt{3}\)</td>
+                                <td>\(-1\)</td>
+                                <td>\(-\sqrt{3}\)</td>
+                                <td>\(-\infty\)</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot style="font-weight: bold; background-color: white;">
+                            <tr>
+                                <td colspan="10"><span style="color: red;">*</span>here, \(\infty\) represents infinity or undefined</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
                 <br/>
 
                 <table class="table25" border="1" style="background-color: black;">
@@ -1665,7 +1692,7 @@
                     \end{align}
                     $$
 
-                    Since, \(\pi/6\) represnts \(30^{\circ}\). 
+                    Since, \(\pi/6\) represents \(30^{\circ}\). 
                 </p>
 
                 <p>
@@ -1719,7 +1746,7 @@
                 $$
             </p>
 
-            <p class="clrb" id="eq2.17">
+            <p class="clrb" id="eq2.17.1">
                 The last step uses the fact that \(EF=BC\). Now, we again use the definitions of sine and cosine in the triangles \(\triangle ABC, \triangle ADC\) and \(\triangle DEC\) to get: 
 
                 $$
@@ -1739,7 +1766,7 @@
             <ul class="c1ul">
                 <li><b><u>For sine</u> :</b></li>
     
-                <p>
+                <p id="eq2.17.2">
                     Above, we derived the expression for \(\sin{(\theta + \phi)}\), now let's see what is \(\sin{(\theta- \phi)}\):
     
     
@@ -1755,12 +1782,12 @@
                     \end{align}
                     $$
     
-                    In the steps above, we have employed the negative angle property of \(\sin\) and \(\cos\) along with \(\text{eq 2.17}\) as indicated. With this, we got our desired relations for sine.
+                    In the steps above, we have employed the <a href="#eq2.10.1">negative angle property of \(\sin\) and \(\cos\)</a> along with <a href="#eq2.17.1">\(\text{eq 2.17 i}\)</a> as indicated. With this, we got our desired relations for sine.
                 </p>
     
                 <li><b><u>For cosine</u>:</b></li>
     
-                <p>
+                <p id="eq2.18.1">
                     To find \(\cos{(\theta + \phi)}\), we work out as following:
     
                     $$
@@ -1774,8 +1801,9 @@
                         \cos{(\theta + \phi)} &= \cos{\theta}\cos{\phi} - \sin{\theta}\sin{\phi} \hspace{1cm} \color{red}{\text{(2.18 i)}}
                     \end{align}
                     $$
-    
-                    For moving from last second to the last equation above we again employ \(\text{eq(2.1 i)}\) and \(\text{eq(2.2 i)}\). Further, deriving \(\cos{(\theta - \phi)}\) is the same as was for \(\sin{(\theta - \phi)}\). This is left for the reader as an exercise. The result would be :
+                </p>
+                <p id="eq2.18.2">
+                    For moving from last second to the last equation above we again employ <a href='#eq2.1.1'>\(\text{eq(2.1 i)}\)</a> and <a href='#eq2.2.1'>\(\text{eq(2.2 i)}\)</a>. Further, deriving \(\cos{(\theta - \phi)}\) is the same as was for \(\sin{(\theta - \phi)}\). This is left for the reader as an exercise. The result would be :
     
                     $$
                         \cos{(\theta - \phi)} = \cos{\theta}\cos{\phi} + \sin{\theta}\sin{\phi} \hspace{1cm} \color{red}{\text{(2.18 ii)}}
@@ -1784,7 +1812,7 @@
     
                 <li><b><u>For tangent</u>:</b></li>
     
-                <p>
+                <p id="eq2.19.1">
                     To find \(\tan{(\theta + \phi)}\), we go as follows: 
     
                     $$
@@ -1800,18 +1828,19 @@
                     $$
     
     
-                    This is the (to say) the most useful form of \(\tan{(\theta + \phi)}\), as it can take many forms as is vivid from the above calculation. Similarly, we can find \(\tan{(\theta - \phi)}\) using the negative angle properties of \(\tan\) \((\text{eq (2.10 iii)})\), which again is left as an exercise. The result is mentioned here: 
-    
+                    This is the (to say) the most useful form of \(\tan{(\theta + \phi)}\), as it can take many forms as is vivid from the above calculation. Similarly, we can find \(\tan{(\theta - \phi)}\) using the negative angle properties of \(\tan\) (<a href="#eq2.10.3">\(\text{eq (2.10 iii)}\)</a>), which again is left as an exercise. The result is mentioned here: 
+                </p>
+                <p id="eq2.19.2">
                     $$
                         \tan{(\theta - \phi)} = \frac{\tan{\theta} - \tan{\phi}}{1 + \tan{\theta}\tan{\phi}} \hspace{1cm} \color{red}{(2.19 \text{ ii})}
                     $$
                 </p>
 
 
-                <li><b><u>For other trigonometric functions</u>:</b></li>
+            <li><b><u>For other trigonometric functions</u>:</b></li>
 
-            <p>
-                Now, for other functions, it can be seen with the help of little algebra that these relations take many forms and those can't be distinguished from each other in terms of simplicity. Also, for cosec and sec, these come rarely and can be dealt with by taking the reciprocal of those of sine and cosine (\(\text{eqs 2.17}\) and \(\text{2.18}\)) respectively. One of them, which should be mentioned is \(\cot{(\theta + \phi)}\):
+            <p id="eq2.20.1">
+                Now, for other functions, it can be seen with the help of little algebra that these relations take many forms and those can't be distinguished from each other in terms of simplicity. Also, for cosec and sec, these come rarely and can be dealt with by taking the reciprocal of those of sine and cosine (<a href="#eq2.17.1">\(\text{eqs 2.17}\)</a> and <a href="#eq2.18.1">\(\text{2.18}\)</a>) respectively. One of them, which should be mentioned is \(\cot{(\theta + \phi)}\):
 
                 $$
                 \begin{align}
@@ -1826,7 +1855,8 @@
                 $$
 
 
-
+            </p>
+            <p id="eq2.20.2">
                 In a similar way, one can deduce \(\cot{(\theta - \phi)}\) by taking the reciprocal of \(\tan{(\theta - \phi)}\) to get: 
 
                 $$
@@ -1846,8 +1876,8 @@
                 <ul class="c1ul">
                     <li>\(\underline{\sin{(2\theta)}}\)</li>
 
-                    <p>
-                        Using, \(\text{eq(2.17 i)}\) for \(\theta = \phi\), we get: 
+                    <p id="eq2.21">
+                        Using, <a href="#eq2.17.1">\(\text{eq(2.17 i)}\)</a> for \(\theta = \phi\), we get: 
 
                         $$
                         \begin{align}
@@ -1868,8 +1898,8 @@
 
                     <li>\(\underline{\cos{(2\theta)}}\)</li>
 
-                    <p>
-                        Using, \(\text{eq(2.18 i)}\) for \(\theta = \phi\), we get: 
+                    <p id="eq2.22">
+                        Using, <a href="#eq2.18.1">\(\text{eq(2.18 i)}\)</a> for \(\theta = \phi\), we get: 
 
                         $$
                         \begin{align}
@@ -1890,10 +1920,10 @@
                         In a similar way, we can deduce higher order \(\sin\) and \(\cos\) i.e. for \(3\theta\) or maybe \(4\theta\). But, we would rarely need them. One is done here: 
                     </p>
 
-                        <li>\(\underline{\sin{(3\theta)}}\)</li>
+                    <li>\(\underline{\sin{(3\theta)}}\)</li>
 
-                    <p>
-                        Again, using \(\text{eq(2.17 i)}\) for \(\theta = \phi\), we get:
+                    <p id="eq2.23">
+                        Again, using <a href="#eq2.17.1">\(\text{eq(2.17 i)}\)</a> for \(\theta = \phi\), we get:
                         
                         $$
                         \begin{align}
@@ -1912,7 +1942,9 @@
 
                         \end{align}
                         $$
-
+                    </p>
+                    
+                    <p id="eq2.24">
                     Here, we used the last two results along with the angle sum relation. For, cosine it turns out to be (left as an exercise): 
 
                     $$
