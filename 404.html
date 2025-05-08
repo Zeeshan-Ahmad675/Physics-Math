@@ -14,7 +14,7 @@
   <h1>404 - Page Not Found</h1>
   <p>Sorry, the requested page doesn't exist.</p>
   <div id="suggestion-box"></div>
-
+  <br/>
   <a href="/">Back to Home</a>
 
 
@@ -35,8 +35,7 @@
     const match = suggestions.find(s => term.toLowerCase().includes(s.keyword));
     if (match) {
       document.getElementById('suggestion-box').innerHTML = `
-        <p>Were you looking for:</p>
-        <a href="${match.url}">${match.title}</a>
+        <p>Were you looking for: <a href="${match.url}">${match.title}</a></p>
       `;
     }
 
