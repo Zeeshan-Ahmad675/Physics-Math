@@ -25,11 +25,12 @@
     const term = decodeURIComponent(path.split('/').pop().replace('.html', '').replace(/[-_]/g, ' '));
 
     const suggestions = [
-      { keyword: 'vector', title: 'Vectors', url: '/vectors' },
-      { keyword: 'math', title: 'Mathematical methods', url: '/Mathematical_methods_in_physics' },
+      { keyword: 'vector', title: 'Vectors', url: '/chapters/vectors' },
+      { keyword: 'math', title: 'Mathematical methods', url: '/chapters/Mathematical_methods_in_physics' },
       { keyword: 'about', title: 'About Us', url: '/about' },
       { keyword: 'contact', title: 'Contact Us', url: '/contact' },
       { keyword: 'feedback', title: 'Feedback', url: '/feedback' },
+      { keyword: 'chapter', title: 'Chapters', url: '/chapters' },      
     ];
 
     const match = suggestions.find(s => term.toLowerCase().includes(s.keyword));
