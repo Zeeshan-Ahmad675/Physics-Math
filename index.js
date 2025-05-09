@@ -1,6 +1,6 @@
-modediv = document.getElementById("modediv");
+// modediv = document.getElementById("modediv");
 modebut = document.getElementById("modebut");
-fixedmodediv = document.getElementById("fixedmodediv");
+// fixedmodediv = document.getElementById("fixedmodediv");
 sun = document.getElementById("sun");
 moon = document.getElementById("moon");
 
