@@ -113,17 +113,20 @@ function modechange() {
     if (currentMode === 'dark') {
         body.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
-        modediv.style.border = "2px solid white";
+
+        // modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
+        // modediv.style.border = "2px solid white";
+
         modebut.style.backgroundColor = "white";
         modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
         modebut.style.transition = "transform 0.5s ease";
-        modebut.style.transform = `translateX(0px)`;
+        // modebut.style.transform = `translateX(0px)`;
         sun.style.display = "block";
         moon.style.display = "none";  
         main.style.backgroundColor = "white";
         main.style.boxShadow = "0 0 4px black" 
-        fixedmodediv.title = "Dark Mode Toggle";
+        // fixedmodediv.title = "Dark Mode Toggle";
+        modebut.title = "Dark Mode Toggle";
 
         const chbox = main.querySelectorAll(".chbox");
         chbox.forEach(element => 
@@ -161,17 +164,20 @@ function modechange() {
     else {
         body.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        modediv.style.backgroundColor = "white";
-        modediv.style.border = "2px solid hsl(200, 2%, 30%)";
+
+        // modediv.style.backgroundColor = "white";
+        // modediv.style.border = "2px solid hsl(200, 2%, 30%)";
+
         modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modebut.style.border = "3px solid white";
         modebut.style.transition = "transform 0.5s ease";
-        modebut.style.transform = `translateX(20px)`;
+        // modebut.style.transform = `translateX(20px)`;
         sun.style.display = "none";
         moon.style.display = "block";  
         main.style.boxShadow = "0 0 4px white";
         main.style.backgroundColor = "hsl(216, 5%, 18%)";
-        fixedmodediv.title = "Light Mode Toggle";
+        // fixedmodediv.title = "Light Mode Toggle";
+        modebut.title = "Light Mode Toggle";
 
 
         const chbox = main.querySelectorAll(".chbox");
@@ -222,17 +228,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentMode = body.getAttribute('data-theme');
 
     if (currentMode === 'light') {
-        modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
-        modediv.style.border = "2px solid white";
+
+        // modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
+        // modediv.style.border = "2px solid white";
+
         modebut.style.backgroundColor = "white";
         modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
         modebut.style.transition = "transform 0.5s ease";
-        modebut.style.transform = `translateX(0px)`;
+        // modebut.style.transform = `translateX(0px)`;
         sun.style.display = "block";
         moon.style.display = "none";  
         main.style.backgroundColor = "white";
         main.style.boxShadow = "0 0 4px black"
-        fixedmodediv.title = "Dark Mode Toggle";
+        // fixedmodediv.title = "Dark Mode Toggle";
+        modebut.title = "Dark Mode Toggle";
  
 
         const chbox = main.querySelectorAll(".chbox");
@@ -268,17 +277,20 @@ document.addEventListener('DOMContentLoaded', () => {
     } 
     
     else {
-        modediv.style.backgroundColor = "white";
-        modediv.style.border = "2px solid hsl(200, 2%, 30%)";
+
+        // modediv.style.backgroundColor = "white";
+        // modediv.style.border = "2px solid hsl(200, 2%, 30%)";
+
         modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         modebut.style.border = "3px solid white";
         modebut.style.transition = "transform 0.5s ease";
-        modebut.style.transform = `translateX(20px)`;
+        // modebut.style.transform = `translateX(20px)`;
         sun.style.display = "none";
         moon.style.display = "block";  
         main.style.backgroundColor = "hsl(216, 5%, 18%)";
         main.style.boxShadow = "0 0 4px white";
-        fixedmodediv.title = "Light Mode Toggle";
+        // fixedmodediv.title = "Light Mode Toggle";
+        modebut.title = "Light Mode Toggle";
 
 
         const chbox = main.querySelectorAll(".chbox");

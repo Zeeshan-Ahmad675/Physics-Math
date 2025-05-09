@@ -167,27 +167,32 @@ nav a.active {
     padding: 0;
 }
 #modebut{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
     background-color: white;
     width: 25px;
     height: 25px;
     border: 3px solid black;
     border-radius: 25px;
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     top: 0;
-    margin: 0;
+    /* margin: 0; */
     box-shadow: 0 0px 5px grey;
     text-align: center;
     font-size: 12px;
 }
 #sun{
     justify-self: center;
-    margin-top: 4px ;
+    /* margin-top: 4px ; */
     color: orange;
 }
 #moon{
     justify-self: center;
-    margin-top: 4px; 
+    /* margin-top: 4px;  */
     color: #ffffff;
 }
 
