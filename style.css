@@ -58,13 +58,20 @@ header{
     height: 56px;
     z-index: 1000;
     box-shadow: 0 0 8px white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 
-
+#logo{
+    cursor: pointer;
+}
 #name{
     padding-left: 8px;
     font-family: "Times New Roman";
+    cursor: pointer;
 }
 
 #lona{
