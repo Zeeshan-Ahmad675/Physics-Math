@@ -41,10 +41,30 @@
   <h1>404 - Page Not Found</h1>
 
   <p style="margin: 0;">Sorry, the requested page doesn't exist.</p>
-  
+
   <div id="suggestion-box" style="margin:auto; width:auto"></div>
   
-  <p>Else, you might like to  visit the website's <a href="/">Home Page</a>.</p>
+  <!-- <div style="margin:auto; width:auto;">
+    <p style="display: inline-block; margin-bottom: 8px;"><b>Were you looking for:</b></p>
+    <ul style="list-style-type:none; display: inline-block; padding: 0; padding-left: 3px; margin: 0; margin-bottom: 16px">
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+      <li style="display: inline-block">Hello</li>
+    </ul>
+  </div> -->
+  <p>You might like to  visit the website's <a href="/">Home Page</a>.</p>
 
 
   <script src="index.js"></script>
@@ -94,10 +114,10 @@
 
     const matches = suggestions.filter(s => term.toLowerCase().includes(s.keyword));
     if (matches.length > 0) {
-      const links = matches.map(m => `<li style="display: inline-block"><a href="${m.url}">${m.title}</a></li>`).join(',');
+      const links = matches.map(m => `<li style="display: inline-block"><a href="${m.url}">${m.title}</a></li>`).join(', ');
       document.getElementById('suggestion-box').innerHTML = `
-      <p style="display: inline-block"><b>Were you looking for:</b></p>
-      <ul style="list-style-type:none; display: inline-block; padding-left: 3px">${links}</ul>
+      <p style="display: inline-block; margin-bottom: 8px;"><b>Were you looking for:</b></p>
+      <ul style="list-style-type:none; display: inline-block; padding-left: 3px; margin: 0; margin-bottom: 16px">${links}</ul>
       `;
     }
 
