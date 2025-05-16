@@ -51,8 +51,8 @@
       
       // Vectors.html topics
       { keyword: 'introduction', title: 'Introduction (Vectors)', url: '/chapters/vectors#Introduction' },
-      { keyword: 'scalars', title: 'Scalars', url: '/chapters/vectors#Scalars' },
-      { keyword: 'vectors', title: 'Vectors', url: '/chapters/vectors#Vectors' },
+      { keyword: 'scalar', title: 'Scalars', url: '/chapters/vectors#Scalars' },
+      { keyword: 'vector', title: 'Vectors', url: '/chapters/vectors#Vectors' },
       { keyword: 'addition of vectors', title: 'Addition of Vectors', url: '/chapters/vectors#Addition_of_Vectors' },
       { keyword: 'triangle law', title: 'Triangle Law', url: '/chapters/vectors#Triangle_Law' },
       { keyword: 'parallelogram law', title: 'Parallelogram Law', url: '/chapters/vectors#Parallelogram_Law' },
@@ -69,10 +69,20 @@
       { keyword: 'angle sum relations', title: 'Angle Sum relations', url: '/chapters/Mathematical_methods_in_physics#Angle_Sum_relations' },
     ];
 
-    const match = suggestions.find(s => term.toLowerCase().includes(s.keyword));
-    if (match) {
+    // const match = suggestions.find(s => term.toLowerCase().includes(s.keyword));
+    // if (match) {
+    //   document.getElementById('suggestion-box').innerHTML = `
+    //     <p>Were you looking for: <a href="${match.url}">${match.title}</a></p>
+    //   `;
+    // }
+
+
+    const matches = suggestions.filter(s => term.toLowerCase().includes(s.keyword));
+    if (matches.length > 0) {
+      const links = matches.map(m => `<li><a href="${m.url}">${m.title}</a></li>`).join('');
       document.getElementById('suggestion-box').innerHTML = `
-        <p>Were you looking for: <a href="${match.url}">${match.title}</a></p>
+      <p>Were you looking for:</p>
+      <ul>${links}</ul>
       `;
     }
 
