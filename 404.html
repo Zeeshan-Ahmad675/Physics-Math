@@ -63,7 +63,7 @@
       { keyword: 'pythagoras theorem', title: 'Pythagoras Theorem', url: '/chapters/Mathematical_methods_in_physics#Pythagoras_Theorem' },
       { keyword: 'distance formula', title: 'Distance Formula', url: '/chapters/Mathematical_methods_in_physics#Distance_Formula' },
       { keyword: 'trigonometry', title: 'Trigonometry', url: '/chapters/Mathematical_methods_in_physics#trigonometry' },
-      { keyword: 'identities', title: 'Pythagorean Trigonometric Identities', url: '/chapters/Mathematical_methods_in_physics#Pythagorean_Trigonometric_Identities' },
+      { keyword: 'pythagoras', title: 'Pythagorean Trigonometric Identities', url: '/chapters/Mathematical_methods_in_physics#Pythagorean_Trigonometric_Identities' },
       { keyword: 'angles', title: 'Review and talk on angles', url: '/chapters/Mathematical_methods_in_physics#Review_and_talk_on_angles' },
       { keyword: 'redefining trigonometric functions', title: 'Redefining trigonometric functions', url: '/chapters/Mathematical_methods_in_physics#Redefining_trigonometric_functions' },
       { keyword: 'angle sum relations', title: 'Angle Sum relations', url: '/chapters/Mathematical_methods_in_physics#Angle_Sum_relations' },
@@ -82,7 +82,7 @@
       const links = matches.map(m => `<li><a href="${m.url}">${m.title}</a></li>`).join('');
       document.getElementById('suggestion-box').innerHTML = `
       <p>Were you looking for:</p>
-      <ul>${links}</ul>
+      <ul style="list-style-type:disc">${links}</ul>
       `;
     }
 
