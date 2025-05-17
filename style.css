@@ -18,6 +18,14 @@ p{
     line-height: 1.5;
 }
 
+.norli{
+    margin: 1em;
+    padding-left: 40px;
+    list-style-position: outside;
+    list-style-type: circle;
+    line-height: 1.5;
+}
+
 mjx-container[display="true"] {
     font-size: 110% !important;
     text-align: left !important;

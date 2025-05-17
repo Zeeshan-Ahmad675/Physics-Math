@@ -458,7 +458,7 @@
                         \begin{align}
                         |R|^2 &= (a+b\cos{\theta})^2 + (b\sin{\theta})^2 \\
                         \implies R^2 &= a^2+ b^2 \cos^2{\theta} + 2ab\cos{\theta} + b^2\sin^2{\theta} \\
-                        \implies R &= \sqrt{a^2+b^2 + 2ab\cos{\theta}}\hspace{1cm} (2.1)
+                        \implies R &= \sqrt{a^2+b^2 + 2ab\cos{\theta}}\hspace{1cm} \color{red}{(2.1)}
                         \end{align} 
                         $$
 
@@ -473,7 +473,7 @@
                         $$
                         \begin{align}
                             \tan{\phi} &= \frac{QR}{PQ} = \frac{b\sin{\theta}}{a+b\cos{\theta}} \\
-                            \implies \phi &= \tan^{-1}\left(\frac{b\sin{\theta}}{a+b\cos{\theta}}\right) \hspace{1cm} (2.2)
+                            \implies \phi &= \tan^{-1}\left(\frac{b\sin{\theta}}{a+b\cos{\theta}}\right) \hspace{1cm} \color{red}{(2.2)}
                         \end{align}
                         $$
                     </p>
@@ -486,7 +486,7 @@
                             R &= \sqrt{a^2 + a^2 + 2a^2 \cos{\theta}}\\
                             \implies R &= \sqrt{2a^2(1+\cos{\theta})}\\
                             \implies R &= \sqrt{2a^2\times 2\cos^2{\left(\frac{\theta}{2}\right)}}\\
-                            \implies  R &= 2a\cos{\left(\frac{\theta}{2}\right)} \hspace{1cm} (2.3)
+                            \implies  R &= 2a\cos{\left(\frac{\theta}{2}\right)} \hspace{1cm} \color{red}{(2.3)}
                         \end{align}
                         $$
 
@@ -532,10 +532,135 @@
                     $$
 
                     <p>
-                        If you have noticed, we have taken the magnitude of the negative vector, \(-\vec{b}\) to be the same \(b\). This is because the length of the vector remains the same even after negating it. The angle \(\phi\) that gives the direction of \(\vec{R}\) is calculated in the same way.
+                        If you have noticed, we have taken the magnitude of the negative vector, \(-\vec{b}\) to be the same \(b\). This is because the length of the vector remains the same even after negating it. The angle \(\phi\) that gives the direction of \(\vec{R}\) is calculated in the same way as is done above
 
                 </ul>
             </p>
+
+            <br/>
+            <br/>
+
+
+            
+            <h2 id="Representation_of_vectors">3. Representation of vectors</h2>
+            
+
+            <p>
+                Vectors are represented in many different ways, primarily depending on the use and context of use. One of the representation has been discussed in the starting of this section, the <a href="#Vectors">arrow representation</a>.
+            </p>
+
+            <p>
+                Here we would be describing yet another representation, which is very useful primarily in Physics, the <a href="#Basis_vector_representation">basis vector representation</a>. This representation makes many operations on vector easy to be computed and visualized.
+            </p>
+
+            <ul class="mainlist">
+                <li id="Vectors_on_coordinate_plane"><b><u>Vectors on coordinate plane</u>:</b></li>
+
+                <p>
+                    Consider a point in the \(2\)-dimensional plane, \((x, y)\). Also, consider an arrow pointing from the origin to this point as shown in <a href="#img3.1">Figure 3.1</a>.
+
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                            <img src="/images/v31.png" alt="Figure displaying the triangle law of vector addition." width="260px;" id="img3.1"/>
+                            <figcaption><center><span style="color: red;">Fig 3.1</span>: Arrow from origin to point \((x,y)\) </center></figcaption>
+                        </figure>
+                    </div>
+                </p>
+
+                <p>
+
+                    Considering the arrow to be a vector (say, \(\vec{A}\)). From <a href="#img3.1">figure</a>, we can see that the vector \(\vec{A}\) can be can be formed by adding multiples of two  other vectors, one along each of the \(x\) and \(y\)-axes. This is just the result of <a href="#Triangle_Law">triangle law</a> of vector addition. In the particular case shown, the vector \(\vec{A}\) is made from \(8\) vectors along \(x\)-axis and \(4\) vectors along \(y\) axis. 
+                </p>
+
+                <p>
+                    Anyway, we can genralize it to be \(x\) vectors along the \(x\)-axis and \(y\) vectors along the \(y\)-axis. The two vectors are known as <b><a href="#">Basis vectors</a></b> for \(2D\) plane and are denoted as \(\hat{i}\) (or \(\hat{x}\)) for basis along \(x\)-axis and \(\hat{j}\) (or \(\hat{y}\)) for that along \(y\)-axis (see <a href="#img3.1">figure</a>).
+                </p>
+
+
+                <br/>
+                <br/>
+
+                <ul class="c1ul">
+                    <li  class="clrb"><b><u>Standard basis in \(2D\):</u></b></li>
+
+                    <p>
+                        Till now, we have been talking of the basis vectors as abstract objects and haven't quantified them yet. In \(2D\), basis can be any two vectors pointing in different directions (for datails, see <a href="#Basic_linear_algebra">Basic Linear Algebra</a> below). But to make the calculations easy and to maintain some standard of vector representation, we have defined the basis as: 
+
+                        <ul class="norli">
+                            <li>
+                                \(\hat{i}\) : The vector representing the arrow from the origin, \((0, 0)\) to the point \((1, 0)\) in the \(xy\)-plane.
+                            </li>
+
+                            <li>
+                                \(\hat{j}\) : The vector representing the arrow from the origin, \((0, 0)\) to the point \((0, 1)\) in the \(xy\)-plane.
+                            </li>
+                        </ul>
+
+                        These are known as the <i>Standard basis</i> in two dimensions.
+                    </p>
+
+                    <p style="text-indent: 2em;">
+                        Now, let's write down the above vector \(\vec{A}\) in this representation, using the standard basis.
+
+                        $$
+                            \vec{A} = 8\hat{i} + 4\hat{j}
+                        $$
+                    </p>
+
+                    <p id="eq3.1">
+                        This is for the particular vector going from the origin to the point \((8, 4)\). For any general vector from origin to point \((x, y)\), the representation gives: 
+
+                        $$
+                            \boxed{\vec{A} = x\hat{i} + y\hat{j}} \hspace{1cm} \color{red}{(3.1)}
+                        $$
+                    </p>
+                </ul>
+
+
+                <br/>
+
+
+                <li id="Basis_vector_representation"><b><u>Vectors in 3-dimensional space</u>:</b></li>
+
+                <p>
+                    The above analysis can be easily generalized to three dimensions. We consider a vector (in arrow form, say \(\vec{A}\)) from the origin, \((0, 0, 0)\) to the point \((x, y, z)\). Also, a new basis vector along the \(z\)-axis is taken, as described below. 
+
+
+                    <ul class="norli">
+                            <li>
+                                \(\hat{i}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((1, 0, 0)\) in the \(xy\)-plane.
+                            </li>
+
+                            <li>
+                                \(\hat{j}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((0, 1, 0)\) in the \(xy\)-plane.
+                            </li>
+
+                            <li>
+                                \(\hat{k}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((0, 0, 1)\) in the \(xy\)-plane.
+                            </li>
+                    </ul>
+                </p>
+
+                <p>
+                    This is the <i>Standard basis</i> in the \(3\)-dimensional cartesian coordinate system. And the basis vector representation of the above vector \(\vec{A}\) is:
+
+                    $$
+                        \boxed{\vec{A} = x\hat{i} + y\hat{j} +z\hat{k}} \hspace{1cm} \color{red}{(3.2)}
+                    $$
+                </p>
+
+
+
+                <br/>
+
+
+                <!-- <li id="Basic_linear_algebra"><b><u>Basic Linear Algebra</u>:</b></li> -->
+
+
+            </ul>
+
+
+
 
 
 
