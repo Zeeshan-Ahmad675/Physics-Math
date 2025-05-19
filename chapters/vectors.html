@@ -649,36 +649,121 @@
 
                 <li id="Basis_vector_representation"><b><u>Vectors in 3-dimensional space</u>:</b></li>
 
+
+            <div class="imgdiv" style="float: right;">
+                    <figure>
+                        <img src="/images/v32.png" alt="Image displaying the standard basis vectors in 3D." width="260px;" id="img3.2"/>
+                        <figcaption><center><span style="color: red;">Fig 3.2</span>: Standard Basis vectors</center></figcaption>
+                    </figure>
+            </div>
+
+            <p>
+                The above analysis can be easily generalized to three dimensions. We consider a vector (in arrow form, say \(\vec{A}\)) from the origin, \((0, 0, 0)\) to the point \((x, y, z)\). Also, a new basis vector along the \(z\)-axis is taken, as described below (refer <a href="#img3.2">Figure 3.2</a>):
+
+
+                <ul class="norli">
+                        <li>
+                            \(\hat{i}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((1, 0, 0)\) in the \(xy\)-plane.
+                        </li>
+
+                        <li>
+                            \(\hat{j}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((0, 1, 0)\) in the \(xy\)-plane.
+                        </li>
+
+                        <li>
+                            \(\hat{k}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((0, 0, 1)\) in the \(xy\)-plane.
+                        </li>
+                </ul>
+            </p>
+
+            <p id="eq3.2">
+                This is the <i>Standard basis</i> in the \(3\)-dimensional cartesian coordinate system. And the basis vector representation of the above vector \(\vec{A}\) is:
+
+                $$
+                    \boxed{\vec{A} = x\,\hat{i} + y\,\hat{j} +z\,\hat{k}} \hspace{1cm} \color{red}{(3.2)}
+                $$
+            </p>
+
+
+            <p id="eq3.3">
+                It is easy to see from here, that the magnitude of such a vector (going from the origin to some arbitrary point \((x, y, z)\)) is given by (using <a href="/chapters/Mathematical_methods_in_physics.html#eq1.4">\(\text{eq}1.4\)</a> of <a href="/chapters/Mathematical_methods_in_physics.html">Mathematical methods</a>)
+
+                $$
+                    |\vec{A}| = A = \sqrt{x^2 + y^2 + z^2} \qquad \color{red}{(3.3)}
+                $$
+            </p>
+
+
+            <br/>
+
+
+
+
+            <li id="Addition_in_coordinate_form"><b><u>Addition of vectors in coordinate form</u>:</b></li>
+
+            <p>
+                Now, we will see an example of the simplicity, the basis vector representation (or coordinate form) imparts into vector analysis. We would try to deduce an expression for addition of vectors in the coordinate form.
+            </p>
+
+
+
+            <ul class="c1ul">
+                <li><b><u>In 2 dimensions</u>:</b></li>
+
                 <p>
-                    The above analysis can be easily generalized to three dimensions. We consider a vector (in arrow form, say \(\vec{A}\)) from the origin, \((0, 0, 0)\) to the point \((x, y, z)\). Also, a new basis vector along the \(z\)-axis is taken, as described below. 
+                    Consider two vectors \(\vec{A}\) and \(\vec{B}\) as shown in <a href="#img3.3">Figure 3.3</a>. They are given as:
 
 
-                    <ul class="norli">
-                            <li>
-                                \(\hat{i}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((1, 0, 0)\) in the \(xy\)-plane.
-                            </li>
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                            <img src="/images/v33.png" alt="Figure displaying the triangle law of vector addition." width="260px;" id="img3.3"/>
+                            <figcaption><center><span style="color: red;">Fig 3.3</span>: Addition of vectors \(\vec{A}\) and \(\vec{B}\)</center></figcaption>
+                        </figure>
+                    </div>
 
-                            <li>
-                                \(\hat{j}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((0, 1, 0)\) in the \(xy\)-plane.
-                            </li>
 
-                            <li>
-                                \(\hat{k}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((0, 0, 1)\) in the \(xy\)-plane.
-                            </li>
-                    </ul>
+
+                    $$
+                        \begin{align}
+                            \vec{A} &= A_x\,\hat{i} + A_y\,\hat{j} \\[4px]
+                            \vec{B} &= B_x\,\hat{i} + B_y\,\hat{j}
+                        \end{align}
+                    $$
+
                 </p>
 
                 <p>
-                    This is the <i>Standard basis</i> in the \(3\)-dimensional cartesian coordinate system. And the basis vector representation of the above vector \(\vec{A}\) is:
+                    Clearly, the two vectors can be added using the <a href="#Triangle_Law">Triangle law</a> i.e. by putting the tail of \(\vec{B}\) on the head of \(\vec{A}\) (represented using dotted vector in the <a href="#img3.3">figure</a>), and then tracing the resultant vector, \((\vec{A} + \vec{B})\) from the tail of \(\vec{A}\) to the head of \(\vec{B}\) as is done.
+
+                </p>
+
+                <p style="text-indent: 2em;" id="eq3.4">
+                    What we see here is that: the vector \(\vec{B}\) "drags" the head of vector \(\vec{A}\) the same amount as its coordinates or vice versa. For reference, the grid lines has been shown. Hence, the resultant vector \((\vec{R})\) can be written in the coordinate form as: 
 
                     $$
-                        \boxed{\vec{A} = x\hat{i} + y\hat{j} +z\hat{k}} \hspace{1cm} \color{red}{(3.2)}
+                    \begin{align}
+                        \vec{R} &= \vec{A} + \vec{B} \\[4px]
+
+
+                        \vec{R} &= (A_x\,\hat{i} + A_y\,\hat{j}) + (B_x\,\hat{i} + B_y\,\hat{j}) \\[4px]
+
+                        \vec{R} &= (A_x + B_x)\, \hat{i} + (A_y + B_y)\, \hat{j} \qquad \color{red}{(3.4)}
+
+                    \end{align}
                     $$
+                </p>
+                
+                <p>
+                    The economy here is really appreciable. In the <a href="#Magnitude_and_Direction_of_Resultant">abstract form</a> of addition of vectors, first we would have to find the magnitude of the resultant vector using <a href="#eq2.1">\(\text{eq} (2.1)\)</a> and then determine its direction with respect to initial vectors using <a href="#eq2.2">\(\text{eq} (2.2)\)</a>. Finally, we draw the resultant vector. But, in the component form, we just need to do the algebraic addition for the components and, lo and behold, we got the <a href="#eq3.4">resultant vector</a>.
+
+                </p>
+
+                <p>
+                    Anyway, this should be understood that both the forms of addition is important and we are not showing one above the another. It is just the situation under which we are performing addition, which makes this apparent scenario of better form of addition.
                 </p>
 
 
-
-                <br/>
+            </ul>
 
 
                 <!-- <li id="Basic_linear_algebra"><b><u>Basic Linear Algebra</u>:</b></li> -->
