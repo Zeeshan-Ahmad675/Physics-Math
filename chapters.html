@@ -145,60 +145,6 @@
 
     <script src="index.js"></script>
 
-    <script>
-    const navLinks = document.querySelectorAll('nav a');
-    const main = document.querySelector("main");
-
-
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add('active');
-            
-        }
-    });
-
-    function ocnav() {
-        var nav = document.getElementById("nav");
-        var navbar = document.getElementById("navbar");
-        var navclo = document.getElementById("navclo")
-        var computedStyle = window.getComputedStyle(nav);
-
-
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 700) {
-                nav.style.display = "flex";
-                navbar.style.display = "none";
-                navclo.style.display = "none";
-
-            }
-            else{
-                nav.style.display = "none";
-                navbar.style.display = "block";
-                navclo.style.display = "none";
-            }
-        });
-        // Check if the current display is "none" using computed style
-        if (computedStyle.display === "none") {
-            nav.style.display = "block";  // Show the nav
-            navbar.style.display = "none";
-            navclo.style.display = "block";
-
-        }
-
-        else{
-            nav.style.display = "none";
-            navbar.style.display = "block";
-            navclo.style.display = "none";
-        
-        }
-    }
-
-    main.addEventListener("click", function(){
-        if(nav.style.display == "block"){
-            ocnav();
-        }
-    })
-    </script>
 
 </body>
 </html>

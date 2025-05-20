@@ -81,6 +81,8 @@
             }
             #v12{
                 text-align: left !important;
+                margin-left: 0;
+                padding-left: 0;
             }
         }
     </style>
@@ -819,81 +821,8 @@
 
 
     <script src="/index.js"></script>
+    <script src="chscript.js"></script>
 
-
-    <script>
-    const navLinks = document.querySelectorAll('nav a');
-    let mainfnav = document.getElementById("mainfnav");
-    let bfnavi = document.getElementById("bfnavi");
-    const main = document.querySelector("main");
-
-    
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add('active');
-            
-        }
-    });
-
-    function ocnav() {
-        var nav = document.getElementById("nav");
-        var navbar = document.getElementById("navbar");
-        var navclo = document.getElementById("navclo")
-        var computedStyle = window.getComputedStyle(nav);
-
-
-        window.addEventListener("resize", function() {
-            if (window.innerWidth > 700) {
-                nav.style.display = "flex";
-                navbar.style.display = "none";
-                navclo.style.display = "none";
-
-            }
-            else{
-                nav.style.display = "none";
-                navbar.style.display = "block";
-                navclo.style.display = "none";
-            }
-        });
-        // Check if the current display is "none" using computed style
-        if (computedStyle.display === "none") {
-            nav.style.display = "block";  // Show the nav
-            navbar.style.display = "none";
-            navclo.style.display = "block";
-
-        }
-
-        else{
-            nav.style.display = "none";
-            navbar.style.display = "block";
-            navclo.style.display = "none";
-        
-        }
-    }
-
-    mainfnav.addEventListener("click", function(){
-        if(bfnavi.style.display == "none"){
-            bfnavi.style.display = "block";
-        }
-        else{
-            bfnavi.style.display = "none";
-        }
-    })
-
-
-    mainfnav.addEventListener("mouseleave", function() {
-        bfnavi.style.display = "none";
-    });
-
-    main.addEventListener("click", function(){
-        if(nav.style.display == "block"){
-            ocnav();
-        }
-    })
-        
-
-
-    </script>
     
 </body>
 </html>
