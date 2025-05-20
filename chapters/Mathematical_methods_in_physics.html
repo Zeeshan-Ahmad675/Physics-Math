@@ -2015,6 +2015,9 @@
 
     <script>
     const navLinks = document.querySelectorAll('nav a');
+    let mainfnav = document.getElementById("mainfnav");
+    let bfnavi = document.getElementById("bfnavi");
+    const main = document.querySelector("main");
 
     
     navLinks.forEach(link => {
@@ -2059,6 +2062,29 @@
         
         }
     }
+
+    mainfnav.addEventListener("click", function(){
+        if(bfnavi.style.display == "none"){
+            bfnavi.style.display = "block";
+        }
+        else{
+            bfnavi.style.display = "none";
+        }
+    })
+
+    mainfnav.addEventListener("mouseenter", function() {
+        bfnavi.style.display = "block";
+    });
+    mainfnav.addEventListener("mouseleave", function() {
+        bfnavi.style.display = "none";
+    });
+
+
+    main.addEventListener("click", function(){
+        if(nav.style.display == "block"){
+            ocnav();
+        }
+    })
     </script>
     
 </body>

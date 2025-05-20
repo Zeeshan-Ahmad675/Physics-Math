@@ -123,7 +123,7 @@
 
     <script>
         const navLinks = document.querySelectorAll('nav a');
-    
+        const main = document.querySelector("main");
         
         navLinks.forEach(link => {
             if (link.href === window.location.href) {
@@ -166,6 +166,12 @@
             
             }
         }
+
+        main.addEventListener("click", function(){
+            if(nav.style.display == "block"){
+                ocnav();
+            }
+        })
     </script>
 </body>
 </html>

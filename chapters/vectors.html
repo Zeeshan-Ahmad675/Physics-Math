@@ -187,8 +187,8 @@
         
                         <li><a href="#Vectors_on_coordinate_plane">Vectors on coordinate plane</a></li>
                         <li><a href="#Basis_vector_representation">Vectors in 3-dimensional space</a></li>
-                        <!-- <li><a href="#Magnitude_and_Direction_of_Resultant">Magnitude and Direction of Resultant</a></li>
-                        <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                        <li><a href="#Addition_in_coordinate_form">Addition of vectors in coordinate form</a></li>
+                        <!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> --><!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
                     </ol>
 
                 </li>
@@ -231,8 +231,8 @@
     
                     <li><a href="#Vectors_on_coordinate_plane">Vectors on coordinate plane</a></li>
                     <li><a href="#Basis_vector_representation">Vectors in 3-dimensional space</a></li>
-                    <!-- <li><a href="#Magnitude_and_Direction_of_Resultant">Magnitude and Direction of Resultant</a></li>
-                    <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                    <li><a href="#Addition_in_coordinate_form">Addition of vectors in coordinate form</a></li>
+                    <!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> --><!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
                 </ol>
 
             </li>
@@ -823,6 +823,9 @@
 
     <script>
     const navLinks = document.querySelectorAll('nav a');
+    let mainfnav = document.getElementById("mainfnav");
+    let bfnavi = document.getElementById("bfnavi");
+    const main = document.querySelector("main");
 
     
     navLinks.forEach(link => {
@@ -867,6 +870,31 @@
         
         }
     }
+
+    mainfnav.addEventListener("click", function(){
+        if(bfnavi.style.display == "none"){
+            bfnavi.style.display = "block";
+        }
+        else{
+            bfnavi.style.display = "none";
+        }
+    })
+
+    mainfnav.addEventListener("mouseenter", function() {
+        bfnavi.style.display = "block";
+    });
+    mainfnav.addEventListener("mouseleave", function() {
+        bfnavi.style.display = "none";
+    });
+
+    main.addEventListener("click", function(){
+        if(nav.style.display == "block"){
+            ocnav();
+        }
+    })
+        
+
+
     </script>
     
 </body>
