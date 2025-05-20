@@ -2063,18 +2063,15 @@
         }
     }
 
-    mainfnav.addEventListener("mouseenter", function() {
-        bfnavi.style.display = "block";
-        mainfnav.addEventListener("click", function(){
+    mainfnav.addEventListener("click", function(){
         if(bfnavi.style.display == "none"){
             bfnavi.style.display = "block";
         }
         else{
             bfnavi.style.display = "none";
         }
-        })
-    });
-
+    })
+    
     mainfnav.addEventListener("mouseleave", function() {
         bfnavi.style.display = "none";
     });

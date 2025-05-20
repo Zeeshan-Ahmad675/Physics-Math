@@ -255,9 +255,9 @@ nav a.active {
 
 
 
-#mainfnav:hover>ol{
+/* #mainfnav:hover>ol{
     display: block;
-}
+} */
 #mainfnav{
     display: inline-block;
     position: fixed;
