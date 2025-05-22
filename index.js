@@ -1,11 +1,28 @@
+// General Variables
+const body = document.body;
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const footer = document.querySelector('footer');
+
+
+// Dark Light Mode varibales
+
 // modediv = document.getElementById("modediv");
-modebut = document.getElementById("modebut");
 // fixedmodediv = document.getElementById("fixedmodediv");
+modebut = document.getElementById("modebut");
 sun = document.getElementById("sun");
 moon = document.getElementById("moon");
-const body = document.body;
-const main = document.querySelector("main");
+
+
+
+
+
+var nav = document.getElementById("nav");
 const navLinks = document.querySelectorAll('nav a');
+copyrightYear = document.getElementById('cyear');
+const extLinks = document.querySelectorAll('.extlink');
+
+
 
 
 
@@ -32,47 +49,57 @@ function modechange() {
         // modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         // modediv.style.border = "2px solid white";
 
-        modebut.style.backgroundColor = "white";
-        modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
-        modebut.style.transition = "transform 0.5s ease";
-        // modebut.style.transform = `translateX(0px)`;
-        sun.style.display = "block";
-        moon.style.display = "none";  
-        main.style.backgroundColor = "white";
-        main.style.boxShadow = "0 0 4px black" 
+        if(modebut){
+            modebut.style.backgroundColor = "white";
+            modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
+            modebut.style.transition = "transform 0.5s ease";
+            modebut.title = "Dark Mode Toggle";
+            // modebut.style.transform = `translateX(0px)`;
+        }
+
+        if(sun){sun.style.display = "block";}
+        if(moon){moon.style.display = "none";}
+        if(main){ 
+            main.style.backgroundColor = "white";
+            main.style.boxShadow = "0 0 4px black" 
+        }
         // fixedmodediv.title = "Dark Mode Toggle";
-        modebut.title = "Dark Mode Toggle";
+        
 
         const chbox = main.querySelectorAll(".chbox");
-        chbox.forEach(element => 
-            {element.style.border = "2px solid black";
-             element.style.boxShadow = "0 0 3px black";
-             element.style.color = "black";
-
-            const img = element.querySelector("img");
-            if (img) {
-                img.style.border = "1px solid white";
-                // img.style.backgroundColor = "white";
-            }
-
-            element.addEventListener("mouseover", () => {
-                element.style.backgroundColor = "white";
-                element.style.color = "hsl(214, 100%, 50%)"
-            })
-
-            element.addEventListener("mouseout", () => {
-                element.style.backgroundColor = "transparent";
+        if(chbox){
+            chbox.forEach(element => 
+                {element.style.border = "2px solid black";
+                element.style.boxShadow = "0 0 3px black";
                 element.style.color = "black";
+
+                const img = element.querySelector("img");
+                if (img) {
+                    img.style.border = "1px solid white";
+                    // img.style.backgroundColor = "white";
+                }
+
+                element.addEventListener("mouseover", () => {
+                    element.style.backgroundColor = "white";
+                    element.style.color = "hsl(214, 100%, 50%)"
+                })
+
+                element.addEventListener("mouseout", () => {
+                    element.style.backgroundColor = "transparent";
+                    element.style.color = "black";
+                });
             });
-        });
+        }
 
         const tablesInMain = main.querySelectorAll("table");
-        tablesInMain.forEach(table => {
-            const cells = table.querySelectorAll("td, th");
-            cells.forEach(cell => {
-            cell.style.color = "black";
+        if(tablesInMain){
+            tablesInMain.forEach(table => {
+                const cells = table.querySelectorAll("td, th");
+                cells.forEach(cell => {
+                cell.style.color = "black";
+                });
             });
-        });
+        }
 
     } 
     
@@ -83,49 +110,58 @@ function modechange() {
         // modediv.style.backgroundColor = "white";
         // modediv.style.border = "2px solid hsl(200, 2%, 30%)";
 
-        modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
-        modebut.style.border = "3px solid white";
-        modebut.style.transition = "transform 0.5s ease";
-        // modebut.style.transform = `translateX(20px)`;
-        sun.style.display = "none";
-        moon.style.display = "block";  
-        main.style.boxShadow = "0 0 4px white";
-        main.style.backgroundColor = "hsl(216, 5%, 18%)";
+        if(modebut){
+            modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
+            modebut.style.border = "3px solid white";
+            modebut.style.transition = "transform 0.5s ease";
+            modebut.title = "Light Mode Toggle";
+            // modebut.style.transform = `translateX(20px)`;
+        }
+        
+        if(sun){sun.style.display = "none";}
+        if(moon){moon.style.display = "block";}
+
+        if(main){
+            main.style.boxShadow = "0 0 4px white";
+            main.style.backgroundColor = "hsl(216, 5%, 18%)";
+        }
         // fixedmodediv.title = "Light Mode Toggle";
-        modebut.title = "Light Mode Toggle";
 
 
         const chbox = main.querySelectorAll(".chbox");
-        chbox.forEach(element => 
-            {element.style.border = "2px solid white";
-             element.style.boxShadow = "0 0 3px white";
-             element.style.color = "white";
-
-            const img = element.querySelector("img");
-             if (img) {
-                img.style.border = "1px solid white";
-                // img.style.backgroundColor = "white";
-             }
-
-            element.addEventListener("mouseover", () => {
-                element.style.backgroundColor = "black";
-                element.style.color = "hsl(214, 100%, 50%)"
-            })
-
-            element.addEventListener("mouseout", () => {
-                element.style.backgroundColor = "transparent";
+        if(chbox){
+            chbox.forEach(element => 
+                {element.style.border = "2px solid white";
+                element.style.boxShadow = "0 0 3px white";
                 element.style.color = "white";
-            });
-        });                                           
 
+                const img = element.querySelector("img");
+                if (img) {
+                    img.style.border = "1px solid white";
+                    // img.style.backgroundColor = "white";
+                }
+
+                element.addEventListener("mouseover", () => {
+                    element.style.backgroundColor = "black";
+                    element.style.color = "hsl(214, 100%, 50%)"
+                })
+
+                element.addEventListener("mouseout", () => {
+                    element.style.backgroundColor = "transparent";
+                    element.style.color = "white";
+                });
+            });                                           
+        }
 
         const tablesInMain = main.querySelectorAll("table");
-        tablesInMain.forEach(table => {
-            const cells = table.querySelectorAll("td, th");
-            cells.forEach(cell => {
-            cell.style.color = "black";
+        if(tablesInMain){
+            tablesInMain.forEach(table => {
+                const cells = table.querySelectorAll("td, th");
+                cells.forEach(cell => {
+                cell.style.color = "black";
+                });
             });
-        });
+        }
     }
 }
 
@@ -145,48 +181,58 @@ document.addEventListener('DOMContentLoaded', () => {
         // modediv.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         // modediv.style.border = "2px solid white";
 
-        modebut.style.backgroundColor = "white";
-        modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
-        modebut.style.transition = "transform 0.5s ease";
-        // modebut.style.transform = `translateX(0px)`;
-        sun.style.display = "block";
-        moon.style.display = "none";  
-        main.style.backgroundColor = "white";
-        main.style.boxShadow = "0 0 4px black"
+        if(modebut){
+            modebut.style.backgroundColor = "white";
+            modebut.style.border = "3px solid hsl(0, 0.00%, 35.70%)";
+            modebut.style.transition = "transform 0.5s ease";
+            modebut.title = "Dark Mode Toggle";
+            // modebut.style.transform = `translateX(0px)`;
+        }
+
+        if(sun){sun.style.display = "block";}
+        if(moon){moon.style.display = "none";}
+        if(main){ 
+            main.style.backgroundColor = "white";
+            main.style.boxShadow = "0 0 4px black" 
+        }
         // fixedmodediv.title = "Dark Mode Toggle";
-        modebut.title = "Dark Mode Toggle";
- 
+        
 
         const chbox = main.querySelectorAll(".chbox");
-        chbox.forEach(element => 
-            {element.style.border = "2px solid black";
-             element.style.boxShadow = "0 0 3px black";
-             element.style.color = "black";
-
-            const img = element.querySelector("img");
-             if (img) {
-                img.style.border = "1px solid white";
-                // img.style.backgroundColor = "white";
-             }
-
-            element.addEventListener("mouseover", () => {
-                element.style.backgroundColor = "white";
-                element.style.color = "hsl(214, 100%, 50%)"
-            })
-
-            element.addEventListener("mouseout", () => {
-                element.style.backgroundColor = "transparent";
+        if(chbox){
+            chbox.forEach(element => 
+                {element.style.border = "2px solid black";
+                element.style.boxShadow = "0 0 3px black";
                 element.style.color = "black";
+
+                const img = element.querySelector("img");
+                if (img) {
+                    img.style.border = "1px solid white";
+                    // img.style.backgroundColor = "white";
+                }
+
+                element.addEventListener("mouseover", () => {
+                    element.style.backgroundColor = "white";
+                    element.style.color = "hsl(214, 100%, 50%)"
+                })
+
+                element.addEventListener("mouseout", () => {
+                    element.style.backgroundColor = "transparent";
+                    element.style.color = "black";
+                });
             });
-        });
+        }
 
         const tablesInMain = main.querySelectorAll("table");
-        tablesInMain.forEach(table => {
-            const cells = table.querySelectorAll("td, th");
-            cells.forEach(cell => {
-            cell.style.color = "black";
+        if(tablesInMain){
+            tablesInMain.forEach(table => {
+                const cells = table.querySelectorAll("td, th");
+                cells.forEach(cell => {
+                cell.style.color = "black";
+                });
             });
-        });   
+        }
+
     } 
     
     else {
@@ -194,49 +240,58 @@ document.addEventListener('DOMContentLoaded', () => {
         // modediv.style.backgroundColor = "white";
         // modediv.style.border = "2px solid hsl(200, 2%, 30%)";
 
-        modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
-        modebut.style.border = "3px solid white";
-        modebut.style.transition = "transform 0.5s ease";
-        // modebut.style.transform = `translateX(20px)`;
-        sun.style.display = "none";
-        moon.style.display = "block";  
-        main.style.backgroundColor = "hsl(216, 5%, 18%)";
-        main.style.boxShadow = "0 0 4px white";
+        if(modebut){
+            modebut.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
+            modebut.style.border = "3px solid white";
+            modebut.style.transition = "transform 0.5s ease";
+            modebut.title = "Light Mode Toggle";
+            // modebut.style.transform = `translateX(20px)`;
+        }
+        
+        if(sun){sun.style.display = "none";}
+        if(moon){moon.style.display = "block";}
+
+        if(main){
+            main.style.boxShadow = "0 0 4px white";
+            main.style.backgroundColor = "hsl(216, 5%, 18%)";
+        }
         // fixedmodediv.title = "Light Mode Toggle";
-        modebut.title = "Light Mode Toggle";
 
 
         const chbox = main.querySelectorAll(".chbox");
-        chbox.forEach(element => 
-            {element.style.border = "2px solid white";
-             element.style.boxShadow = "0 0 3px white";
-             element.style.color = "white";
-
-            const img = element.querySelector("img");
-             if (img) {
-                img.style.border = "1px solid white";
-                // img.style.backgroundColor = "white";
-             }
-
-            element.addEventListener("mouseover", () => {
-                element.style.backgroundColor = "black";
-                element.style.color = "hsl(214, 100%, 50%)"
-            })
-
-            element.addEventListener("mouseout", () => {
-                element.style.backgroundColor = "transparent";
+        if(chbox){
+            chbox.forEach(element => 
+                {element.style.border = "2px solid white";
+                element.style.boxShadow = "0 0 3px white";
                 element.style.color = "white";
-                });
-        });                                           
 
+                const img = element.querySelector("img");
+                if (img) {
+                    img.style.border = "1px solid white";
+                    // img.style.backgroundColor = "white";
+                }
+
+                element.addEventListener("mouseover", () => {
+                    element.style.backgroundColor = "black";
+                    element.style.color = "hsl(214, 100%, 50%)"
+                })
+
+                element.addEventListener("mouseout", () => {
+                    element.style.backgroundColor = "transparent";
+                    element.style.color = "white";
+                });
+            });                                           
+        }
 
         const tablesInMain = main.querySelectorAll("table");
-        tablesInMain.forEach(table => {
-            const cells = table.querySelectorAll("td, th");
-            cells.forEach(cell => {
-            cell.style.color = "black";
+        if(tablesInMain){
+            tablesInMain.forEach(table => {
+                const cells = table.querySelectorAll("td, th");
+                cells.forEach(cell => {
+                cell.style.color = "black";
+                });
             });
-        });
+        }
     }
 });
 
@@ -246,14 +301,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-navLinks.forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add('active');
-        
-    }
-});
+if(navLinks){
+    navLinks.forEach(link => {
+        // Remove .html from link.href for comparison
+        const linkHref = link.href.replace(/\.html$/, '');
+        if (linkHref === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+}
+
+
 function ocnav() {
-    var nav = document.getElementById("nav");
     var navbar = document.getElementById("navbar");
     var navclo = document.getElementById("navclo")
     var computedStyle = window.getComputedStyle(nav);
@@ -279,14 +338,50 @@ function ocnav() {
         nav.style.display = "none";
         navbar.style.display = "block";
         navclo.style.display = "none";
-    
     }
 }
-main.addEventListener("click", function(){
-    if(nav.style.display == "block"){
-        ocnav();
+
+body.addEventListener("click", function(event) {
+    // If the click is inside the header, do nothing
+    if (header && header.contains(event.target)) {
+        return;
+    }
+    else if (nav && nav.style.display === "block") {
+            ocnav();
+    }
+});
+
+
+if(copyrightYear){
+    copyrightYear.textContent = new Date().getFullYear();
+}
+
+['DOMContentLoaded', 'resize'].forEach((event) => {document.addEventListener(`${event}`, () => {
+    if (document.documentElement.scrollHeight <= window.innerHeight && footer && main) {
+        document.documentElement.style.height = '100vh';
+        document.body.style.height = 'auto';
+        footer.style.position = 'absolute';
+        footer.style.bottom = '0';
+        footer.style.left = '0';
+        footer.style.width = '100%';
     }
 })
+});
 
 
-document.getElementById('cyear').textContent = new Date().getFullYear();
+if (extLinks) {
+    extLinks.forEach(extLink => {
+        extLink.setAttribute('target', '_blank');
+        extLink.setAttribute('rel', 'noopener noreferrer');
+        extLink.addEventListener("mouseover", function() {
+            const i = this.querySelector('i');
+            if (i) {
+                i.classList.add('fa-bounce');
+                setTimeout(() => i.classList.remove('fa-bounce'), 1000);
+            }
+        });
+        // extLink.addEventListener("mouseout", function() {
+        //     this.querySelector('i').classList.remove('fa-bounce')
+        // });
+    });
+}

@@ -392,11 +392,21 @@ footer a{
     color: hsl(170, 100%, 50%);
     text-decoration: none;
 }
-footer p{
+footer a:hover{
+    text-decoration: underline;
+}
+/* footer p{
     align-self: center;
     padding-left: 10px;
     text-shadow: 0 0 1px white;
+} */
+
+#footdiv{
+    display: flex;
+    justify-content: space-around;
 }
+
+
 
 
 
@@ -455,7 +465,7 @@ footer p{
 
 
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 726px){
 
     /* General setup */
 
@@ -549,6 +559,10 @@ footer p{
     #navbar3{
         animation-name: bar3;
         animation-duration: 1s;
+    }
+    #footdiv{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
