@@ -48,6 +48,11 @@ main{
     /* background-color: #ffffff; */
     padding: 19px;
     /* box-shadow: 0 0 4px black; */
+    Box-Shadow : 0 0 4px black 
+
+}
+main span{
+    color: black;
 }
 
 
@@ -65,7 +70,7 @@ header{
     top: 0;
     height: 56px;
     z-index: 1000;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 8px black;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -386,7 +391,7 @@ footer{
     height: auto;
     color: white;
     padding: 8px;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 8px black;
 }
 footer a{
     color: hsl(170, 100%, 50%);
