@@ -373,6 +373,10 @@ if (extLinks) {
     extLinks.forEach(extLink => {
         extLink.setAttribute('target', '_blank');
         extLink.setAttribute('rel', 'noopener noreferrer');
+        extLink.insertAdjacentHTML('beforeend', `
+            <sup class="fa-sup">
+                <i class="fa-solid fa-arrow-up-right-from-square fa-2xs" aria-hidden="true"></i>
+            </sup>`);
         extLink.addEventListener("mouseover", function() {
             const i = this.querySelector('i');
             if (i) {
@@ -383,5 +387,34 @@ if (extLinks) {
         // extLink.addEventListener("mouseout", function() {
         //     this.querySelector('i').classList.remove('fa-bounce')
         // });
+    });
+}
+
+
+
+
+
+if(footer){
+    // Remove the fa icon if the anchor's href matches the current page
+    const footerLinks = footer.querySelectorAll('.extlink');
+    footerLinks.forEach(link => {
+        // Normalize both URLs for comparison (remove .html and handle relative/absolute)
+        const linkUrl = new URL(link.getAttribute('href'), window.location.origin);
+        const currentUrl = new URL(window.location.pathname, window.location.origin);
+        const linkPath = linkUrl.pathname.replace(/\.html$/, '');
+        const currentPath = currentUrl.pathname.replace(/\/$/, '');
+        if (linkPath === currentPath) {
+            const sup = link.querySelector('.fa-sup');
+            if (sup){ 
+                sup.remove();
+                link.classList.remove("extlink");
+                if (link.hasAttribute("target")) {
+                    link.removeAttribute("target");
+                }
+                if (link.hasAttribute("rel")) {
+                    link.removeAttribute("rel");
+                }
+            }
+        }
     });
 }
