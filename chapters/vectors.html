@@ -195,7 +195,9 @@
                         <li><a href="#Vectors_on_coordinate_plane">Vectors on coordinate plane</a></li>
                         <li><a href="#Basis_vector_representation">Vectors in 3-dimensional space</a></li>
                         <li><a href="#Addition_in_component_form">Addition of vectors in component form</a></li>
-                        <!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> --><!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                        <li><a href="#negation_of_vector_component_form">Negation of vector in component form</a></li>
+                        <!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                        <!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
                     </ol>
 
                 </li>
@@ -239,7 +241,9 @@
                     <li><a href="#Vectors_on_coordinate_plane">Vectors on coordinate plane</a></li>
                     <li><a href="#Basis_vector_representation">Vectors in 3-dimensional space</a></li>
                     <li><a href="#Addition_in_component_form">Addition of vectors in component form</a></li>
-                    <!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> --><!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                    <li><a href="#negation_of_vector_component_form">Negation of vector in component form</a></li>
+                    <!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                    <!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
                 </ol>
 
             </li>
@@ -329,7 +333,7 @@
 
 
 
-                        <p>
+                        <p id="negation_of_vector">
 
                             And, one vector is said to be opposite of other vector, say \(\vec{C}\) or the negative of that vector iff they have the same magnitude but point in opposite directions and is denoted as \(-\vec{C}\). This is also shown in <a href="#img1.2">Figure 1.2</a>.
 
@@ -844,12 +848,94 @@
                         \end{align}
                         $$
                     </p>
-
-
                 </ul>
 
 
-                <!-- <li id="Basic_linear_algebra"><b><u>Basic Linear Algebra</u>:</b></li> -->
+
+
+
+
+                <li id="negation_of_vector_component_form"><b><u>Negation of vector in component form</u>:</b></li>
+
+                <p>
+                    The <a href="#negation_of_vector">negation of a vector</a> in component form follows simply in this scenario. Consider again the vector: 
+                    
+                    $$
+                        \vec{A} = A_x \, \hat{i} + A_y \, \hat{j} + A_z \, \hat{k}.
+                    $$
+
+                </p>
+
+                <p>
+                    Let \(\vec{A^n}\) (here, \(n\) is just a <sup>superscript</sup> to represent 'negative' and should not be considered as an exponent) be the vector equal and opposite to \(\vec{A}\), then using vector sum, we get: 
+
+                    $$
+                    \begin{align}
+                        &\vec{A} + \vec{A^n} = \vec{0} \\[4px]
+
+                        \implies &(A_x + A_x^n)\, \hat{i} + (A_y + A_y^n)\, \hat{j}  + (A_z + A_z^n)\, \hat{k} = 0 \, \hat{i} + 0 \, \hat{j} + 0 \, \hat{k} \\[4px]
+
+                        \implies
+                        &\begin{cases}
+                            A_x + A_x^n = 0 \\[4px]
+                            A_y + A_y^n = 0 \\[4px]
+                            A_z + A_z^n = 0 \\[4px]
+                        \end{cases}
+
+                        \implies
+                        \begin{cases}
+                            A_x^n = -A_x \\[4px]
+                            A_y^n = -A_y \\[4px]
+                            A_z^n = -A_z \\[4px]
+                        \end{cases}
+
+
+                    \end{align}
+                    $$
+                </p>
+
+                <p id="eq3.6">
+                    So, the negation of \(\vec{A}\) would be given as:
+
+                    $$
+                    \begin{align}
+                       \vec{A^n} &= -\vec{A} = (-A_x) \, \hat{i} + (- A_y) \, \hat{j}  + (- A_z) \, \hat{k} \\[4px]
+
+                       \implies -\vec{A} &= -A_x \, \hat{i} - A_y \, \hat{j}  - A_z \, \hat{k} \qquad \color{red}{(3.6)}
+                    \end{align} 
+                    $$
+
+                </p>
+
+                <div class="imgdiv" style="float: left;">
+                    <figure>
+                        <img src="/images/v35.png" alt="Representation of negative vectors in component form" width="320px;" id="img3.5"/>
+                        <figcaption><center><span style="color: red;">Fig 3.5</span>: Negative vector in component form</center></figcaption>
+                    </figure>
+                </div>
+
+                <p>
+
+                    i.e. <i>all the components of the vector is negated to get the required equal and opposite vector</i>. This can easily be justified using diagrams similar to <a href="#img3.5">figure 3.5</a>.
+                </p>
+
+                
+                <ul class="c1ul">
+                    <li><b><u>Null vector</u>:</b></li>
+                    <p>
+                        If you noticed, we used the vector arrow on zero above in the analysis, as \(\vec{0}\). This is known as the <i>'Null Vector'</i>. It was intoduced above in the case of vector addition when we needed the resultant to be zero \((\vec{A} + \vec{A^n} = \vec{0})\). Since, <a href="#Addition_of_Vectors">vector addition</a> gives <a href="#Magnitude_and_Direction_of_Resultant">resultant</a> as a vector, we need to put an arrow over zero to show that it is a vector with magnitude zero.
+                    </p>
+
+                    <p  id="null_vector" class="clrb">
+                        Now, to interpret it we say that the <i>Null vector</i> is a vector with magnitude zero and can point in any direction we wish. So, it has no magnitude (in the sense of arrow length), and no specific direction. Since, the magnitude is zero, we can easily see that: 
+
+                        $$
+                            \vec{0} = 0 \,\hat{i} + 0 \,\hat{j} + 0 \,\hat{k} \qquad \color{red}{(3.7)}
+                        $$
+                    </p>
+
+                </ul>
+
 
 
             </ul>
@@ -883,7 +969,7 @@
 
                 <p><a href="/contact.html" class="extlink">Contact</a></p>
                 <p><a href="/feedback.html" class="extlink">Feedback</a></p>
-                <p><a href="/credits.html" class="extlink">Credits</a></p>p
+                <p><a href="/credits.html" class="extlink">Credits</a></p>
 
             </div>
             <div class="c1fdiv">
