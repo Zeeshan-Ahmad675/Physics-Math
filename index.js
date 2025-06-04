@@ -356,17 +356,17 @@ if(copyrightYear){
     copyrightYear.textContent = new Date().getFullYear();
 }
 
-['DOMContentLoaded', 'resize'].forEach((event) => {document.addEventListener(`${event}`, () => {
-    if (document.documentElement.scrollHeight <= window.innerHeight && footer && main) {
-        document.documentElement.style.height = '100vh';
-        document.body.style.height = 'auto';
-        footer.style.position = 'absolute';
-        footer.style.bottom = '0';
-        footer.style.left = '0';
-        footer.style.width = '100%';
-    }
-})
-});
+// ['DOMContentLoaded', 'resize'].forEach((event) => {document.addEventListener(`${event}`, () => {
+//     if (document.documentElement.scrollHeight <= window.innerHeight && footer && main) {
+//         document.documentElement.style.height = '100vh';
+//         document.body.style.height = 'auto';
+//         footer.style.position = 'absolute';
+//         footer.style.bottom = '0';
+//         footer.style.left = '0';
+//         footer.style.width = '100%';
+//     }
+// })
+// });
 
 
 if (extLinks) {
