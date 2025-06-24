@@ -196,10 +196,21 @@
                         <li><a href="#Basis_vector_representation">Vectors in 3-dimensional space</a></li>
                         <li><a href="#Addition_in_component_form">Addition of vectors in component form</a></li>
                         <li><a href="#negation_of_vector_component_form">Negation of vector in component form</a></li>
-                        <!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                        <li><a href="#directional_cosines">Directional cosines of a direction</a></li>
                         <!--<li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
                     </ol>
 
+                </li>
+
+
+                <li><a href="#Multiplication_of_Vectors" style="font-weight: bold">Multiplication of Vectors</a>
+    
+                    <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+                        <li><a href="#Multiplication_with_scalar">Multiplication with scalar</a></li>
+                        <li><a href="#dot_product">Dot product</a></li>
+                    </ol>
+    
                 </li>
 
                 <!-- <li><a href="#"></a></li>
@@ -242,11 +253,21 @@
                     <li><a href="#Basis_vector_representation">Vectors in 3-dimensional space</a></li>
                     <li><a href="#Addition_in_component_form">Addition of vectors in component form</a></li>
                     <li><a href="#negation_of_vector_component_form">Negation of vector in component form</a></li>
-                    <!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
+                    <li><a href="#directional_cosines">Directional cosines of a direction</a></li>
                     <!-- <li><a href="#Difference_of_two_Vectors">Difference of two Vectors</a></li> -->
                 </ol>
 
             </li>
+
+            <li><a href="#Multiplication_of_Vectors" style="font-weight: bold">Multiplication of Vectors</a>
+    
+                <ol style="list-style-position:outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type:lower-roman">
+    
+                    <li><a href="#Multiplication_with_scalar">Multiplication with scalar</a></li>
+                    <li><a href="#dot_product">Dot product</a></li>
+                </ol>
+            </li>
+
 
             <!-- <li><a href="#"></a></li>
             <li><a href="#"></a></li>
@@ -614,11 +635,52 @@
                     Anyway, we can genralize it to be \(x\) vectors along the \(x\)-axis and \(y\) vectors along the \(y\)-axis. The two vectors are known as <b><a href="#">Basis vectors</a></b> for \(2D\) plane and are denoted as \(\hat{i}\) (or \(\hat{x}\)) for basis along \(x\)-axis and \(\hat{j}\) (or \(\hat{y}\)) for that along \(y\)-axis (see <a href="#img3.1">figure</a>).
                 </p>
 
+                <hr>
 
-                <br/>
-                <br/>
+                <p>
+                    A question rises here. How do we know exactly how much vectors (of a particular length, generally 1 unit) is needed along each of the axes to get the desired vector?
+                </p>
+                <p>
+                    The answer is that either we need to know <i>the coordinates of the point</i>, \(A\) to which the vector is going from the origin OR we need to know the <i>angles made by the vector with each of the axes considered and the length of the vector \(\vec{A}\)</i>. 
+                    The coordinates method is quite simple, as this is how we define the coordinates of a point. So, let's see the angle method. 
+                </p>
+
+                <p>
+                    If the vector \(\vec{A}\) makes an angle theta with the \(x\)-axis, then from \(\triangle OAB\):
+
+                    $$
+                        \text{OB} = A\cos{\theta} \quad\&\quad \text{AB} = A\sin{\theta}
+                    $$
+
+                    But, \(\text{OB} = x\) and \(\text{AB} = y\), so:
+
+                    $$
+                        x = A\cos{\theta}, \quad y = A\sin{\theta} = A\cos{\left(\frac{\pi}{2} - \theta\right)},
+                    $$
+                    where, \((\pi/2-\theta)\) is the angle made by the vector and the \(y\)-axis. This shows that knowing the angle with the axes and lenght of the vector does indeed lets us know how many vectors are required along each axis, in \(2\) dimensions. An extension of this to \(3\) dimensions would be discussed in the <a href="#directional_cosines">Directional Cosines</a> section.
+                </p>
+
+                <p>
+                    One notable thing here is that \(A\cos{\theta}\) and \(A\sin{\theta}\) are known as the projection of the vector \(\vec{A}\) along the \(x\)-axis and \(y\)-axis respectively.
+                </p>
 
                 <ul class="c1ul">
+                    
+                    <li id="projection_of_a_vector"><b><u>Projection</u>:</b></li>
+
+                    <p>
+                        We would have to say about projection <a href="#dot_product">later on</a> too, still let's have an idea of what exactly projecting means. When we say the vector is projected on an axis, we imagine a line drawn perpendicular to the axis (say, \(x\)-axis) from the head of the vector, as \(\text{AB}\) in <a href="#img3.1">Figure 3.1</a>. Then, the length of the segment from the tail of the vector to the bottom of the perpendicular line along the axis, here \(\text{OA}\) is know as <i>projection of the vector</i> of that axis.
+                    </p>
+
+                <hr>
+
+                <p>
+                    From here, we would assume that the coordinates of point to which the vector is drawn from origin is given, instead of its length and angles, unless otherwise stated.
+                </p>
+
+                <br/>
+
+                
                     <li  class="clrb"><b><u>Standard basis in \(2D\):</u></b></li>
 
                     <p>
@@ -676,7 +738,7 @@
                     The above analysis can be easily generalized to three dimensions. We consider a vector (in arrow form, say \(\vec{A}\)) from the origin, \((0, 0, 0)\) to the point \((x, y, z)\). Also, a new basis vector along the \(z\)-axis is taken, as described below (refer <a href="#img3.2">Figure 3.2</a>):
 
 
-                    <ul class="norli">
+                    <ul class="norli" id="standard_3D_basis">
                             <li>
                                 \(\hat{i}\) : The vector representing the arrow from the origin, \((0, 0, 0)\) to the point \((1, 0, 0)\) in the \(xy\)-plane.
                             </li>
@@ -942,7 +1004,413 @@
                 </ul>
 
 
+                <li id="directional_cosines"><b><u>Directional cosines of a direction in space</u>:</b></li>
 
+                <p>
+                    By now, it is clear that any direction in space can be represented with a vector. Consider the direction same as that of a vector, say \(\vec{A}\) given as:
+
+                    $$
+                    \vec{A} = A_x\,\hat{i} + A_y\,\hat{j} + A_z\,\hat{k}
+                    $$
+                </p>
+
+                <p>
+                    The directional cosines of this direction is <b>defined as</b> the cosine of the angles made by the vector with all the three axes. Say, the vector make angles \(\alpha, \beta, \gamma\) (known ad directional angles) with the \(x,y\) and \(z\)-axes respectively. Then, the directional consines are:
+                </p>
+
+                <div class="imgdiv" style="float: left;">
+                    <figure>
+                        <img src="/images/v36.png" alt="Figure showing the angle made by vector A with the theree axes along with the projection on them" width="300px;" id="img3.6"/>
+                        <figcaption><center><span style="color: red;">Fig 3.6</span>: Directional cosines and <br/>projection of the vector on axes</center></figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    $$
+                    \begin{align}
+                    l &= \cos{\alpha} \\
+                    m &= \cos{\beta} \\
+                    n &= \cos{\gamma} 
+                    \end{align}
+                    $$
+
+                    , where \(l\) is the cosine with respect to the \(x\)-axis, \(m\) with respect to the \(y\)-axis and \(n\) with respect to the \(z\)-axis. Further, consider the <a href="#projection_of_a_vector">projection of the vector</a> on the three axes, as shown in <a href="#img3.6">Figure 3.6</a>.
+                </p>
+
+                
+
+                <p>
+                    Now, since the projection of a vector on the coordinate axes gives the component of the vector in that direction (this is how the coordinates of a point are defined). Also, in each of three right angled triangles in the <a href="#img3.6">figure</a>, the base consitutes a length of \(A\cos{\theta}\), where \(\theta\) is the corresponding directional angle. So,
+
+                    $$
+                    \begin{align}
+                        A\cos{\alpha} = A_x \implies \cos{\alpha} = \frac{A_x}{A} \\[4px]
+
+                        A\cos{\beta} = A_y \implies \cos{\beta} = \frac{A_y}{A} \\[4px]
+
+                        A\cos{\gamma} = A_z \implies \cos{\gamma} = \frac{A_z}{A} \\[4px]
+                    \end{align}
+                    $$
+                
+
+                </p>
+                <p class="clrb" id="eq3.8">
+                    That is to say:
+
+                    $$
+                    \boxed{
+                        l = \frac{A_x}{A},\;
+                        m = \frac{A_y}{A},\;
+                        n = \frac{A_z}{A}
+                    }\qquad \color{red}{(3.8)}
+                    $$
+
+                    Also, it can be seen that \(l^2 + m^2 + n^2 = 1\) using the equation for <a href="#eq3.3">length of vector</a>.
+                </p>
+            </ul>
+
+            <br/>
+
+
+
+
+            <h2 id="Multiplication_of_Vectors">4. Multiplication of Vectors</h2>
+
+
+            <ul class="mainlist">
+
+            <p>
+                Although, there are many different multiplications for vectors in Mathematics, only three different multiplications defined on vectors have important roles in Physics. Let's discuss them in detail.
+            </p>
+
+            <li id="Multiplication_with_scalar"><b><u>Multiplication with scalar</u>:</b></li>
+
+            <p>
+                Consider a vector \(\vec{A}\) and a scalar \(c\). When we multiply a vector with a scalar, we effectively scale that vector by a factor of \(c\). That is, the resultant vector, \(c\vec{A}\) is in the direction of \(\vec{A}\), but has a length of \(c|\vec{A}|\).
+            </p>
+
+            <div class="imgdiv" style="float: left;">
+                <figure>
+                    <img src="/images/v41.png" alt="Multiplication of vector by scalar resulting in scaled vectors" width="300px;" id="img4.1"/>
+                    <figcaption><center><span style="color: red;">Fig 4.1</span>: Multiplication of vector by scalar</center></figcaption>
+                </figure>
+            </div>
+
+            <p>
+                In the adjacent image, <a href="#img4.1">Figure 4.1</a>, the scalar multiplied by the vector \(\vec{A}\) is \(c = 2\). So, the resultant vector, \(2\vec{A}\) is in the direction of \(\vec{A}\) itself but have double the magnitude as indicated by its length.
+            </p>
+
+            <p>
+                What we are doing here isn't anything new. Actually we have been doing this for a while in this chapter, starting right <a href="#eq3.1">from here</a>. To give a similar example, let \(\vec{A} = \hat{i}\) and \(c = 2.5\), as indicated in the right diagram of <a href="#img4.1">Figure 4.1</a>. Then, the resultant vector, \((2.5)\hat{i} = 5/2\hat{i}\) is in the direction of \(\hat{i}\) i.e. along the \(x\)-axis (if we consider our <a href="#standard_3D_basis">standard basis</a>) and is \(2.5\) times \(1\text{ unit}\) (the length of \(\hat{i}\)).
+            </p>
+            <br/>
+
+            <p>
+                Only two different types of product on two vectors have prominent use in Physics. These are: 
+            </p>
+
+            <br/>
+
+            <li id="dot_product"><b><u>Dot Product</u>:</b></li>
+
+
+                <p id="eq4.1">
+                    Consider two vectors, \(\vec{A}\) and \(\vec{B}\) with an angle \(\theta\) in between them (see <a href="#Magnitude_and_Direction_of_Resultant">angle between two vectors</a>), on acute side as shown in the <a href="#img4.2">Figure 4.2</a>. Then, the <i>Dot Product</i> of \(\vec{A}\) and \(\vec{B}\) is defined as: 
+
+                    $$
+                       \vec{A} \cdot \vec{B} = |\vec{A}||\vec{B}|\cos{\theta} \qquad \color{red}{(4.1)} 
+                    $$
+                </p>
+
+                <div class="imgdiv" style="float: left;">
+                    <figure>
+                        <img src="/images/v42.png" alt="Vectors A and B with angle theta in between them." width="300px;" id="img4.2"/>
+                        <figcaption><center><span style="color: red;">Fig 4.2</span>: Vectors \(\vec{A}\) and \(\vec{B}\) with angle <br/>\(\theta\) in between them.</center></figcaption>
+                    </figure>
+                </div>
+
+                <p>
+                    Here, |\(\vec{A}\)| and |\(\vec{B}\)| are the magnitudes of vectors \(\vec{A}\) and \(\vec{B}\) respectively. It is represented by placing a dot\((\cdot)\) in between the vectors, hence the name. Also, the resulting quantity is itself a scalar, so, <i> Dot Product</i> is often called as <i>Scalar Product</i> too.
+                </p>
+
+
+                <ul class="c1ul">
+                    <li><b><u>Interpretation</u>:</b></li>
+
+                    <p>
+                        The interpretation of dot product is simple. From <a href="#img4.2">Figure 4.2</a>, the projection of \(\vec{A}\) in the direction of \(\vec{B}\) is \(A\cos{\theta}\) and vice versa. So, the dot product of two vectors is the projection of one vector along the direction of other times the magnitude of the other vector. This interpretation in itself reveals the uses of dot product in Physics. One of them, and the most famous one is calculating work done by a force.  
+                    </p>
+
+                    <p>
+                        The work done by a force \(\vec{F}\) in moving a body in a direction at angle \(\theta\) with itself, a distance \(d\) is given as: 
+
+                        $$
+                            W = Fd\cos{\theta}.
+                        $$
+                    </p>
+
+                    <p class="clrb">
+                        If, the vector \(\vec{d}\) represents the displacement of the body in the specified direction and magnitude, then we get: 
+
+                        $$
+                            W = Fd\cos{\theta} \implies W = \vec{F} \cdot \vec{d}
+                        $$
+                        
+                        Similarly, dot product arise in many other physical situation, when we try to analyse them. Actually, this is the reason why even a "Dot Product" exists for vectors. So many expressions have the term of the form \(ab\cos{\theta}\), that a notation \(\vec{a}\cdot\vec{b}\) was introduced to make the expressions compact and more interpretable.
+                    </p>
+                    <br/>
+
+
+                    
+
+                    <li><b><u>Properties of dot product</u>:</b></li>
+
+                    <p>
+                        Dot product have some very interesting properties, which also makes them much useful. Let's state and prove them one by one.
+                    </p>
+
+                    <ul class="norli">
+                        <li><b><u>Commutativity</u>:</b></li>
+                        <p id="eq4.2">
+                            Dot products are commuatative i.e., for any two vectors \(\vec{A}\) and \(\vec{B}\):
+
+                            $$
+                            \vec{A}\cdot\vec{B} = \vec{B}\cdot\vec{A} \qquad \color{red}{(4.2)}
+                            $$
+
+                            This can easily be shown from the defining equation of dot product, <a href="#eq4.1">\(eq(4.1)\)</a>. If the angle between the two vectors is \(\theta\), then:
+
+                            $$
+                            \begin{align}
+                                \vec{A}\cdot\vec{B} &= |\vec{A}||\vec{B}|\cos{\theta} = |\vec{B}||\vec{A}|\cos{\theta} = \vec{B}\cdot\vec{A} \\[4px]
+
+                                \vec{A}\cdot\vec{B} &= \vec{B}\cdot\vec{A}
+                            \end{align}
+                            $$
+                            Hence, proved.
+                        </p>
+
+                        <li><b><u>Associativity</u>:</b></li>
+
+                        <p>
+                            The dot product can't be associative, in such a way that it never fulfills the criteria to give the equation of associativity such as \(a\times (b\times c)\), given by scalar numbers. The reasoning for this is:
+                        </p>
+
+                        <p>
+                            Since, the dot product of two vectors is always a scalar, the equation of the form:
+
+                            $$
+                            \vec{A}\cdot(\vec{B}\cdot\vec{C}) = \vec{A}\cdot(\text{Scalar})
+                            $$
+
+                            would never make sense, since the dot product is defined only between two vectors and not between a vector and a scalar.
+                        </p>
+
+
+
+                        <li><b><u>Distributivity over addition</u>:</b></li>
+
+                        <p id="eq4.3">
+                            Dot products are distributive over addition (and hence, over subtraction too) i.e.
+
+                            $$
+                            \vec{A}\cdot(\vec{B} + \vec{C}) = \vec{A}\cdot\vec{B} + \vec{A}\cdot\vec{C} \qquad \color{red}{(4.3)}
+                            $$
+                        </p>
+
+                        <p>
+                            Unlike other properties, this is not obvious at the first glance (at least not in our geometric definition of <a href="#eq4.1">\(\text{eq}(4.1)\)</a>, but can indeed be proved). Anyway, let's prove it.
+                        </p>
+                    </ul>
+
+                    <hr>
+
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                            <img src="/images/v43.png" alt="Image showing the three vectors A, B and C with the angle between A and B being phi 1, between A and C " width="320px;" id="img4.3"/>
+                            <figcaption><center><span style="color: red;">Fig 4.3</span>: The three vectors \(\vec{A}, \vec{B}\) and \(\vec{C}\)<br/>and the corresponding angles between them.<br/><sup>(not to scale)</sup></center>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <p>
+                        Consider the <a href="#img4.3">Figure 4.3</a> shown. If one finds it hard to see, try this <a href="https://www.geogebra.org/material/iframe/id/zrvm6ymu/width/1536/height/730/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" class="extlink">Geogebra resource</a> <sup>(The angles are omitted due to alignment problems).</sup> Here, \(\vec{A}, \vec{B}\) and \(\vec{C}\) are three arbitrary vectors, such that the angle between \(\vec{A}\) and \((\vec{B} + \vec{C})\) is \(\theta\), that between \(\vec{A}\) and \(\vec{B}\) is \(\phi_1\) and between \(\vec{A}\) and \(\vec{C}\) is \(\phi_2\), as shown. Now, writing the vectors in <a href="#Basis_vector_representation">component form</a>, we get:
+
+                        $$
+                        \begin{align}
+                            \vec{A} = A_x\,\hat{i} + A_y\,\hat{j} + A_z\,\hat{k} \\[4px]
+
+                            \vec{B} = B_x\,\hat{i} + B_y\,\hat{j} + B_z\,\hat{k} \\[4px]
+
+                            \vec{C} = C_x\,\hat{i} + C_y\,\hat{j} + C_z\,\hat{k}
+                        \end{align}
+                        $$
+
+                    </p>
+                    <p id="eq4.3.1">
+                        So, the vector \((\vec{B} + \vec{C})\) can be written as (using <a href="#Addition_in_component_form">vector addition in component form</a>):
+
+                        $$
+                        \vec{B} + \vec{C} = (B_x + C_x)\,\hat{i} + (B_y + C_y)\,\hat{j} + (B_z + C_z)\,\hat{k} \qquad \color{red}{(4.3\text{ i})}
+                        $$
+                    </p>
+
+                    <p class="clrb">
+                        Further, let the <a href="#directional_cosines">directional cosines</a> of the vectors be
+                        
+                        $$
+                        \begin{align}
+                        \begin{cases}
+                            l_1, m_1, n_1 \quad&\text{for} \quad\vec{A} \\[4px]
+                            l_2, m_2, n_2 \quad&\text{for} \quad\vec{B} \\[4px]
+                            l_3, m_3, n_3 \quad&\text{for}\quad \vec{C} \\[4px]
+                            l_4, m_4, n_4 \quad&\text{for}\quad (\vec{B} + \vec{C}). 
+                        \end{cases}
+                        \end{align}
+                        $$
+                        Now, consider the points \(a(l_1, m_1, n_1),b(l_2, m_2, n_2), c(l_3, m_3, n_3), d(l_4, m_4, n_4)\) on the line along the directions of vectors \(\vec{A}, \vec{B}, \vec{C}, (\vec{B} + \vec{C})\) respectively as shown in <a href="#img4.3">figure</a>.
+                    </p>
+                    <p>
+                        Using the property of directional cosines that \(l^2 + m^2 + n^2 = 1\), we see that the distance of each of these points from the origin \(\text{O}\) (see <a href="#img4.3">figure</a>), is \(1\) unit i.e.
+
+                        $$
+                        |Oa|^2 = |Ob|^2 = |Oc|^2 = |Od|^2 = 1.
+                        $$
+
+                        Then, from \(\triangle \text{Oad}\), using the <a href="#">law of consines*</a>, we get: 
+                    </p>
+
+                    <p id="eq4.4">
+                        $$
+                        \begin{align}
+                            \cos{\theta} &= \frac{|Oa|^2 + |Od|^2 - |ad|^2}{2|Oa||Od|} \\[4px]
+                            
+                            \cos{\theta} &= \frac{2-(l_4-l_1)^2-(m_4-m_1)^2-(n_4-n_1)^2 }{2}\\[4px]
+
+                            \cos{\theta} &= \frac{2 - (l_4^2 + m_4^2 + n_4^2) - (l_1^2 + m_1^2 + n_1^2)\\ + (2l_4l_1 + 2m_4m_1 + 2n_4n_1)}{2}\\[4px]
+
+                            \cos{\theta} &= \frac{2-1-1 + 2(l_4l_1 + m_4m_1 + n_4n_1)}{2},
+                        \end{align}
+                        $$
+
+                        using the property, $l^2 + m^2 + n^2 = 1$. Simplifying, we get:
+
+                        $$
+                            \boxed{\cos{\theta} = l_1l_4 + m_1m_4 + n_1n_4} \qquad \color{red}{(4.4)}
+                        $$
+                    </p>
+                    <p id="eq4.3.2">
+                        Similarly, we get:
+
+                        $$
+                        \left\{\begin{array}{lr}
+                            \cos{\phi_1} = l_1l_2 + m_1m_2 + n_1n_2 \\[4px]
+                            \cos{\phi_2} = l_3l_3 + m_3m_3 + n_1n_3
+                        \end{array}\right\}\qquad \color{red}{(4.3\text{ ii})}
+                        $$
+                    </p>
+
+                    <p>
+                        Now, its time to finish the task:
+
+                        $$
+                        \begin{align}
+                            \vec{A} \cdot (\vec{B} + \vec{C}) &= A|\vec{B} + \vec{C}|\cos{\theta} \\[4px]
+
+                            &= A|\vec{B} + \vec{C}|\,(l_1l_4 + m_1m_4 + n_1n_4) \quad \color{red}{\text{(using eq(4.4))}} \\[4px] 
+
+                            &= A|\vec{B} + \vec{C}|\, \left(\frac{A_x(B_x + C_x)}{A|\vec{B} + \vec{C}|} + \frac{A_y(B_y + C_y)}{A|\vec{B} + \vec{C}|} + \frac{A_z(B_z + C_z)}{A|\vec{B} + \vec{C}|}\right) \\[4px]
+
+                            \vec{A}\cdot(\vec{B} + \vec{C}) &= A_x(B_x + C_x) + A_y(B_y + C_y) + A_z(B_z + C_z)
+                        \end{align}
+                        $$
+
+                        Here, we used the $\text{eqs}$ <a href="#eq3.8">$(3.8)$</a> and <a href="#eq4.3.1">$(4.3\text{ i})$</a> to expand the <a href="#directional_cosines">directional cosines</a>. Now, we can expand (rather, <i>distribute</i>) the last expression, as it only involves normal numbers (the components of real vectors) belonging to the set of real numbers. Further, identifying the directional cosines of $\vec{A}$ and $\vec{B}$, again using <a href="#eq3.8">$\text{eq} (3.8)$</a> we get: 
+                    </p>
+
+                    <p>
+                        $$
+                        \begin{align}
+                            \vec{A}\cdot(\vec{B} + \vec{C}) &= A_xB_x + A_xC_x + A_yB_y + A_yC_y + A_zB_z + A_zC_z \\[4px]
+
+                            &= (A_xB_x +  A_yB_y + A_zB_z) + (A_xC_x + A_yC_y + A_zC_z) \\[4px]
+
+                            &= AB\left(\frac{A_xB_x +  A_yB_y + A_zB_z}{AB}\right) + AC\left(\frac{A_xC_x + A_yC_y + A_zC_z}{AC}\right) \\[4px]
+
+                            &= AB\left(
+                                \frac{A_x}{A}\frac{B_x}{B} + \frac{A_y}{A}\frac{B_y}{B} + \frac{A_z}{A}\frac{B_z}{B}
+                            
+                            \right) + AC\left(
+                                \frac{A_x}{A}\frac{C_x}{C} + \frac{A_y}{A}\frac{C_y}{C} + \frac{A_z}{A}\frac{C_z}{C}
+                            \right)\\[4px]
+
+                            \vec{A}\cdot(\vec{B} + \vec{C})  &= AB\,(l_1l_2 + m_1m_2 + n_1n_2) + AC\,(l_1l_3 + m_1m_3 + n_1n_3)
+                        \end{align}
+                        $$
+                    </p>
+    
+                    <p>
+                        Finally, using <a href="#eq4.3.2">$\text{eqs(4.3 ii)}$</a>, we get:
+
+                        $$
+                        \vec{A}\cdot(\vec{B} + \vec{C})  = AB\cos{\phi_1} + AC \cos{\phi_2} \\[4px]
+
+                        \boxed{\vec{A}\cdot(\vec{B} + \vec{C}) = \vec{A}\cdot\vec{B} + \vec{A}\cdot\vec{C}}
+                        $$
+                    </p>
+
+
+                    <hr>
+                    <br/>
+
+
+                    <li><b><u>Dot Product of parallel and orthogonal vectors</u>:</b></li>
+
+
+
+                    <p id="eq4.4">
+                        For any two parallel vectors, say \(\vec{a}\) and \(\vec{b}\), \(\theta=0\). So, the dot product of the two gives: 
+
+                        $$
+                            \vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos{(0)} \implies \vec{a}\cdot\vec{b} = ab.
+                        $$
+
+
+                        A special case arises when \(\vec{a} = \vec{b}\). Then, the dot product of \(\vec{a}\) with itself would be: 
+
+                        $$
+                        \begin{align}
+                            \vec{a} \cdot\vec{a} &= a^2 \qquad \color{red}{(4.4)}
+                        \end{align}
+                        $$
+                        
+                        So, the dot product of a vector with itself is equal to the magnitude squared of the vector. It has a very useful implication for unit vectors, as we will soon see. But first, let us consider the situation in which \(\theta = \pi/2\) i.e. dot product of orthogonal vectors. Here, 
+
+                        $$
+                            \vec{a}\cdot\vec{b} = |\vec{a}||\vec{b}|\cos{\left(\frac{\pi}{2}\right)} = 0.
+                        $$
+                        
+                        
+                        So, the dot product of orthogonal vectors is always zero. Actually, <b>to check if two vectors are othogonal</b>, we generally check if their dot product is zero. One might get confused here that if we doesn't know the angle between the two vectors, how would we even compute the dot product between them to check for orthogonality. This is where we are now heading.
+                    </p>
+
+
+                    <p> 
+                        Consider the dot product of <a href="#standard_3D_basis">standard basis vectors</a> within themselves:
+
+                        $$
+                        \begin{align}
+                            \hat{i}\cdot\hat{i} &= 1 \qquad \hat{j}\cdot\hat{i} = 0 \qquad \hat{k}\cdot\hat{i} = 0 \\[4px]
+
+                            \hat{i}\cdot\hat{j} &= 0 \qquad \hat{j}\cdot\hat{j} = 1 \qquad \hat{k}\cdot\hat{j} = 0 \\[4px]
+
+                            \hat{i}\cdot\hat{k} &= 0 \qquad \hat{j}\cdot\hat{k} = 0 \qquad \hat{k}\cdot\hat{k} = 1
+                        \end{align}
+                        $$
+
+                        
+                    </p>
+                </ul>
             </ul>
 
 

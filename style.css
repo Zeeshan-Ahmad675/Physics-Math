@@ -427,7 +427,6 @@ footer a:hover{
 .imgdiv {
   scrollbar-width: thin;
   scrollbar-color: darkgray transparent;
-
 }
 .imgdiv::-webkit-scrollbar {
   height: 8px;
@@ -436,6 +435,19 @@ footer a:hover{
   background-color: darkgray;
   border-radius: 4px;
 }
+
+/* .exdiv{
+    background-color: hsl(160, 100%, 75%);
+    padding: 10px;
+    border: 3px solid hsl(160, 100%, 45%);
+    border-radius: 10px;
+    color: black;
+    clear: both;
+} */
+
+/* .bfnavitestli{
+    list-style-position: outside ;margin-block-start: 0.2em; margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;padding-inline-start: 40px; list-style-type: lower-roman
+} */
 
 
 
