@@ -113,7 +113,19 @@
     </style>
     
 </head>
-<body>
+<body class="loading">
+
+    <div id="loader">
+        <div id="mloader">
+            <div class="spinner">
+                <img id="loaderLogo" src="/images/icon.png" alt="logo" width="100%">
+            </div>
+            <center>
+                <p><span style="color:green; font-weight: bold; font-size: 20px">Loading...</span></br>Please wait while we get the page ready for you.</p>
+            </center>
+        </div>
+    </div>
+
     <header>
         <div id="lona">
             <div id="navbar" onclick="ocnav()">
@@ -1289,7 +1301,7 @@
                         \end{cases}
                         \end{align}
                         $$
-                        Now, consider the points \(a(l_1, m_1, n_1),b(l_2, m_2, n_2), c(l_3, m_3, n_3)\) and \(d(l_4, m_4, n_4)\) on the line along the directions of vectors \(\vec{A}, \vec{B}, \vec{C}, (\vec{B} + \vec{C})\) respectively as shown in <a href="#img4.3">figure</a>.
+                        Now, consider the points \(a(l_1, m_1, n_1)\),\(b(l_2, m_2, n_2)\), \(c(l_3, m_3, n_3)\) and \(d(l_4, m_4, n_4)\) on the line along the directions of vectors \(\vec{A}, \vec{B}, \vec{C}, (\vec{B} + \vec{C})\) respectively as shown in <a href="#img4.3">figure</a>.
                     </p>
                     <p>
                         Using the property of directional cosines that \(l^2 + m^2 + n^2 = 1\), we see that the distance of each of these points from the origin \(\text{O}\) (see <a href="#img4.3">figure</a>), is \(1\) unit i.e.
@@ -1324,7 +1336,7 @@
                         Similarly, we get:
 
                         $$
-                        \left\{\begin{array}{lr}
+                        \left.\begin{array}{lr}
                             \cos{\phi_1} = l_1l_2 + m_1m_2 + n_1n_2 \\[4px]
                             \cos{\phi_2} = l_3l_3 + m_3m_3 + n_1n_3
                         \end{array}\right\}\qquad \color{red}{(4.3\text{ ii})}

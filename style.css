@@ -456,6 +456,66 @@ footer a:hover{
 
 
 
+/* Loading Bar */
+
+body.loading {
+  overflow: hidden;
+}
+
+#loader{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+#mloader{
+    width: 260px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px black;
+    border-radius: 5px;
+    background: white;
+}
+
+.spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid hsl(199, 70%, 53%);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+#loaderLogo{
+    position: absolute;
+}
+
+#loaderLogo {
+    position: absolute;
+    animation: spin 1s linear reverse infinite;
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
 
 
 
