@@ -1,7 +1,7 @@
-chapters/refer.html
-chapters/test.html
+src/chapters/refer.html
+src/chapters/test.html
 Mathematical Methods.pdf
-parts
-build.js
 images_png
 tools
+dist
+node_modules

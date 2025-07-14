@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://physicsderived.club/about">
+    <title>About</title>
+    <meta property="og:site_name" content="Physics Derived">
+    <meta property="og:title" content="About Us">
+
+    <style>
+        main a:link{
+            text-decoration: none;
+            color: hsl(920, 100%, 50%);
+        }
+    </style>
+</head>
+<body>
+    {{header}}
+
+    <main>
+        <!-- <div id="fixedmodediv">
+            <div id="modediv" onclick="modechange()">
+                <div id="modebut">
+                    <i id="sun" class="fa-solid fa-sun"></i>
+                    <i id="moon" class="fa-solid fa-moon" ></i>
+                </div>
+            </div>
+        </div> -->
+
+        <h1 style="text-align: center; font-weight: 200;">Welcome to Physics Derived</h1>
+
+        
+            <p>Physics Derived is aimed to be a reference website for concepts in Physics. It is a website for academics and students of physics and related fields. With your support, we are working to make this website a library of derivations in physics, which is a crucial tool for active research. </p>
+
+            <hr/>
+
+        
+            <p><b>Get started</b> by navigating to <a style="text-decoration: none;" href="chapters.html">chapters</a> and select any topic you did like to study now. All your <a href="feedback.html" style="text-decoration: none;">feedbacks</a> are highly appreciated.</p>
+
+        
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    {{footer}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+    <script defer>
+        ['DOMContentLoaded', 'resize'].forEach((event) => {document.addEventListener(`${event}`, () => {
+            if (document.documentElement.scrollHeight <= window.innerHeight && footer && main) {
+                document.documentElement.style.height = '100vh';
+                document.body.style.height = 'auto';
+                footer.style.position = 'absolute';
+                footer.style.bottom = '0';
+                footer.style.left = '0';
+                footer.style.width = '100%';
+            }
+        })
+        });
+    </script>
+
+</body>
+</html>

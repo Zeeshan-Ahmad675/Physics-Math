@@ -81,11 +81,13 @@ window.onload = () => {
     // Optional: wait a short delay to allow final paint
     setTimeout(() => {
         const loader = document.getElementById("loader");
-        loader.style.opacity = "0";
+        if(loader){
+            loader.style.opacity = "0";
 
-        // Fully remove after transition
-        setTimeout(() => loader.remove(), 300);
-        
-        document.body.classList.remove("loading");
+            // Fully remove after transition
+            setTimeout(() => loader.remove(), 300);
+            
+            document.body.classList.remove("loading");
+        }
     }, 100); // tweak this delay if needed
 };
