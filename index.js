@@ -101,6 +101,17 @@ function modechange() {
             });
         }
 
+
+        const loader = document.getElementById("loader");
+        if(loader){
+            loader.style.color = "black";
+            loader.style.background = "rgba(255, 255, 255, 0.8)";
+            const mloader = loader.querySelector("#mloader");
+            mloader.style.background = "white";
+            mloader.style.boxShadow = "0 0 8px black";
+            const loadingText = loader.querySelector('#loadingText');
+            loadingText.style.color = "hsla(120, 100%, 42%, 1.00)";
+        }
     } 
     
     else {
@@ -161,6 +172,17 @@ function modechange() {
                 cell.style.color = "black";
                 });
             });
+        }
+
+        const loader = document.getElementById("loader");
+        if(loader){
+            loader.style.color = "white";
+            loader.style.background= "hsla(225, 4%, 18%, 0.7)";
+            const mloader = loader.querySelector("#mloader");
+            mloader.style.background = "black";
+            mloader.style.boxShadow = "0 0 8px white";
+            const loadingText = loader.querySelector('#loadingText');
+            loadingText.style.color = "hsl(122, 100%, 50%)";
         }
     }
 }
@@ -233,6 +255,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        const loader = document.getElementById("loader");
+        if(loader){
+            loader.style.color = "black";
+            loader.style.background = "rgba(255, 255, 255, 0.8)";
+            const mloader = loader.querySelector("#mloader");
+            mloader.style.background = "white";
+            mloader.style.boxShadow = "0 0 8px black";
+            const loadingText = loader.querySelector('#loadingText');
+            loadingText.style.color = "hsla(120, 100%, 42%, 1.00)";
+        }
     } 
     
     else {
@@ -291,6 +323,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.style.color = "black";
                 });
             });
+        }
+
+        const loader = document.getElementById("loader");
+        if(loader){
+            loader.style.color = "white";
+            loader.style.background= "hsla(225, 4%, 18%, 0.8)";
+            const mloader = loader.querySelector("#mloader");
+            mloader.style.background = "black";
+            mloader.style.boxShadow = "0 0 8px white";
+            const loadingText = loader.querySelector('#loadingText');
+            loadingText.style.color = "hsl(122, 100%, 50%)";
         }
     }
 });

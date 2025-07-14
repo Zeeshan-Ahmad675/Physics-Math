@@ -71,8 +71,8 @@
 
         table {
             margin: auto;
-            /* width: 100%; */
-            /* max-width: 700px;  */
+            width: 100%;
+            max-width: 700px;
             border-collapse: collapse;
         }
 
@@ -85,9 +85,9 @@
             white-space: nowrap;
         }
 
-        .table25{
+        /* .table25{
             display: none;
-        }
+        } */
 
         
 
@@ -106,14 +106,14 @@
             }
         }
 
-        @media screen and (max-width: 700px) {
+        /* @media screen and (max-width: 700px) {
             .table25{
                 display: table;
             }
             #table25{
                 display: none;
             }
-        }
+        } */
     </style>
 </head>
 <body class="loading">
@@ -123,7 +123,7 @@
                 <img id="loaderLogo" src="/images/icon.png" alt="logo" width="100%">
             </div>
             <center>
-                <p><span style="color:green; font-weight: bold; font-size: 20px">Loading...</span></br>Please wait while we get the page ready for you.</p>
+                <p><span id="loadingText" style="font-weight: bold; font-size: 20px">Loading...</span></br>Please wait while we get the page ready for you.</p>
             </center>
         </div>
     </div>
@@ -1524,7 +1524,7 @@
                 </div>
                 <br/>
 
-                <div class="tablediv">
+                <!-- <div class="tablediv">
                 <table class="table25" border="1" style="background-color: black;">
                     <caption><span style="color: red;">Table  2.5</span>: Values of trigonometric functions at some common angles (expanded)</caption>
                     <thead>
@@ -1679,7 +1679,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                </div>
+                </div> -->
 
 
 
