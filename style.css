@@ -436,6 +436,21 @@ footer a:hover{
   border-radius: 4px;
 }
 
+.tablediv{
+    overflow: auto;
+}
+.tablediv {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray transparent;
+}
+.tablediv::-webkit-scrollbar {
+  height: 8px;
+}
+.tablediv::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 4px;
+}
+
 /* .exdiv{
     background-color: hsl(160, 100%, 75%);
     padding: 10px;
