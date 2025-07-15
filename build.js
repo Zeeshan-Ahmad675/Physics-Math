@@ -60,7 +60,6 @@ function processDirectory(currentSrcDir, currentOutDir) {
 
                 fs.writeFileSync(outPath, content);
             } else {
-                // Just copy non-HTML files (JS, CSS, images, etc.)
                 fs.copyFileSync(srcPath, outPath);
             }
         }
