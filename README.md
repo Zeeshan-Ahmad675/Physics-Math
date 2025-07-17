@@ -9,6 +9,6 @@ One may contribute in many ways to this project. To list some:
 
 - One might point out our mistakes through the [feedback](https://physicsderived.club/feedback) or [contact](https://physicsderived.club/contact) forms. 
 
-- If someone want to include a topic which is yet not on the website, he might [fork](https://github.com/Zeeshan-Ahmad675/Physics-Math/fork) this repo and then create a merge request with the changes made. They might [contact](https://physicsderived.club/contact.html) us for some help, if needed.
+- If someone want to include a topic which is yet not on the website, he might [fork](https://github.com/Zeeshan-Ahmad675/Physics-Math/fork) this repo and then create a merge request with the changes made. [Contact](https://physicsderived.club/contact.html) us for some help, if needed.
 
 
