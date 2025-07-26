@@ -1093,7 +1093,7 @@
                             Since, the dot product of two vectors is always a scalar, the equation of the form:
 
                             $$
-                            \vec{A}\cdot(\vec{B}\cdot\vec{C}) = \vec{A}\cdot(\text{Scalar})
+                            \vec{A}\cdot(\vec{B}\cdot\vec{C}) = \vec{A}\cdot(\text{Some scalar})
                             $$
 
                             would never make sense, since the dot product is defined only between two vectors and not between a vector and a scalar.
@@ -1161,7 +1161,7 @@
                         \end{cases}
                         \end{align}
                         $$
-                        Now, consider the points \(a(l_1, m_1, n_1)\),\(b(l_2, m_2, n_2)\), \(c(l_3, m_3, n_3)\) and \(d(l_4, m_4, n_4)\) on the line along the directions of vectors \(\vec{A}, \vec{B}, \vec{C}, (\vec{B} + \vec{C})\) respectively as shown in <a href="#img4.3">figure</a>.
+                        Now, consider the points \(a(l_1, m_1, n_1)\), \(b(l_2, m_2, n_2)\), \(c(l_3, m_3, n_3)\) and \(d(l_4, m_4, n_4)\) on the line along the directions of vectors \(\vec{A}, \vec{B}, \vec{C}, (\vec{B} + \vec{C})\) respectively as shown in <a href="#img4.3">figure</a>.
                     </p>
                     <p>
                         Using the property of directional cosines that \(l^2 + m^2 + n^2 = 1\), we see that the distance of each of these points from the origin \(\text{O}\) (see <a href="#img4.3">figure</a>), is \(1\) unit i.e.
@@ -1203,7 +1203,7 @@
                         $$
                     </p>
 
-                    <p>
+                    <p id="dot_product_component_form_dp">
                         Now, its time to finish the task:
 
                         $$
@@ -1257,11 +1257,9 @@
                     <br/>
 
 
-                    <li><b><u>Dot Product of parallel and orthogonal vectors</u>:</b></li>
-
-
-
-                    <p id="eq4.4">
+                    <li id="dot_product_of_po_vector"><b><u>Dot Product of parallel and orthogonal vectors</u>:</b></li>
+                    
+                    <p id="eq4.5">
                         For any two parallel vectors, say \(\vec{a}\) and \(\vec{b}\), \(\theta=0\). So, the dot product of the two gives: 
 
                         $$
@@ -1273,7 +1271,7 @@
 
                         $$
                         \begin{align}
-                            \vec{a} \cdot\vec{a} &= a^2 \qquad \color{red}{(4.4)}
+                            \vec{a} \cdot\vec{a} &= a^2 \qquad \color{red}{(4.5)}
                         \end{align}
                         $$
                         
@@ -1286,22 +1284,79 @@
                         
                         So, the dot product of orthogonal vectors is always zero. Actually, <b>to check if two vectors are othogonal</b>, we generally check if their dot product is zero. One might get confused here that if we doesn't know the angle between the two vectors, how would we even compute the dot product between them to check for orthogonality. This is where we are now heading.
                     </p>
+                    <br/>
 
 
-                    <p> 
-                        Consider the dot product of <a href="#standard_3D_basis">standard basis vectors</a> within themselves:
+                    <li id="dot_product_in_component_form"><b><u>Dot Product in component form</u>:</b></li>
+
+                    <p id="eq4.6"> 
+                        Let's now deduce how we can compute the dot product of the vectors, when they are given in the <a href="#eq3.2">component form</a>. First, consider the dot product of <a href="#standard_3D_basis">standard basis vectors</a> within themselves:
 
                         $$
+                        \left.\begin{array}{lr}
+                            \hat{i}\cdot\hat{i} = 1 && \hat{j}\cdot\hat{i} = 0 && \hat{k}\cdot\hat{i} = 0 \\[4px]
+
+                            \hat{i}\cdot\hat{j} = 0 && \hat{j}\cdot\hat{j} = 1 && \hat{k}\cdot\hat{j} = 0 \\[4px]
+
+                            \hat{i}\cdot\hat{k} = 0 && \hat{j}\cdot\hat{k} = 0 && \hat{k}\cdot\hat{k} = 1
+                        \end{array}\right\} \qquad \color{red}{(4.6)}
+                        $$ 
+                    </p>
+
+                    <p>
+                        The like unit vectors' dot products compute to $1$ as they are parallel (same vector) and unlike pair have dot product zero as they are perpendicular to each other (from <a href="#dot_product_of_po_vector">previous</a> section). Now, consider two vectors $\vec{A}$ and $\vec{B}$:
+                        
+                        $$
                         \begin{align}
-                            \hat{i}\cdot\hat{i} &= 1 \qquad \hat{j}\cdot\hat{i} = 0 \qquad \hat{k}\cdot\hat{i} = 0 \\[4px]
-
-                            \hat{i}\cdot\hat{j} &= 0 \qquad \hat{j}\cdot\hat{j} = 1 \qquad \hat{k}\cdot\hat{j} = 0 \\[4px]
-
-                            \hat{i}\cdot\hat{k} &= 0 \qquad \hat{j}\cdot\hat{k} = 0 \qquad \hat{k}\cdot\hat{k} = 1
+                            \vec{A} &= A_x\, \hat{i} + A_y\, \hat{j} + A_z\, \hat{k} \\[4px]
+                            \vec{B} &= B_x\, \hat{i} + B_y\, \hat{j} + B_z\, \hat{k} \\[4px]
                         \end{align}
                         $$
 
-                        
+                        Then, using the <a href="#eq4.3">distributive property</a> of dot product, we get:
+                    </p>
+
+                    <p>
+                        $$
+                        \begin{align}
+                            \vec{A} \cdot \vec{B} &= (A_x\, \hat{i} + A_y\, \hat{j} + A_z\, \hat{k}) \cdot  (B_x\, \hat{i} + B_y\, \hat{j} + B_z\, \hat{k}) \\[4px]
+
+                            &= (A_x\, \hat{i}\cdot B_x\, \hat{i}) + \cancel{(A_x\, \hat{i}\cdot B_y\, \hat{j})} + \cancel{(A_x\, \hat{i}\cdot B_z\, \hat{k})} + \cancel{(A_y\, \hat{j}\cdot B_x\, \hat{i})} + (A_y\, \hat{j}\cdot B_y\, \hat{j}) + \cancel{(A_y\, \hat{j}\cdot B_z\, \hat{k})} + \cancel{(A_z\, \hat{k}\cdot B_x\, \hat{i})} + \cancel{(A_z\, \hat{k}\cdot B_y\, \hat{j})} + (A_z\, \hat{k}\cdot B_z\, \hat{k}) \qquad \color{red}{(\text{using (4.6)})}
+                        \end{align}
+                        $$
+                    </p>
+
+                    <p>
+                        We can use the distributive property here since the terms of the form $A_x\hat{i}$ are themselves a vector. Further, the terms are cancelled to zero using <a href="#eq4.6">$\text{eqs(4.6)}$</a>. So, we get a nice little equation, for the dot product in terms of component of the vectors:
+
+                        $$
+                            \boxed{\vec{A} \cdot \vec{B} = A_xB_x + A_yB_y + A_zB_z} \qquad \color{red}{(4.7)}
+                        $$
+
+                        Actually, we didn't even need to deduce it from the <a href="#eq4.3">distributive property</a>. If you noticed, while proving the distributive property, we already encountered this result <a href="#dot_product_component_form_dp">here</a> (we can say it to be a by-product of that deduction).
+                    </p>
+
+                    <p>
+                        Let's consider an example. Consider the two vectors to be:
+
+                        $$
+                        \begin{align}
+                            \vec{a} &= 3\,\hat{i} - 2\,\hat{j} + 5\, \hat{k} \\[4px]
+                            \vec{b} &= 2\,\hat{i} - 5\,\hat{j} + 0.8\, \hat{k}
+                        \end{align}
+                        $$
+
+                        Then the dot product of the two vectors is:
+
+                        $$
+                        \begin{align}
+                            \vec{a} \cdot \vec{b} &= (3\,\hat{i} - 2\,\hat{j} + 5\, \hat{k}) \cdot (2\,\hat{i} - 5\,\hat{j} + 0.8\, \hat{k}) \\[4px]
+                            &= 3 \cdot 2 + (-2) \cdot (-5) + 5 \cdot 0.8 \\[4px]
+                            \implies \vec{a} \cdot \vec{b} &= 6 - 10 + 4 = 0
+                        \end{align}
+                        $$
+
+                        So, we see that the vectors $\vec{a}$ and $\vec{b}$ are perpendicular (since their dot product is zero).
                     </p>
                 </ul>
             </ul>
