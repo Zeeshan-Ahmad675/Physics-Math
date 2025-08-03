@@ -48,8 +48,7 @@ main{
     /* background-color: #ffffff; */
     padding: 19px;
     /* box-shadow: 0 0 4px black; */
-    Box-Shadow : 0 0 4px black 
-
+    box-shadow : 0 0 4px black;
 }
 main span{
     color: black;
@@ -330,7 +329,7 @@ main a:visited{
 
 
 main{
-    margin: 8px;
+    margin: 8px auto;
 }
 
 
