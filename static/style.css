@@ -540,7 +540,7 @@ body.loading {
 
 
 .ea_calculator{
-    min-width: 400px;
+    /* min-width: 400px; */
     max-width: 800px;
     height: auto;
     text-align: center;
