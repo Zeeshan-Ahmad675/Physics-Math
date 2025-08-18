@@ -24,6 +24,10 @@ const extLinks = document.querySelectorAll('.extlink');
 
 
 
+// Euler Angles Calculator
+const calculate_ea = document.getElementById("calculate_ea");
+const ea_calculator = document.querySelector(".ea_calculator");
+let display = document.getElementById("ea_display");
 
 
 
@@ -112,6 +116,10 @@ function modechange() {
             const loadingText = loader.querySelector('#loadingText');
             loadingText.style.color = "hsla(120, 100%, 42%, 1.00)";
         }
+
+        if(ea_calculator){
+            ea_calculator.style.backgroundColor = "hsla(0, 0%, 97%, 1.00)";
+        }
     } 
     
     else {
@@ -183,6 +191,10 @@ function modechange() {
             mloader.style.boxShadow = "0 0 8px white";
             const loadingText = loader.querySelector('#loadingText');
             loadingText.style.color = "hsl(122, 100%, 50%)";
+        }
+
+        if(ea_calculator){
+            ea_calculator.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
         }
     }
 }
@@ -265,6 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const loadingText = loader.querySelector('#loadingText');
             loadingText.style.color = "hsla(120, 100%, 42%, 1.00)";
         }
+
+        if(ea_calculator){
+            ea_calculator.style.backgroundColor = "hsla(0, 0%, 97%, 1.00)";
+        }
     } 
     
     else {
@@ -335,6 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const loadingText = loader.querySelector('#loadingText');
             loadingText.style.color = "hsl(122, 100%, 50%)";
         }
+
+        if(ea_calculator){
+            ea_calculator.style.backgroundColor = "hsl(0, 0.00%, 35.70%)";
+        }
     }
 });
 
@@ -360,7 +380,7 @@ function ocnav() {
     var navclo = document.getElementById("navclo")
     var computedStyle = window.getComputedStyle(nav);
     window.addEventListener("resize", function() {
-        if (window.innerWidth > 700) {
+        if (window.innerWidth > 800) {
             nav.style.display = "flex";
             navbar.style.display = "none";
             navclo.style.display = "none";
@@ -458,6 +478,81 @@ if(footer){
                     link.removeAttribute("rel");
                 }
             }
+        }
+    });
+}
+
+
+
+
+
+
+// Euler Angles API
+
+
+if(calculate_ea){
+    document.getElementById("calculate_ea").addEventListener("click", async function (e) {
+        const form = e.target.closest("form");
+    
+        // If form is invalid, stop here
+        if (!form.checkValidity()) {
+            form.reportValidity(); // shows native validation popup
+            return;
+        }
+
+        e.preventDefault();
+
+        const xi = parseFloat(document.getElementById("xi").value) || 0;
+        const xj = parseFloat(document.getElementById("xj").value) || 0;
+        const xk = parseFloat(document.getElementById("xk").value) || 0;
+
+        const ri = parseFloat(document.getElementById("ri").value) || 0;
+        const rj = parseFloat(document.getElementById("rj").value) || 0;
+        const rk = parseFloat(document.getElementById("rk").value) || 0;
+
+        try {
+            const res = await fetch("https://python-server-euler-angles.onrender.com/process", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    a: xi,
+                    b: xj,
+                    c: xk,
+                    d: ri,
+                    e: rj,
+                    f: rk
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(`Server error: ${res.status}`);
+            }
+
+            // const data = await res.json();
+            if("alpha" in data){
+                display.className = "success";
+                document.getElementById("ea_display").innerText = 
+                    `$$\\begin{align}\\alpha &= ${data.alpha}\\\\[4px]\\beta&= ${data.beta}\\\\[4px] \\gamma&= ${data.gamma}\\\\[4px] \\theta&= ${data.theta}\\end{align}$$`;
+                MathJax.typeset([display]);
+            }
+            else if("warning" in data){
+                display.className = "warning";
+                document.getElementById("ea_display").innerText = 
+                    `\u26A0 ${data.warning}`;
+            }
+            else if("error" in data){
+                display.className = "error";
+                document.getElementById("ea_display").innerText = 
+                    `\u274C ${data.error}`;
+            }
+        } catch (err) {
+            display.className = "error";
+            console.error(err);
+            document.getElementById("ea_display").innerHTML = `\u274C An unexpected error occured! If you believe this is a bug, please report it to us on our <a href="/contact.html">contact</a> page. Please mention the input vectors. We would try to correct that as soon as possible.`;
         }
     });
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://physicsderived.club/index">
+    
+    <title>Euler Angles Calculator - Physics Derived</title>
+    <meta property="og:site_name" content="Physics Derived">
+    <meta property="og:title" content="Euler Angle Calculator">
+</head>
+<body>
+
+    {{header}}
+
+    <main>
+
+        <h1 style="text-align: center;">Euler Angles Calculator</h1>
+        <hr>
+
+        
+
+        <div class="ea_calculator">
+            <form>
+                <p>Final $x$-axis</p>
+                <input type="number" step="any" id="xi" required>
+                <label for="xi">$\hat{i}\, + $</label>
+                <!-- <span> $+$ </span> -->
+                <input type="number" step="any" id="xj" required>
+                <label for="xj">$\hat{j}\, + $</label>
+                <!-- <span> $+$ </span> -->
+                <input type="number" step="any" id="xk" required>
+                <label for="xk">$\hat{k}$</label>
+
+                <p>Reference vector $(\vec{R})$ on the $xy$-plane</p>
+                <input type="number" step="any" id="ri" required>
+                <label for="ri">$\hat{i}\, +$</label>
+                <!-- <span> $+$ </span> -->
+                <input type="number" step="any" id="rj" required>
+                <label for="rj">$\hat{j}\, + $</label>
+                <!-- <span> $+$ </span> -->
+                <input type="number" step="any" id="rk" required>
+                <label for="rk">$\hat{k}$</label>
+
+                <br/>
+
+                <button id="calculate_ea">Calculate</button>
+            </form>
+            <p id="ea_display"></p>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+        <h2>About</h2>
+        <p>
+            In many of the applications today (including aircraft, space vehicle orientation, frames shifting in Physics, computer graphics, etc.), we find Euler Angles decribing the orientation of the frame in consideration. After all, that is for what Euler angles are. As is clear, these was introduced by Leonhard Euler to describe orientation of a rigid body.
+        </p>
+
+        <p>
+            Any orientation can be reached using the rotation by Euler Angles, $\alpha$, $\beta$ and $\gamma$ (these are the notations which we would use from here on). These rotations can be extrinsic (rotation about the original axes i.e. the initial $x$, $y$ and $z$-axes) or exitrinsic (rotation about axes of successively new frames after each rotation). Now, there are many prevalent conventions for these angles and they all work for any given situation. One of them is $\text{ZXZ}$ (intrinsic). This means that we first rotate the frame about the initial $z$-axis by angle $\alpha$, then we rotate the resulting frame about the $x$-axis (say, $x'$) of the resulting frame by angle $\beta$ and finally about the $z$-axis (say, $z''$) of the second resulting frame by angle $\gamma$. The sequence is depicted in the <a href="#img1.1">figure</a> below.
+        </p>
+        
+        
+        
+        <div class="imgdiv" style="float: left; width: 100%; text-align: center">
+            <figure>
+                <img src="/images/t11.svg" alt="Image showing the first rotation about the initial z axis" width="320px;" id="img1.1"/>
+                <img src="/images/t12.svg" alt="Image showing the second roattion about the x prime axis after the first rotation" width="320px;" id="img1.2"/>
+                <img src="/images/t13.svg" alt="Image showing third and final rotation about the final z axis" width="320px;" id="img1.3"/>
+                <figcaption><center><span style="color: red;">Fig 1</span>: The sequence of rotation in the $\text{ZXZ}$ (intrinsic) convention</center>
+                </figcaption>
+            </figure>
+        </div>
+
+
+        <p>
+            The $x'$-axis after the first rotation is called <i>the line of nodes</i> (denoted by $N$) in the <a href="#img1.2">figure</a>. 
+        </p>
+
+        
+    </main>
+
+
+
+    {{footer}}
+
+
+
+
+
+
+
+
+    <script src="/index.js"></script>
+
+    
+</body>
+</html>

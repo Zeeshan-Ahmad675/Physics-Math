@@ -363,6 +363,7 @@ main{
 .chbox img{
     width: 150px;
     margin-bottom: 6px;
+    background: white;
 }
 .chbox:hover{
     scale: 1.02;
@@ -533,6 +534,129 @@ body.loading {
 
 
 
+/* Tools */
+
+/* Euler Angles Calculator */
+
+
+.ea_calculator{
+    min-width: 400px;
+    max-width: 800px;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    /* font-size: large; */
+    box-shadow: 0 0 6px black;
+    border-radius: 10px;
+    align-self: center;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: hsla(0, 0%, 97%, 1.00);
+}
+
+.ea_calculator button{
+    margin-top: 10px;
+    padding: 8px;
+    width: auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4em;
+    color: white;
+    background-color: hsl(203, 100%, 50%);
+    box-shadow: 0 0 4px hsl(203, 100%, 50%);
+    cursor: pointer;
+}
+.ea_calculator button:hover{
+    background-color: hsl(203, 100%, 40%);
+    box-shadow: 0 0 4px hsl(203, 100%, 40%);
+}
+.ea_calculator button:active{
+    background-color: hsl(203, 100%, 30%);
+    box-shadow: 0 0 4px hsl(203, 100%, 30%);
+}
+
+.ea_calculator input {
+    padding: 12px 16px;
+    width: 200px;
+    border: 2px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    margin: 5px;
+}
+
+.ea_calculator input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.15);
+    background-color: #ffffff;
+}
+
+.ea_calculator input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none; /* Standard property */
+  /* margin: 0; */
+}
+
+/* Remove arrows in Firefox */
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox-specific */
+  appearance: textfield;      /* Standard property */
+}
+
+
+/* #ea_display{
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 10px auto;
+} */
+
+
+#ea_display {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background-color: hsl(210, 17%, 98%); /* light gray background */
+    border: 1px solid hsl(0, 0%, 87%);
+    font-size: 1.2rem;
+    text-align: center;
+    color: hsl(0, 0%, 20%);
+    min-height: 2.5rem; /* keeps box from collapsing when empty */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#ea_display:empty {
+    border: none;
+    background: transparent;
+    height: 0;
+}
+
+#ea_display.success {
+    background-color: hsl(137, 100%, 95%); /* light green */
+    border-color: hsl(114, 58%, 77%);
+    color: hsl(123, 40%, 20%);
+}
+
+#ea_display.warning {
+    background-color: hsl(48, 100%, 96%);  /* light yellow */
+    border: 1px solid hsl(48, 85%, 77%);   /* soft golden border */
+    color: hsl(48, 85%, 24%); 
+}
+
+#ea_display.error {
+    background-color: hsl(0, 100%, 96%); /* light red */
+    border-color: hsl(0, 58%, 77%);
+    color: hsl(0, 58%, 24%);
+}
 
 
 
@@ -573,7 +697,7 @@ body.loading {
 
 
 
-@media screen and (max-width: 726px){
+@media screen and (max-width: 826px){
 
     /* General setup */
 

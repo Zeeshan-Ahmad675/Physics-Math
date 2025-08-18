@@ -45,7 +45,7 @@ function processDirectory(currentSrcDir, currentOutDir) {
 
                 const head = document.querySelector("head");
                 head.insertAdjacentHTML("beforeend", parhead);
-                ["Mathematical_methods_in_physics.html","refer.html","test.html","vectors.html","credits.html"].forEach(element => {
+                ["Mathematical_methods_in_physics.html","refer.html","test.html","vectors.html","credits.html","euler_angles_calculator.html"].forEach(element => {
                     if(element == entry.name){
                     head.insertAdjacentHTML("beforeend", chstyle);
                 }
