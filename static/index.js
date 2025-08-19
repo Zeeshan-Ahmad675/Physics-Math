@@ -512,6 +512,7 @@ if(calculate_ea){
 
         try {
             const res = await fetch("https://python-server-euler-angles.onrender.com/process", {
+            // const res = await fetch("http://127.0.0.1:5000/process", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -526,6 +527,13 @@ if(calculate_ea){
                 })
             });
 
+            if (res.status === 429) {
+                const data = await res.json().catch(() => ({ error: "Too many requests" }));
+                display.className = "error";
+                document.getElementById("ea_display").innerHTML = `\u274C ${data.error}`;
+                return;
+            }
+
             const data = await res.json();
 
             if (!res.ok) {
@@ -536,7 +544,21 @@ if(calculate_ea){
             if("alpha" in data){
                 display.className = "success";
                 document.getElementById("ea_display").innerText = 
-                    `$$\\begin{align}\\alpha &= ${data.alpha}\\\\[4px]\\beta&= ${data.beta}\\\\[4px] \\gamma&= ${data.gamma}\\\\[4px] \\theta&= ${data.theta}\\end{align}$$`;
+                    `$\\text{Rotation Angles}\\\\[8px]$
+                    \\begin{align}
+                        \\alpha &= ${data.alpha}\\\\[4px]
+                        \\beta &= ${data.beta}\\\\[4px]
+                        \\gamma &= ${data.gamma}\\\\[4px]
+                        \\theta &= ${data.theta}
+                    \\end{align}
+                    $\\text{Rotation Matrix}\\\\[8px]$
+                    $$
+                    \\begin{bmatrix}
+                        ${data.row1[0].toFixed(3)} & ${data.row1[1].toFixed(3)} & ${data.row1[2].toFixed(3)}\\\\
+                        ${data.row2[0].toFixed(3)} & ${data.row2[1].toFixed(3)} & ${data.row2[2].toFixed(3)}\\\\
+                        ${data.row3[0].toFixed(3)} & ${data.row3[1].toFixed(3)} & ${data.row3[2].toFixed(3)}
+                    \\end{bmatrix}
+                    $$`;
                 MathJax.typeset([display]);
             }
             else if("warning" in data){

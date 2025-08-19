@@ -632,6 +632,7 @@ input[type=number] {
     color: hsl(0, 0%, 20%);
     min-height: 2.5rem; /* keeps box from collapsing when empty */
     transition: background-color 0.3s ease, color 0.3s ease;
+    /* overflow: auto; */
 }
 
 #ea_display:empty {
@@ -816,6 +817,12 @@ input[type=number] {
         display: flex;
         align-items: center;
         margin: 0;
+    }
+
+
+    /* Euler Angles Calculator */
+    #ea_display{
+        overflow: auto;
     }
 }
 
