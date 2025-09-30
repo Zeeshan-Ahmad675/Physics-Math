@@ -510,6 +510,8 @@ if(calculate_ea){
         const rj = parseFloat(document.getElementById("rj").value) || 0;
         const rk = parseFloat(document.getElementById("rk").value) || 0;
 
+        const convention = document.getElementById("ea_convention").value || "";
+
         try {
             const res = await fetch("https://python-server-euler-angles.onrender.com/process", {
             // const res = await fetch("http://127.0.0.1:5000/process", {
@@ -523,7 +525,8 @@ if(calculate_ea){
                     c: xk,
                     d: ri,
                     e: rj,
-                    f: rk
+                    f: rk,
+                    g: convention
                 })
             });
 
@@ -537,7 +540,12 @@ if(calculate_ea){
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(`Server error: ${res.status}`);
+                if("error" in data){
+                    display.className = "error";
+                    document.getElementById("ea_display").innerHTML = `\u274C ${data.error}`;
+                    return;
+                }
+                else throw new Error(`Server error: ${res.status}`);
             }
 
             // const data = await res.json();
@@ -574,7 +582,7 @@ if(calculate_ea){
         } catch (err) {
             display.className = "error";
             console.error(err);
-            document.getElementById("ea_display").innerHTML = `\u274C An unexpected error occured! If you believe this is a bug, please report it to us on our <a href="/contact.html">contact</a> page. Please mention the input vectors. We would try to correct that as soon as possible.`;
+            document.getElementById("ea_display").innerHTML = `\u274C An unexpected error occured! If you believe this is a bug, please report it to us on the <a href="/contact.html">contact</a> page. Alse mention your input vectors. We would try to correct it as soon as possible.`;
         }
     });
 }

@@ -583,13 +583,13 @@ body.loading {
     font-size: 16px;
     outline: none;
     transition: all 0.25s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.08);
     margin: 5px;
 }
 
 .ea_calculator input:focus {
     border-color: #4a90e2;
-    box-shadow: 0 0 0 4px rgba(74,144,226,0.15);
+    box-shadow: 0 0 0 4px hsla(212, 72%, 59%, 0.15);
     background-color: #ffffff;
 }
 
@@ -621,10 +621,11 @@ input[type=number] {
     padding: 4px;
     border: 2px solid #d0d7de;
     border-radius: 10px;
+    cursor: pointer;
 }
 #ea_convention:focus{
     border-color: #4a90e2;
-    box-shadow: 0 0 0 4px rgba(74,144,226,0.15);
+    box-shadow: 0 0 0 4px hsla(212, 72%, 59%, 0.15);
     background-color: #ffffff;
 }
 
