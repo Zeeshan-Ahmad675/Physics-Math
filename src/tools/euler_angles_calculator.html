@@ -18,6 +18,9 @@
         <h1 style="text-align: center;">Euler Angles Calculator</h1>
         <hr>
 
+
+        <p style="text-align: center">Not sure how to use? Refer the <a href="#how_to_use">How to use</a> section</p>
+
         
 
         <div class="ea_calculator">
@@ -32,7 +35,7 @@
                 <input type="number" step="any" id="xk" required>
                 <label for="xk">$\hat{k}$</label>
 
-                <p>Reference vector $(\vec{R})$ on the $xy$-plane</p>
+                <p>Reference vector $(\vec{R})$ on the final $xy$-plane</p>
                 <input type="number" step="any" id="ri" required>
                 <label for="ri">$\hat{i}\, +$</label>
                 <!-- <span> $+$ </span> -->
@@ -44,37 +47,123 @@
 
                 <br/>
 
+                <label for="ea_convention">Convention: </label>
+                <select id="ea_convention" required>
+                    <option value="" disabled selected>Select convention</option>
+                    <option value="ZXZ">ZXZ (intrinsic)</option>
+                    <option value="ZYZ">ZYZ (intrinsic)</option>
+                </select>
+
+                <br/>
+
                 <button id="calculate_ea">Calculate</button>
             </form>
             <p id="ea_display"></p>
         </div>
 
         
+        <br/>
+
+        <h2 id="how_to_use">How to use</h2>
+
+        <h3><u>Inputs</u>:</h3>
+        <p>
+            The calculator takes as input two vectors and one field of convention to be followed (not all conventions have been added yet). The two vectors are:
+            <ul>
+                <li>The final $x$-axis in the coordinates of the initial frame. For example, if we want the final $x$-axis to be directed along the the $z$-axis of the initial frame, then we would input this vector as:
+
+                    $$ 
+                        \vec{x} = 0\,\hat{i} + 0\,\hat{j} + a\,\hat{k},
+                    $$
+                
+                where, $a$ is any constant depending on the context.
+                </li>
+
+                <br/>
+
+                <li>
+                    A reference vector (denoted here as $\vec{R}$) on the final $xy$-plane, again in the coordinates of the initial frame. Since, only the final $x$-axis can't determine all other axes of any orientation, we need a reference vector to determine the complete state.
+
+                    <br/><br/>
+
+                    For example, if we want the final orientation to be such that the final $x$-axis is along the direction $3\,\hat{i} + 5\,\hat{j} + 4\,\hat{k}$ and the final $y$-axis to be along the orginal, then the reference vector on the final $xy$-plane can simply be $y$-axis itself i.e.
+                    
+                    $$
+                        \vec{R} = 0\,\hat{i} + b\,\hat{j} + 0\,\hat{j},
+                    $$
+
+                    where, $b$ is some arbitrary constant.
+                </li>
+            </ul>
+
+        </p>
+
+        <p>
+            To emphasize the point more clearly consider the <a href="#img1.1">diagram</a> shown below. Here, the intial orientation is shown in blue color and the final orientation of the frame is shown in red.
+        </p>
+
+        <div class="imgdiv" style="float: left; width: 100%; text-align: center">
+            <figure>
+                <img src="/images/t11.svg" alt="Image showing the input vectors required for a particular orientation" width="320px;" id="img1.1"/>
+                <figcaption><center><span style="color: red;">Fig 1</span>: The input vectors $X$ and $R$.</center>
+                </figcaption>
+            </figure>
+        </div>
+
+        <p>
+            The final $x$-axis (say, $X$-axis) is in the direction $(x_1, x_2, x_3)$ with resepct to initial frame. Further, if $Y$-axis is in the direction $(y_1, y_2, y_3)$ with respect to the initial frame, then we can take the reference  vector $R$ (shown in green in the diagram) to be any vector on the final $xy$-plane (as shown in <a href="#img1.1">figure</a>):
+
+            $$
+            \begin{align}
+                \vec{R} &= c_1\vec{X} + c_2\vec{Y} \\[4px]
+                        &= (c_1x_1 + c_2y_1) + (c_1x_2 + c_2y_2) + (c_1x_3 + c_2y_3) 
+            \end{align}
+            $$
+        </p>
+
+        <hr/>
+
+        <h3><u>Outputs:</u></h3>
+        <p>
+            The calculator gives four angles as outputs, three of which $(\alpha, \beta, \gamma)$ depends on the convention chosen, and the last one, $\theta$ doesn't. And, the rotation matrix for the output euler angles in the chosen convention.
+        </p>
+            
+        <ul>
+            <li>
+                <p style="display: inline">The angles $\alpha$, $\beta$, $\gamma$ are the euler angles for the given convention, which is self explanatory. If you want to learn what they mean exactly in each convention, refer to the <a href="#about">about</a> section.</p>
+            </li>
+            <br/>
+            <li>
+                <p style="display: inline">The angle $\theta$ is shown in the <a href="#img1.1">figure</a>. It represents the angle between the $X$-axis and the reference vector $\vec{R}$. A positive $\theta$ indicates that the reference vector $\vec{R}$ is towards the $Y$-axis in the $XY$-plane generated finally else towards the negative $Y$-axis, with respect to the $X$-axis. It is not directly related with the required euler angles but is given for convenience, in case it is needed.</p>
+            </li>
+        </ul>
+
+        
 
 
 
 
 
+        <br/><br/>
 
 
 
-
-        <h2>About</h2>
+        <h2 id="about">About Euler Angles</h2>
         <p>
             In many of the applications today (including aircraft, space vehicle orientation, frames shifting in Physics, computer graphics, etc.), we find Euler Angles decribing the orientation of the frame in consideration. After all, that is for what Euler angles are. As is clear, these was introduced by Leonhard Euler to describe orientation of a rigid body.
         </p>
 
-        <p>
-            Any orientation can be reached using the rotation by Euler Angles, $\alpha$, $\beta$ and $\gamma$ (these are the notations which we would use from here on). These rotations can be extrinsic (rotation about the original axes i.e. the initial $x$, $y$ and $z$-axes) or exitrinsic (rotation about axes of successively new frames after each rotation). Now, there are many prevalent conventions for these angles and they all work for any given situation. One of them is $\text{ZXZ}$ (intrinsic). This means that we first rotate the frame about the initial $z$-axis by angle $\alpha$, then we rotate the resulting frame about the $x$-axis (say, $x'$) of the resulting frame by angle $\beta$ and finally about the $z$-axis (say, $z''$) of the second resulting frame by angle $\gamma$. The sequence is depicted in the <a href="#img1.1">figure</a> below.
+        <p id="ZXZ_convention">
+            Any orientation can be reached using the rotation by Euler Angles, $\alpha$, $\beta$ and $\gamma$ (these are the notations which we would use from here on). These rotations can be extrinsic (rotation about the original axes i.e. the initial $x$, $y$ and $z$-axes) or intrinsic (rotation about axes of successively new frames after each rotation). Now, there are many prevalent conventions for these angles and they all work for any given situation. One of them is $\text{ZXZ}$ (intrinsic). This means that we first rotate the frame about the initial $z$-axis by angle $\alpha$, then we rotate the resulting frame about the $x$-axis (say, $x'$) of the resulting frame by angle $\beta$ and finally about the $z$-axis (say, $z''$) of the second resulting frame by angle $\gamma$. The sequence is depicted in the <a href="#img2.1">figure</a> below.
         </p>
         
         
         
         <div class="imgdiv" style="float: left; width: 100%; text-align: center">
             <figure>
-                <img src="/images/t11.svg" alt="Image showing the first rotation about the initial z axis" width="320px;" id="img1.1"/>
-                <img src="/images/t12.svg" alt="Image showing the second roattion about the x prime axis after the first rotation" width="320px;" id="img1.2"/>
-                <img src="/images/t13.svg" alt="Image showing third and final rotation about the final z axis" width="320px;" id="img1.3"/>
+                <img src="/images/t21.svg" alt="Image showing the first rotation about the initial z axis" width="320px;" id="img2.1"/>
+                <img src="/images/t22.svg" alt="Image showing the second rotation about the x prime axis after the first rotation" width="320px;" id="img2.2"/>
+                <img src="/images/t23.svg" alt="Image showing third and final rotation about the final z axis" width="320px;" id="img2.3"/>
                 <figcaption><center><span style="color: red;">Fig 1</span>: The sequence of rotation in the $\text{ZXZ}$ (intrinsic) convention</center>
                 </figcaption>
             </figure>
@@ -82,8 +171,25 @@
 
 
         <p>
-            The $x'$-axis after the first rotation is called <i>the line of nodes</i> (denoted by $N$) in the <a href="#img1.2">figure</a>. 
+            The $x'$-axis after the first rotation is called <i>the line of nodes</i> (denoted by $N$) in the <a href="#img2.2">figure</a> above. 
         </p>
+
+        <p id="ZYZ_convention">
+            Another convention is the $\text{ZYZ}$ (intrinsic) convention (refer <a href="#img3.1">Figure 2</a>). Similar to what we said above, here we first rotate the frame about the initial $z$-axis by angle $\alpha$, then we rotate the resulting frame about the $y$-axis (say, $y'$) of the resulting frame by angle $\beta$ and finally about the $z$-axis (say, $z''$) of the second resulting frame by angle $\gamma$..
+        </p>
+
+        <div class="imgdiv" style="float: left; width: 100%; text-align: center">
+            <figure>
+                <img src="/images/t31.svg" alt="Image showing the first rotation about the initial z axis" width="320px;" id="img3.1"/>
+                <img src="/images/t32.svg" alt="Image showing the second rotation about the y prime axis after the first rotation" width="320px;" id="img3.2"/>
+                <img src="/images/t33.svg" alt="Image showing third and final rotation about the final z axis" width="320px;" id="img3.3"/>
+                <figcaption><center><span style="color: red;">Fig 2</span>: The sequence of rotation in the $\text{ZYZ}$ (intrinsic) convention</center>
+                </figcaption>
+            </figure>
+        </div>
+
+
+        <p>Again, The $y'$-axis after the first rotation is called <i>the line of nodes</i> (denoted by $N$) in the above <a href="#img3.2">figure</a>.</p>
 
         
     </main>

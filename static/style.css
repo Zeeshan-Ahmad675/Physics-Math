@@ -613,6 +613,22 @@ input[type=number] {
 }
 
 
+
+#ea_convention{
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 4px;
+    border: 2px solid #d0d7de;
+    border-radius: 10px;
+}
+#ea_convention:focus{
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.15);
+    background-color: #ffffff;
+}
+
+
 /* #ea_display{
     max-width: 800px;
     text-align: center;
