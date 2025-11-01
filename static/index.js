@@ -533,7 +533,8 @@ if(calculate_ea){
             });
 
             display.classList.remove("loading");
-            
+            const d = Date();
+            localStorage.setItem("ea_wakeup_time", String(d.getTime()));
 
             if (res.status === 429) {
                 const data = await res.json().catch(() => ({ error: "Too many requests" }));

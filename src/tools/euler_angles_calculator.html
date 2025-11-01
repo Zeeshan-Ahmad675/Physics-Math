@@ -207,28 +207,32 @@
 
     <script src="/index.js"></script>
     <script>
-        body.onload = async () => {
-            try {
-                const res = await fetch("https://python-server-euler-angles.onrender.com/process", {
-                // const res = await fetch("http://127.0.0.1:5000/process", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        a: 1,
-                        b: 2,
-                        c: 3,
-                        d: 4,
-                        e: 5,
-                        f: 6,
-                        g: ""
-                    })
-                });
-            }
-            catch {
-
-            }
+        const d = new Date();
+        const time = Number(localStorage.getItem("ea_wakeup_time")) || 0;
+        if (d.getTime() - time >= 14 * 60 * 1000) {
+            window.addEventListener('load', async () => {
+                try {
+                    const res = await fetch("https://python-server-euler-angles.onrender.com/process", {
+                        // const res = await fetch("http://127.0.0.1:5000/process", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            a: 1,
+                            b: 2,
+                            c: 3,
+                            d: 4,
+                            e: 5,
+                            f: 6,
+                            g: ""
+                        })
+                    });
+                } catch (err) {
+                    console.error(err);
+                }
+                localStorage.setItem("ea_wakeup_time", String(d.getTime()));
+            });
         }
     </script>
     
