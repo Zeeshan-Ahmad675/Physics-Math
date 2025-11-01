@@ -676,6 +676,12 @@ input[type=number] {
     color: hsl(0, 58%, 24%);
 }
 
+#ea_display.loading {
+    background-color: hsl(210, 100%, 96%); /* light blue */
+    border-color: hsl(210, 60%, 80%);
+    color: hsl(210, 60%, 25%);
+}
+
 
 
 

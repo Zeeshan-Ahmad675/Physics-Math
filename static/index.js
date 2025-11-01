@@ -501,6 +501,8 @@ if(calculate_ea){
         }
 
         e.preventDefault();
+        display.className = "loading";
+        display.innerHTML = "<b>Loading ...</b>";
 
         const xi = parseFloat(document.getElementById("xi").value) || 0;
         const xj = parseFloat(document.getElementById("xj").value) || 0;
@@ -529,6 +531,9 @@ if(calculate_ea){
                     g: convention
                 })
             });
+
+            display.classList.remove("loading");
+            
 
             if (res.status === 429) {
                 const data = await res.json().catch(() => ({ error: "Too many requests" }));

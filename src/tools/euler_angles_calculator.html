@@ -164,14 +164,14 @@
                 <img src="/images/t21.svg" alt="Image showing the first rotation about the initial z axis" width="320px;" id="img2.1"/>
                 <img src="/images/t22.svg" alt="Image showing the second rotation about the x prime axis after the first rotation" width="320px;" id="img2.2"/>
                 <img src="/images/t23.svg" alt="Image showing third and final rotation about the final z axis" width="320px;" id="img2.3"/>
-                <figcaption><center><span style="color: red;">Fig 1</span>: The sequence of rotation in the $\text{ZXZ}$ (intrinsic) convention</center>
+                <figcaption><center><span style="color: red;">Fig 2</span>: The sequence of rotation in the $\text{ZXZ}$ (intrinsic) convention</center>
                 </figcaption>
             </figure>
         </div>
 
 
         <p>
-            The $x'$-axis after the first rotation is called <i>the line of nodes</i> (denoted by $N$) in the <a href="#img2.2">figure</a> above. 
+            The $x'$-axis ($x$-axis after the first rotation) is called <i>the line of nodes</i> (denoted by $N$) in the <a href="#img2.2">figure</a> above.
         </p>
 
         <p id="ZYZ_convention">
@@ -183,13 +183,13 @@
                 <img src="/images/t31.svg" alt="Image showing the first rotation about the initial z axis" width="320px;" id="img3.1"/>
                 <img src="/images/t32.svg" alt="Image showing the second rotation about the y prime axis after the first rotation" width="320px;" id="img3.2"/>
                 <img src="/images/t33.svg" alt="Image showing third and final rotation about the final z axis" width="320px;" id="img3.3"/>
-                <figcaption><center><span style="color: red;">Fig 2</span>: The sequence of rotation in the $\text{ZYZ}$ (intrinsic) convention</center>
+                <figcaption><center><span style="color: red;">Fig 3</span>: The sequence of rotation in the $\text{ZYZ}$ (intrinsic) convention</center>
                 </figcaption>
             </figure>
         </div>
 
 
-        <p>Again, The $y'$-axis after the first rotation is called <i>the line of nodes</i> (denoted by $N$) in the above <a href="#img3.2">figure</a>.</p>
+        <p>Again, the $y'$-axis ($y$-axis after the first rotation) is called <i>the line of nodes</i> (denoted by $N$) in the above <a href="#img3.2">figure</a>.</p>
 
         
     </main>
@@ -206,7 +206,31 @@
 
 
     <script src="/index.js"></script>
+    <script>
+        body.onload = async () => {
+            try {
+                const res = await fetch("https://python-server-euler-angles.onrender.com/process", {
+                // const res = await fetch("http://127.0.0.1:5000/process", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        a: 1,
+                        b: 2,
+                        c: 3,
+                        d: 4,
+                        e: 5,
+                        f: 6,
+                        g: ""
+                    })
+                });
+            }
+            catch {
 
+            }
+        }
+    </script>
     
 </body>
 </html>
