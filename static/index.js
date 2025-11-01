@@ -533,7 +533,7 @@ if(calculate_ea){
             });
 
             display.classList.remove("loading");
-            const d = Date();
+            const d = new Date();
             localStorage.setItem("ea_wakeup_time", String(d.getTime()));
 
             if (res.status === 429) {
