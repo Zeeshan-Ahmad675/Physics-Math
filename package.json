@@ -1,10 +1,12 @@
 {
   "scripts": {
     "build": "node build.js",
-    "dev": "node dev.js"
+    "dev": "node dev.js",
+    "serve": "serve dist"
   },
   "dependencies": {
     "chokidar": "^4.0.3",
-    "jsdom": "^26.1.0"
+    "jsdom": "^26.1.0",
+    "serve": "^14.2.5"
   }
 }

@@ -1023,7 +1023,7 @@
                 </div>
 
                 <p>
-                    Here, |\(\vec{A}\)| and |\(\vec{B}\)| are the magnitudes of vectors \(\vec{A}\) and \(\vec{B}\) respectively. It is represented by placing a dot\((\cdot)\) in between the vectors, hence the name. Also, the resulting quantity is itself a scalar, so, <i> Dot Product</i> is often called as <i>Scalar Product</i> too.
+                    Here, |\(\vec{A}\)| and |\(\vec{B}\)| are the magnitudes of vectors \(\vec{A}\) and \(\vec{B}\) respectively. It is represented by placing a dot\((\cdot)\) in between the vectors, hence the name. Also, the resulting quantity is itself a scalar, so, <i> Dot Product</i> is often called as <i>Scalar Product</i>.
                 </p>
 
 
@@ -1358,6 +1358,317 @@
 
                         So, we see that the vectors $\vec{a}$ and $\vec{b}$ are perpendicular (since their dot product is zero).
                     </p>
+                </ul>
+
+
+
+
+
+
+                <br/>
+                <br/>
+
+
+                <li id="cross_product"><b><u>Cross Product</u>:</b></li>
+                <br/>
+
+                <p>
+                    The last type of vector multiplication which we are going to cover at this level is the <i>Cross Product</i>. Again, consider two vetcors, $\vec{A}$ and $\vec{B}$ with angle $\theta$ in between them as shown in <a href="#img4.4">Figure 4.4</a>.
+                </p>
+
+                <div class="imgdiv" style="float: left;">
+                    <figure>
+                        <img src="/images/v44.svg" alt="Image showing the vectors A and B having angle theta between them and how to calculate it using the right hand thumb rule" width="300px;" id="img4.4"/>
+                        <figcaption><center><span style="color: red;">Fig 4.4</span>: Cross product of the vectors $\vec{A}$ and  $\vec{B}$</sup></center>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p id="eq4.8">
+                    Then, the cross product $\vec{A} \times \vec{B}$ is defined as:
+
+                    $$
+                        \vec{A} \times \vec{B} = AB\sin{\theta}\,\hat{n}, \qquad \color{red}{(4.8)}
+                    $$
+
+                    where $\hat{n}$ is a unit vector, pointing in the direction perpendicular to both $\vec{A}$ and $\vec{B}$ such that rotating a right handed screw (a screw which tightens or goes inside the material when rotated clockwise) from $\vec{A}$ towards $\vec{B}$ advances in the direction of $\hat{n}$.
+
+                </p>
+                <p id="right_hand_thumb_rule_cp">
+                    So, cross product of two vectors gives another vector, having magnitude $AB\sin{\theta}$ and pointing along $\hat{n}$. Hence, it is also known as <i>Vector Product</i>. This is represented using a cross $(\times)$ in between the two vectors, hence the name. Another method to determine the direction of $\vec{A} \times \vec{B}$ is using the <b>Right Hand Thumb rule</b>. It says that: if we start by pointing out the fingers of our right hand along $\vec{A}$, with its palm facing $\vec{B}$ (i.e. the palm can sort of see the "arrow" of $\vec{B}$), and then if we curl our fingers towards $\vec{B}$, then the direction of $\vec{A}\times\vec{B}$ or $\hat{n}$ is along the thumb.
+                </p>
+
+                <p>
+                    That's actually a mouthfull, so let's see how it works out in our case. In <a href="#img4.4">Figure 4.4</a>, we start by pointing our fingers of the right hand along the direction of $\vec{A}$ such that our palm is facing the vector $\vec{B}$ (or the screen in this case, for verification). Now, if we curl our fingers along the curve $c$, then the thumb points along $\vec{A}\times\vec{B}$ or $\hat{n}$ in the figure.
+                </p>
+
+                <ul class="c1ul">
+                    <li><b><u>Interpretation</u>:</b></li>
+
+                    <p>
+                        Cross product, as we have seen above, gives the vector perpendicular to the participating vectors' plane i.e. along the vector $\hat{n}$ (for visualization, see <a href="#img4.6">Figure 4.6</a>). While it is important from the point of view of Mathematics, we generally have quite an opposite scenario in Physics. In Physics, we get some result out of two vectors, say the velocity vector, $\vec{v}$ and the Magnetic field (at this level, just ignore the names you aren't aware of), $\vec{B}$ such as:
+
+                        $$
+                            \vec{F} = q \cdot (\vec{v} \times \vec{B}).
+                        $$
+                    </p>
+
+                    <p>
+                        Now, we say that the force, $\vec{F}$ on a particle of charge $q$ is perpendicular to the plane of the vectors $\vec{v}$ and $\vec{B}$. We weren't after a "perpendicular" vector, rather we were finding (the details are ommited for clarity) the force on the charged particle and the force turned out be given by cross product of two other vectors, giving us an extra information about it (its orthogonality with $\vec{v}$ and $\vec{B}$).
+                    </p>
+
+                    <div class="imgdiv" style="float: left;">
+                        <figure>
+                            <img src="/images/v45.svg" alt="Image showing the vectors a and b having angle theta between them and area vector S coming out of the screen" width="300px;" id="img4.5"/>
+                            <figcaption><center><span style="color: red;">Fig 4.5</span>: Area using cross product</sup></center>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <p>
+                        Let's do one familiar example on this. Consider two vectors $\vec{a}$ and $\vec{b}$ as the two adjacent sides of a parallelogram as shown in <a href="#img4.5">Figure 4.5</a>. Let us calculate the area of this parallelogram. Since, area of a parallelogram is given as $\text{base}\cdot\text{height}$, we get:
+
+                        $$
+                            \begin{align}
+                                S &= a\cdot h = a\cdot b\sin{\theta} \\[4px]
+                                \implies \vec{S} &= \vec{a}\times\vec{b}.
+                            \end{align}
+                        $$
+
+                        Here, the area $S$ comes out to be $ab\sin{\theta}$, which is exactly the magnitude of cross product of the two vectors. So, we assume our area to be a vector too. The direction of this area vector (verify it) is out of the screen (denoted by the encircled dot). The idea of turning such a scalar looking quantity into a vector might look exotic here but it has profound use and simplification benefits in upcoming topics. 
+                    </p>
+
+
+
+                    <li><b><u>Properties of cross product</u>:</b></li>
+
+                    <p>
+                        Cross product have properties which makes it different from the dot product. We discuss each of them below.
+                    </p>
+                    
+                    <ul class="norli">
+                        <li><b><u>Commutativity</u>:</b></li>
+
+                        <p>
+                            Cross products are famous for being non-commutative. This non-commutativity stems because of the normal vector, $\hat{n}$ in its definition. Otherwise, the magnitude is same in both directions i.e. $|\vec{A}\times\vec{B}| = |\vec{B}\times\vec{A}|$, as was in <a href="#eq4.2">case of dot product</a>. Now, let's see how things work out here.
+                        </p>
+
+                        <div class="imgdiv" style="float: left;">
+                            <figure>
+                                <img src="/images/v46.svg" alt="Image showing the vectors A cross B and B cross A to be opposite to each other" width="280px;" id="img4.6"/>
+                                <figcaption><center><span style="color: red;">Fig 4.6</span>: $\vec{A}\times\vec{B} \text{ vs } \vec{B}\times\vec{A}$</sup></center>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <p>
+                            Consider the <a href="#img4.6">Figure 4.6</a> shown. As we have computed $\vec{A}\times\vec{B}$ above, we got $\hat{n}$ using the <a href="#right_hand_thumb_rule_cp">Right Hand Thumb rule</a> as shown in the figure. Now, let's compute $\vec{B}\times\vec{A}$:
+
+                            $$
+                                \vec{B}\times\vec{A} = BA\sin{\theta}\,\hat{m}
+                            $$
+
+                            Now, using the right hand thumb rule again, we get the direction of $\hat{m}$ as follows:
+                            <br/>
+                            First, we place our right hand fingers along $\vec{B}$, then we curl them in the direction of $\vec{A}$ and out thumb gives us the direction of $\hat{m}$ or $\vec{B}\times\vec{A}$. Clearly, if you have done it right, you would see that the thumb points in the direction opposite to $\hat{n}$ or along $\hat{m}$ shown in the figure. Now, we "claim" that $\hat{m} = -\hat{n}$, which might be seen through intuition (and would later be proved formally) as follows: since, $\vec{A}\times\vec{B}$ is a vector perpendicular to the plane of the two vectors and $\vec{B}\times\vec{A}$ comes on the other side of $\vec{A}\times\vec{B}$ of the plane (if not exactly opposite). Further, only one perpendicular is present on one side of a plane and perpendicular to the same is parallel (as a line) to each other, hence $\vec{B}\times\vec{A}$ is opposite to $\vec{A}\times\vec{B}$.
+                        </p>
+
+                        <p id="eq4.9">
+                            Hence,
+                            $$
+                                \vec{A}\times\vec{B} = -(\vec{B}\times\vec{A}) \qquad \color{red}{(4.9)}
+                            $$
+                        </p>
+
+
+                        <li><b><u>Associativity</u>:</b></li>
+
+                        <p>
+                            Unlike dot product, we can at least talk about the associativity of cross products. To state simply, they aren't even associative. And this can be seen by a simple counter example. Consider,
+
+                            $$
+                                \hat{i} \times (\hat{i} \times \hat{j}) = \hat{i} \times \hat{k} = -\hat{j}
+                            $$
+
+                            and
+
+                            $$
+                                (\hat{i} \times \hat{i}) \times \hat{j} = 0,
+                            $$
+
+                            where the cross products are left for evaluation to the readers as an exercise.
+                        </p>
+
+                        <li><b><u>Distributivity</u>:</b></li>
+
+                        <p>
+                            Fortunately, and like dot products, cross products are distributive over addition (and hence subtraction) i.e.
+
+                            $$
+                                \vec{A} \times (\vec{B} + \vec{C}) = (\vec{A} \times \vec{B}) + (\vec{A}\times\vec{C}) \qquad \color{red}{(4.10)}
+                            $$
+
+                            Its proof is quite amazing. Let's see it.
+                        </p>
+
+                    </ul>
+
+                    <hr>
+
+                    <p>
+                        Consider the three vectors, $\vec{A}, \vec{B}$ and $\vec{C}$</a>.
+
+                        <div class="imgdiv" style="float: left;">
+                            <figure>
+                                <img src="/images/v47.svg" alt="Images showing the vector u perpendicular to the plane of vectors a and b + c" width="280px;" id="img4.7"/>
+                                <figcaption><center><span style="color: red;">Fig 4.7</span>: Vector $\vec{u}$ perpendicular to the <br/> plane of $\vec{A}$ and $\vec{B} + \vec{C}$</center>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        $$
+                        \begin{align}
+                            \vec{A} &= A_x\,\hat{i} + A_y\,\hat{j} + A_z\,\hat{k} \\[4px]
+                            \vec{B} &= B_x\,\hat{i} + B_y\,\hat{j} + B_z\,\hat{k} \\[4px]
+                            \vec{C} &= C_x\,\hat{i} + C_y\,\hat{j} + C_z\,\hat{k}.
+                        \end{align}
+                        $$
+                    
+                    </p>
+                    <p>
+                        Let $\vec{u}$ be a vector perpendicular to the plane of $\vec{A}$ and $\vec{B} + \vec{C}$ as shown in <a href="#img4.7">Figure</a> shown. So, from the properties of dot product, we get:
+
+                        $$
+                        \begin{align}
+                            \vec{u}\cdot\vec{A} = 0 \implies A_xu_x + A_yu_y + A_zu_z &= 0 \qquad (i) \\[4px]
+                            \vec{u}\cdot(\vec{B} + \vec{C}) = 0 \implies (B_x + C_x)u_x + (B_y + C_y)u_y + (B_z + C_z)u_z &= 0 \qquad (ii)
+                        \end{align}
+                        $$
+
+                        Clearly, this a system of linear equations. Upon elimination $\left(ii = ii - \frac{B_x + C_x}{A_x}i\right)$, we get:
+
+                        $$
+                        \begin{align}
+                            A_x \, u_x + A_y \, u_y +  A_z \, u_z &= 0 \qquad (iii)\\[4px]
+                            0 \, u_x +  \left(B_y + C_y - \frac{B_x + C_x}{A_x}A_y\right)\, u_y +  \left(B_z + C_z - \frac{B_x + C_x}{A_x}A_z\right)\, u_z &= 0 \qquad (iv)
+                        \end{align}
+                        $$
+
+                        Considering $u_z = \alpha$ (a constant)<sup>*</sup>, we get from equation $(iv)$:
+                        <br/>
+                        <sup>* One way to understand <b>why we can consider $u_z$ to be a constant</b> is that we are trying to find the values of all three variables $u_x$, $u_y$ and $u_z$ but we only have $2$ linear equations. So, we are assuming the value of one of them (chosen randomly $u_z$) by ourselves and finding remaining two using the $2$ equations, effectively solving (and partially declaring) the values of all three.</sup>
+                        
+                        $$
+                        \begin{align}
+                            \left(B_y + C_y - \frac{B_x + C_x}{A_x}A_y\right)\, &u_y +  \left(B_z + C_z - \frac{B_x + C_x}{A_x}A_z\right)\, \alpha = 0 \\[4px]
+                            &u_y = \frac{\alpha(B_xA_z + C_xA_z - A_xB_z - A_xC_z)}{A_xB_y + A_xC_y - B_xA_y - C_xA_y}
+                        \end{align}
+                        $$
+
+                        Substituting $u_z = \alpha$ and $u_y$ from above in equation $(iii)$, we get:
+
+                        $$
+                        \begin{align}
+                            u_x = -\frac{\alpha A_z}{A_x} - \frac{\alpha A_y}{A_x}\left(\frac{B_xA_z + C_xA_z - A_xB_z - A_xC_z}{A_xB_y + A_xC_y - B_xA_y - C_xA_y}\right)
+                        \end{align}
+                        $$
+
+                        So, the $\vec{u}$ comes out to be:
+
+                        $$
+                        \begin{align}
+                            \vec{u} &= u_x\,\hat{i} + u_y\,\hat{j} + u_z\,\hat{k} \\[4px]
+
+                            &= \left(-\frac{\alpha A_z}{A_x} - \frac{\alpha A_y}{A_x}\frac{B_xA_z + C_xA_z - A_xB_z - A_xC_z}{A_xB_y + A_xC_y - B_xA_y - C_xA_y}\right)\,\hat{i} + \frac{\alpha(B_xA_z + C_xA_z - A_xB_z - A_xC_z)}{A_xB_y + A_xC_y - B_xA_y - C_xA_y}\,\hat{j} + \alpha\,\hat{k} \\[4px]
+                        \end{align}
+                        $$
+                    </p>
+
+                    <p id="eq4.11">
+                        Multiplying both side by $A_x(A_xB_y + A_xC_y - B_xA_y - C_xA_y)$, we get another vector $\vec{u}'$, which is just scaled version of $\vec{u}$ i.e. different magnitude but same direction (why?):
+
+                        $$
+                        \begin{align}
+                            \vec{u}' &= \left(-\alpha A_z(A_xB_y + A_xC_y - B_xA_y - C_xA_y) - \alpha A_y(B_xA_z + C_xA_z - A_xB_z - A_xC_z)\right)\,\hat{i} + \alpha A_x(B_xA_z + C_xA_z - A_xB_z - A_xC_z)\,\hat{j} + \alpha A_x(A_xB_y + A_xC_y - B_xA_y - C_xA_y)\,\hat{k} \\[4px]
+
+                            \frac{\vec{u}'}{\alpha} &= \left(-A_zA_xB_y - A_zA_xC_y + \cancel{A_zB_xA_y} + \cancel{A_zC_xA_y} - \cancel{A_yB_xA_z} - \cancel{A_yC_xA_z} + A_yA_xB_z + A_yA_xC_z\right)\,\hat{i} + A_x(B_xA_z + C_xA_z - A_xB_z - A_xC_z)\,\hat{j} + A_x(A_xB_y + A_xC_y - B_xA_y - C_xA_y)\,\hat{k} \\[4px]
+
+                            \frac{\vec{u}'}{\alpha~A_x} &= (A_yB_z + A_yC_z -A_zB_y - A_zC_y)\,\hat{i} + (B_xA_z + C_xA_z - A_xB_z - A_xC_z)\,\hat{j} + (A_xB_y + A_xC_y - B_xA_y - C_xA_y)\,\hat{k} \qquad \color{red}{(4.11)}
+                        \end{align}
+                        $$
+                    </p>
+
+                    <p id="eq4.12">
+                        Therefore, the cross product $\vec{A}\times(\vec{B} + \vec{C})$ is along $\vec{u}''\left( = \frac{\vec{u}'}{\alpha A_x}\right)$ as it was derived from properties suggesting that it is orthogonal to both $\vec{A}$ and $\vec{B} + \vec{C}$. We now just have to adjust its magnitude to make it the unit vector, say, $\hat{n}_1$ i.e.
+
+                        $$
+                            \begin{align}
+                                \hat{n}_1 &= \frac{\vec{u}''}{|\vec{u}''|} \\[4px]
+                                \implies \vec{A}\times(\vec{B} + \vec{C}) &= A|\vec{B} + \vec{C}|\sin{\theta} \, \hat{n}_1 \qquad \color{red}{(4.12)}
+                            \end{align}
+                        $$
+
+                        Oh God!! after this much manipulation, we got a $\sin$ in our equation. But, help comes from somewhere familiar. Consider the <a href="#eq4.4">$\text{eq(4.4)}$</a>. That's $\cos{\theta}$, and using <a href="/chapters/Mathematical_methods_of_physics#eq2.4">$\text{eq(2.4)}$</a> together with <a href="#eq3.8">$\text{eq(3.8)}$</a> to substitute for <a href="#directional_cosines">directional cosines</a> (see <a href="#eq4.3.1">here</a> for the definitions of $l_1, m_1, n_1$ and $l_4, m_4, n_4$), we get:
+
+                        $$
+                        \begin{align}
+                            \sin{\theta} &= \sqrt{1 - \cos^2{\theta}} \\[4px]
+                            &= \sqrt{1 - (l_1l_4 + m_1m_4 + n_1n_4)^2} \\[4px]
+                            &= \frac{1}{A|\vec{B} + \vec{C}|}\sqrt{A^2|\vec{B} + \vec{C}|^2 - [A_x(B_x + C_x) + A_y(B_y + C_y) + A_z(B_z + C_z)]^2}
+                        \end{align}
+                        $$
+                    </p>
+
+                    <p id="eq4.13">
+                        Substituting the magnitude of $\vec{A}$ and $\vec{B} + \vec{C}$ using <a href="#eq3.3">$\text{eq(3.3)}$</a> and simplifying, we get:
+
+                        $$
+                        \begin{align}
+                            \sin{\theta} &=\frac{1}{A|\vec{B} + \vec{C}|}\sqrt{[A_y(B_z + C_z) - A_z(B_y + C_y)]^2 + [A_x(B_y + C_y) - A_y(B_x + C_x)]^2 +[A_x(B_z + C_z) - A_z(B_x + C_x)]^2} \qquad \color{red}{(4.13)} \\[4px]
+
+                            &= \frac{\delta}{A|\vec{B} + \vec{C}|},
+                        \end{align}
+                        $$
+
+                        where, $\delta$ is used to denote the monster square root in the equation. Now, from $\text{eqs}$ <a href="#eq4.11">$4.11$</a>, <a href="#eq4.12">$4.12$</a> and <a href="#eq4.13">$4.13$</a>, we get: (realising $|\vec{u}''| = \delta$)
+
+                        $$
+                        \begin{align}
+                            \vec{A}\times(\vec{B} + \vec{C}) &= A|\vec{B} + \vec{C}|\sin{\theta}\,\hat{n}_1 \\[4px]
+                            &= A|\vec{B} + \vec{C}|\frac{\delta}{A|\vec{B} + \vec{C}|}\frac{\vec{u}''}{\delta} \\[4px]
+                            &= \vec{u}''
+                        \end{align}
+                        $$
+                        $$
+                            \implies \boxed{\vec{A}\times(\vec{B} + \vec{C}) = [A_y(B_z + C_z) - A_z(B_y + C_y)]\,\hat{i} + [A_z(B_x + C_x) - A_x(B_z + C_z)]\,\hat{j} + [A_x(B_y + C_y) - A_y(B_x + C_x)]\,\hat{k}} \qquad \color{red}{(4.14)}
+                        $$
+                    </p>
+
+                    <p>
+                        We arrived at a very <i>"beautiful result"</i>. Now, it might be hard to believe (may be that its beautiful), but we have almost finished the proof. There is a pattern (not exactly, its more of a rule) in here, through which we get:
+                        
+                        $$
+                            \vec{u}\times\vec{v} = (u_yv_z - u_zv_y)\,\hat{i} + (u_zv_x - u_xv_z)\,\hat{j} + (u_xv_y - u_yv_x)\,\hat{k}.
+                        $$
+
+                        So, for $\vec{A}\times\vec{B} + \vec{A}\times\vec{C}$, we get:
+
+                        $$
+                        \begin{align}
+                            \vec{A}\times\vec{B} + \vec{A}\times\vec{C} &= (A_yB_z - A_zB_y)\,\hat{i} + (A_zB_x - A_xB_z)\,\hat{j} + (A_xB_y - A_yB_x)\,\hat{k} + (A_yC_z - A_zC_y)\,\hat{i} + (A_zC_x - A_xC_z)\,\hat{j} + (A_xC_y - A_yC_x)\,\hat{k} \\[4px]
+
+                            &= [A_y(B_z + C_z) - A_z(B_y + C_y)]\,\hat{i} + [A_z(B_x + C_x) - A_x(B_z + C_z)]\,\hat{j} + [A_x(B_y + C_y) - A_y(B_x + C_x)]\,\hat{k} \\[4px]
+
+                            &= \vec{A}\times(\vec{B} + \vec{C}) \qquad \qquad \qquad \color{red}{\text{using eq(4.13)}} \\[4px]
+                        \end{align}
+                        $$
+
+                        $$
+                            \implies \boxed{\vec{A}\times(\vec{B} + \vec{C}) = \vec{A}\times\vec{B} + \vec{A}\times\vec{C}}
+                        $$
+                    </p>
+
+                    <hr>
                 </ul>
             </ul>
 
